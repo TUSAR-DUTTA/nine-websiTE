@@ -87,7 +87,7 @@ export function GmeSagaSection() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-nine-border bg-nine-elevated p-5 px-6">
             <div>
               <div className="text-[11px] text-nine-green font-bold uppercase tracking-wider">
-                CHAPTER 0{selectedChapter.chapterNumber} /// {selectedChapter.timeframe}
+                CHAPTER 0{selectedChapter.chapterNumber} {"///"} {selectedChapter.timeframe}
               </div>
               <h3 className="text-xl sm:text-2xl font-black text-white mt-1">
                 {selectedChapter.title}

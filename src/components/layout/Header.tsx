@@ -92,7 +92,7 @@ export function Header() {
                   </span>
                 )}
                 <span className="text-[10px] text-zinc-600">[{item.timestamp}]</span>
-                <span className="text-zinc-700">///</span>
+                <span className="text-zinc-700">{"///"}</span>
               </div>
             ))}
           </div>

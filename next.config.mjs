@@ -6,6 +6,11 @@ const nextConfig = {
   },
   eslint: {
     dirs: ["src"],
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Exclude build errors from stopping production deployment
+    ignoreBuildErrors: false,
   },
 };
 

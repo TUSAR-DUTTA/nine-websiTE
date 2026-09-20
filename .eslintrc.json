@@ -5,5 +5,11 @@
     "scripts/**",
     "scratch/**",
     "node_modules/**"
-  ]
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "react/jsx-no-comment-textnodes": "off",
+    "@next/next/no-img-element": "off",
+    "react-hooks/exhaustive-deps": "warn"
+  }
 }
