@@ -36,6 +36,10 @@ import {
 } from '@/lib/onchain';
 
 interface NineContextType {
+  // Website Layer (Landing vs Terminal)
+  viewLayer: 'LANDING' | 'TERMINAL';
+  setViewLayer: (layer: 'LANDING' | 'TERMINAL') => void;
+
   // Navigation Tabs
   activeTab: TabType;
   setActiveTab: (tab: TabType) => void;
@@ -141,7 +145,19 @@ const DEFAULT_USER: NineProfile = {
 };
 
 export function NineProvider({ children }: { children: ReactNode }) {
+  const [viewLayer, setViewLayer] = useState<'LANDING' | 'TERMINAL'>('LANDING');
   const [activeTab, setActiveTabState] = useState<TabType>('TERMINAL');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash;
+      const path = window.location.pathname;
+      const search = window.location.search;
+      if (hash === '#terminal' || path.startsWith('/terminal') || search.includes('view=terminal')) {
+        setViewLayer('TERMINAL');
+      }
+    }
+  }, []);
   const [isConnected, setIsConnected] = useState<boolean>(false);
   const [connectedProfile, setConnectedProfile] = useState<NineProfile | null>(null);
   const [userNineBalance, setUserNineBalance] = useState<number>(0);
@@ -778,6 +794,8 @@ export function NineProvider({ children }: { children: ReactNode }) {
   return (
     <NineContext.Provider
       value={{
+        viewLayer,
+        setViewLayer,
         activeTab,
         setActiveTab,
         isConnected,

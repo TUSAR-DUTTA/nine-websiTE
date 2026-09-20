@@ -1,15 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { NineProvider } from '@/context/NineContext';
-import { Header } from '@/components/layout/Header';
-import { MobileNav } from '@/components/layout/MobileNav';
-import { Footer } from '@/components/layout/Footer';
-import { ProfileSlideOver } from '@/components/profile/ProfileSlideOver';
-import { WalletConnectModal } from '@/components/wallet/WalletConnectModal';
-import { AdminDashboardModal } from '@/components/admin/AdminDashboardModal';
-import { FumbleExplainerModal } from '@/components/modals/FumbleExplainerModal';
-import { BagWorkerExplainerModal } from '@/components/modals/BagWorkerExplainerModal';
-import { FloatingMascotCompanion } from '@/components/layout/FloatingMascotCompanion';
+import { AppContent } from '@/components/layout/AppContent';
 
 export const metadata: Metadata = {
   title: '$NINE | 9 Lives. One More Comeback. ($NINE × $GME)',
@@ -38,26 +30,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="min-h-screen bg-nine-bg text-nine-text antialiased selection:bg-nine-green selection:text-black">
+    <html lang="en" className="dark scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bungee&family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Titan+One&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-screen bg-[#08080a] text-nine-text antialiased selection:bg-[#ff6b9d] selection:text-black">
         <NineProvider>
           {/* Subtle CRT Scanline overlay across the screen */}
           <div className="fixed inset-0 crt-scanlines opacity-25 pointer-events-none z-50" />
-          
-          <div className="relative flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <MobileNav />
-          </div>
 
-          {/* Interactive Modals & Slide-overs */}
-          <ProfileSlideOver />
-          <WalletConnectModal />
-          <AdminDashboardModal />
-          <FumbleExplainerModal />
-          <BagWorkerExplainerModal />
-          <FloatingMascotCompanion />
+          {/* Unified Multi-Layer App Content (Landing Layer -> Glass Break -> Terminal Layer) */}
+          <AppContent>{children}</AppContent>
         </NineProvider>
       </body>
     </html>

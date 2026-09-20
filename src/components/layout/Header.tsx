@@ -29,6 +29,7 @@ export function Header() {
   const {
     activeTab,
     setActiveTab,
+    setViewLayer,
     isConnected,
     connectedProfile,
     setWalletModalOpen,
@@ -240,6 +241,18 @@ export function Header() {
       {/* 3. MULTI-TAB COMMAND NAVIGATION STRIP (Fixes page clutter) */}
       <div className="hidden md:flex w-full border-t border-nine-border/70 bg-[#0a0a0e] px-4 sm:px-6 overflow-x-auto">
         <div className="mx-auto flex max-w-7xl w-full items-center gap-1 font-mono text-xs py-1">
+          {/* Back to First Layer / Landing Page */}
+          <button
+            onClick={() => {
+              soundManager.playClick();
+              setViewLayer('LANDING');
+            }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded font-mono text-xs font-bold text-black bg-[#ffb703] hover:bg-[#ffd454] transition shadow-[0_0_10px_rgba(255,183,3,0.3)] mr-2 cursor-pointer shrink-0"
+            title="Return to $NINE Landing Page & Lore"
+          >
+            <span>🐱 LANDING LOBBY</span>
+          </button>
+
           {navTabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (
