@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #07070a;
+  --bg-secondary: #0e0e14;
+  --bg-tertiary: #161620;
+  --border-subtle: #242433;
+  --accent-green: #00ff66;
+  --accent-red: #ff3344;
+  --accent-gold: #ffd700;
+  --text-main: #f4f4f7;
+  --text-muted: #8c8c9e;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  overflow-x: hidden;
+  selection-background-color: #00ff66;
+  selection-color: #000000;
+}
+
+::selection {
+  background: #00ff66;
+  color: #08080a;
+}
+
+/* Custom terminal scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242433;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f54;
+}
+
+/* CRT Screen Scanline Overlay */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Subtle Film Grain */
+.grain-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+/* Terminal Monospace typography */
+.font-terminal {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: -0.02em;
+}
+
+/* Ticker text glow */
+.glow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 102, 0.45);
+}
+
+.glow-red {
+  text-shadow: 0 0 10px rgba(255, 51, 68, 0.45);
+}
+
+.glow-gold {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.45);
+}
+
+/* Box border glows */
+.box-glow-green {
+  box-shadow: 0 0 20px -3px rgba(0, 255, 102, 0.15);
+}
+
+.box-glow-red {
+  box-shadow: 0 0 20px -3px rgba(255, 51, 68, 0.15);
+}
+
+/* Profile Skins dynamic styles */
+.skin-crt-burnt {
+  border-color: #f59e0b !important;
+  background: radial-gradient(circle at center, #1c1505 0%, #0d0a02 100%) !important;
+  box-shadow: inset 0 0 25px rgba(245, 158, 11, 0.15), 0 0 15px rgba(245, 158, 11, 0.2) !important;
+}
+
+.skin-red-alert {
+  border-color: #ff3344 !important;
+  background: radial-gradient(circle at center, #26050a 0%, #0d0204 100%) !important;
+  box-shadow: inset 0 0 25px rgba(255, 51, 68, 0.2), 0 0 20px rgba(255, 51, 68, 0.25) !important;
+}
+
+.skin-after-crash {
+  border-color: #525266 !important;
+  background: linear-gradient(135deg, #111118 0%, #08080c 100%) !important;
+  filter: contrast(1.1);
+}
+
+.skin-cat-in-dark {
+  border-color: #27273a !important;
+  background: #050508 !important;
+  box-shadow: 0 0 35px rgba(0, 255, 102, 0.08) !important;
+}
+
+.skin-gme-terminal {
+  border-color: #00ff66 !important;
+  background: #06110a !important;
+  box-shadow: inset 0 0 30px rgba(0, 255, 102, 0.12), 0 0 20px rgba(0, 255, 102, 0.2) !important;
+}
+
+.skin-nine-lives {
+  border-color: #ffd700 !important;
+  background: radial-gradient(circle at 50% 0%, #292004 0%, #0c0902 100%) !important;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2) !important;
+}
