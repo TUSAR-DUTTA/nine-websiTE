@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com", "api.dicebear.com", "pbs.twimg.com"],
   },
+  eslint: {
+    dirs: ["src"],
+  },
 };
 
 export default nextConfig;
