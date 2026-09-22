@@ -30,12 +30,18 @@ import {
 import { ROBINHOOD_CONFIG, BURN_ADDRESS } from '@/lib/onchain';
 
 const MASCOT_PFP_PRESETS = [
-  { label: 'Legendary Mascot', src: '/assets/mascot/MAIN MASCOT.jpg' },
-  { label: 'Pixel Head', src: '/assets/mascot/mascot_head_favicon.webp' },
+  { label: 'Nine the Cat (Canon)', src: '/assets/mascot/meme_nine_standing.webp' },
+  { label: 'Legendary Screaming', src: '/assets/mascot/MAIN MASCOT.jpg' },
+  { label: 'Pixel Headshot', src: '/assets/mascot/mascot_head_favicon.webp' },
   { label: 'Stool Sentinel', src: '/assets/mascot/mascot_stool.webp' },
   { label: 'Shocked Duo', src: '/assets/mascot/meme_shocked_duo.webp' },
   { label: 'Moonwatcher', src: '/assets/mascot/mascot_moonwatcher.webp' },
   { label: 'Genesis Closet', src: '/assets/mascot/mascot_closet.webp' },
+  { label: 'CEO Nine the Cat', src: '/assets/mascot/meme_wallstreet_suit.webp' },
+  { label: 'Gatsby Toast', src: '/assets/mascot/meme_gatsby_toast.webp' },
+  { label: 'Ancient Lore Sage', src: '/assets/mascot/meme_ancient_sage.webp' },
+  { label: 'Strawberry Zen', src: '/assets/mascot/meme_strawberry_zen.webp' },
+  { label: 'Baby Nine (Hi!)', src: '/assets/mascot/meme_baby_hi.webp' },
 ];
 
 type DossierTab = 'OVERVIEW' | 'LOADOUT' | 'CUSTOMIZE';

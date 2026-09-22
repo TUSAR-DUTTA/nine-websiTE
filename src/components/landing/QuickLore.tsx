@@ -24,7 +24,7 @@ export const QuickLore: React.FC = () => {
 
           <p className="text-base sm:text-lg text-neutral-300 font-['Space_Grotesk'] leading-relaxed">
             GameStop ($GME) became the greatest comeback story in market history. 
-            $NINE turned that exact phenomenon into a pink drooling cat that simply refuses to stay buried.
+            $NINE turned that exact phenomenon into <strong className="text-white">Nine the Cat</strong> who simply refuses to stay buried.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export const QuickLore: React.FC = () => {
             <div className="flex items-center justify-between mb-4">
               <span className="font-['Titan_One'] text-xl text-neutral-400">03</span>
               <span className="px-2 py-0.5 rounded bg-neutral-800 text-neutral-300 text-[10px] font-['JetBrains_Mono'] font-bold uppercase">
-                OBITUARY
+                COUNTED OUT
               </span>
             </div>
             <div>
@@ -117,9 +117,9 @@ export const QuickLore: React.FC = () => {
               </span>
             </div>
             <div>
-              <h3 className="font-['Titan_One'] text-lg text-[#ff6b9d] mb-2">9 LIVES</h3>
+              <h3 className="font-['Titan_One'] text-lg text-[#ff6b9d] mb-2">NINE THE CAT</h3>
               <p className="text-xs text-neutral-300 font-['Space_Grotesk'] leading-relaxed">
-                The entire cycle immortalized into one unhinged cat. Each dump is just life #8 burning for life #9.
+                The entire comeback saga immortalized into Nine the Cat. Each dump is just life #8 burning for life #9.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-neutral-800 text-[11px] font-['JetBrains_Mono'] text-[#ff6b9d] font-bold">

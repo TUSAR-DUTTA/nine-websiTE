@@ -126,7 +126,7 @@ export function FloatingMascotCompanion() {
                     : 'text-zinc-400 hover:text-white'
                 }`}
               >
-                MASCOT ($NINE CAT)
+                NINE THE CAT
               </button>
             </div>
 
@@ -374,7 +374,7 @@ export function FloatingMascotCompanion() {
               </div>
 
               <span className="text-zinc-500 font-bold uppercase truncate max-w-[150px]">
-                {viewTarget === 'COMPANION' ? companionName : 'ROARING CAT'}
+                {viewTarget === 'COMPANION' ? companionName : 'NINE THE CAT'}
               </span>
             </div>
 

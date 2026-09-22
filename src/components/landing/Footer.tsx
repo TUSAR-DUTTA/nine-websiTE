@@ -17,14 +17,14 @@ export const Footer: React.FC = () => {
         
         {/* Giant Footer Mascot Hero Banner */}
         <div className="text-center max-w-4xl mx-auto mb-16 space-y-6">
-          <div className="relative inline-block cursor-pointer group" onClick={() => soundFx.playMeow()}>
+          <div className="relative inline-block cursor-pointer group" onClick={() => { soundFx.playCash(); soundFx.playMeow(); }}>
             <img
-              src="/assets/mascot_moonwatcher.webp"
-              alt="NINE Cat Looking Up"
-              className="w-44 sm:w-60 h-auto mx-auto object-contain filter drop-shadow-[0_0_35px_rgba(255,107,157,0.35)] group-hover:scale-105 transition-transform"
+              src="/assets/meme_gatsby_toast.webp"
+              alt="NINE Cat Raising A Toast"
+              className="w-48 sm:w-64 h-auto mx-auto object-contain filter drop-shadow-[0_0_35px_rgba(255,107,157,0.45)] group-hover:scale-105 transition-transform"
             />
-            <div className="absolute -bottom-2 right-0 bg-[#00e676] text-black font-['Titan_One'] text-xs px-3 py-1 rounded-xl border-2 border-black shadow-[3px_3px_0px_#000] rotate-[-6deg]">
-              LOOKING AT THE MOON 🌕
+            <div className="absolute -bottom-2 right-0 bg-[#00e676] text-black font-['Titan_One'] text-xs px-3.5 py-1 rounded-xl border-2 border-black shadow-[3px_3px_0px_#000] rotate-[-4deg]">
+              CHEERS TO LIFE 9! 🥂
             </div>
           </div>
 
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
 
           <p className="text-base sm:text-xl text-neutral-400 font-['Space_Grotesk'] max-w-xl mx-auto">
             You can ban the buy button. You can publish the obituary. <br />
-            <strong className="text-white">This cat isn't going anywhere.</strong>
+            <strong className="text-white">Nine the Cat isn't going anywhere.</strong>
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">

@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Skull, HeartPulse, Sparkles, AlertTriangle, ArrowRight } from 'lucide-react';
 import { soundFx } from '@/utils/audio';
 
+interface LifeVariant {
+  img: string;
+  name: string;
+  quote: string;
+}
+
 interface LifeItem {
   id: number;
   label: string;
@@ -10,6 +16,7 @@ interface LifeItem {
   color: 'green' | 'red' | 'purple' | 'gold' | 'pink';
   mascotImg: string;
   mascotQuote: string;
+  variants?: LifeVariant[];
   story: string;
   chartStatus: string;
   statusIcon: 'alive' | 'dead' | 'reviving';
@@ -22,9 +29,13 @@ const LIVES: LifeItem[] = [
     subtitle: "THE INNOCENT ENTRY",
     tag: "BIRTH OF THE CHAOS",
     color: "pink",
-    mascotImg: "/assets/mascot_head_favicon.webp",
+    mascotImg: "/assets/meme_baby_hi.webp",
     mascotQuote: "“Wait, you guys are making money?”",
-    story: "The pink drooling cat stumbles into the market with zero financial literacy, no risk management, and supreme confidence. He buys the top and doesn't care.",
+    variants: [
+      { img: "/assets/meme_baby_hi.webp", name: "BABY NINE (HI!)", quote: "“Wait, you guys are making money?”" },
+      { img: "/assets/meme_nine_standing.webp", name: "CLASSIC NINE", quote: "“Zero risk management. Infinite conviction.”" },
+    ],
+    story: "Nine the Cat stumbles into the market with zero financial literacy, no risk management, and supreme confidence. He says 'hi' with giant glossy anime pupils and happily buys the top.",
     chartStatus: "VOLATILITY: +14% (Oblivious)",
     statusIcon: "alive"
   },
@@ -36,7 +47,11 @@ const LIVES: LifeItem[] = [
     color: "green",
     mascotImg: "/assets/mascot_stool.webp",
     mascotQuote: "“Sitting on this dip until further notice.”",
-    story: "Sitting calmly on a red wooden stool while degenerates scream on Reddit. Quiet hands accumulate. The tension builds like a coiled spring.",
+    variants: [
+      { img: "/assets/mascot_stool.webp", name: "STOOL SENTINEL", quote: "“Sitting on this dip until further notice.”" },
+      { img: "/assets/meme_strawberry_zen.webp", name: "STRAWBERRY ZEN", quote: "“Unbothered. Peaceful. Clutching my giant berry.”" },
+    ],
+    story: "Nine the Cat sits calmly on a red wooden stool while degenerates scream on Reddit. Quiet hands accumulate. The tension builds like a coiled spring.",
     chartStatus: "VOLATILITY: +80% (Whales confused)",
     statusIcon: "alive"
   },
@@ -48,7 +63,7 @@ const LIVES: LifeItem[] = [
     color: "green",
     mascotImg: "/assets/mascot_main.webp",
     mascotQuote: "“WE ARE GOING TO PARALLEL UNIVERSES!”",
-    story: "The chart launches into outer orbit. Short sellers collapse into fetal positions. The cat is screaming with joy, purple tongue flying in the solar wind.",
+    story: "The chart launches into outer orbit. Short sellers collapse into fetal positions. Nine the Cat is screaming with pure joy, purple tongue flying in the solar wind.",
     chartStatus: "VOLATILITY: +1,600% (Historic)",
     statusIcon: "alive"
   },
@@ -60,7 +75,7 @@ const LIVES: LifeItem[] = [
     color: "red",
     mascotImg: "/assets/meme_shocked_duo.webp",
     mascotQuote: "“BRO WHO TOOK AWAY THE BUY BUTTON?!”",
-    story: "Brokers pull the plug. You can sell, but you can't buy. Red candlesticks crash through the floorboards like falling anvils. -80% in hours.",
+    story: "Brokers pull the plug. You can sell, but you can't buy. Red candlesticks crash through the floorboards like falling anvils. Nine the Cat watches in total shock as -80% hits in hours.",
     chartStatus: "VOLATILITY: -84% (Broker shutdown)",
     statusIcon: "dead"
   },
@@ -72,7 +87,7 @@ const LIVES: LifeItem[] = [
     color: "red",
     mascotImg: "/assets/mascot_head_favicon.webp",
     mascotQuote: "“Reports of my demise are slightly exaggerated.”",
-    story: "Every financial news outlet prints the same headline: 'Meme frenzy dead forever.' Short sellers pop champagne. The cat lies motionless in the dip. Or so they think.",
+    story: "Every financial news outlet prints the same headline: 'Meme frenzy dead forever.' Short sellers pop champagne. Nine the Cat lies motionless in the dip. Or so they think.",
     chartStatus: "VOLATILITY: FLATLINE (Declared deceased)",
     statusIcon: "dead"
   },
@@ -84,7 +99,7 @@ const LIVES: LifeItem[] = [
     color: "purple",
     mascotImg: "/assets/mascot_closet.webp",
     mascotQuote: "“Painting green candles in the dark.”",
-    story: "Three years in the shadows. While Wall Street laughed, the cat hid in the closet, quietly painting fresh green candlesticks for the next chapter.",
+    story: "Three years in the shadows. While Wall Street laughed, Nine the Cat hid in the closet, quietly painting fresh green candlesticks for the next chapter.",
     chartStatus: "VOLATILITY: 0% (Silent accumulation)",
     statusIcon: "reviving"
   },
@@ -96,7 +111,7 @@ const LIVES: LifeItem[] = [
     color: "gold",
     mascotImg: "/assets/mascot_moonwatcher.webp",
     mascotQuote: "“I'M NOT LOCKED IN HERE WITH YOU...”",
-    story: "May 2024: A single tweet. The gamer leans forward in the chair. Millions of screens light up. The dead cat jumps 110% in a morning.",
+    story: "May 2024: A single tweet. The gamer leans forward in the chair. Millions of screens light up. Nine the Cat awakens with a +110% morning god candle.",
     chartStatus: "VOLATILITY: +110% (The second coming)",
     statusIcon: "alive"
   },
@@ -106,21 +121,29 @@ const LIVES: LifeItem[] = [
     subtitle: "THE $3 BILLION WAR CHEST",
     tag: "THE RE-UP",
     color: "green",
-    mascotImg: "/assets/mascot_main.webp",
-    mascotQuote: "“YOU THOUGHT LIFE 8 WAS OVER? THINK AGAIN.”",
-    story: "June 2024: Massive cash reserves raised. Debt zeroed out. The 'dying retailer' transforms into a fortress of dry powder. Downfall denied again.",
+    mascotImg: "/assets/meme_wallstreet_suit.webp",
+    mascotQuote: "“YOU THOUGHT LIFE 8 WAS OVER? CALL ME THE CEO.”",
+    variants: [
+      { img: "/assets/meme_wallstreet_suit.webp", name: "CEO PINSTRIPE", quote: "“YOU THOUGHT LIFE 8 WAS OVER? CALL ME THE CEO.”" },
+      { img: "/assets/meme_gatsby_toast.webp", name: "GATSBY TOAST", quote: "“A TOAST TO THE SHORT SELLERS WHO COUNTED US OUT!”" },
+    ],
+    story: "June 2024: Massive cash reserves raised. Debt zeroed out. Nine the Cat adjusts his silk tie, checks his diamond paw watch, and turns the retailer into an impregnable fortress of liquidity.",
     chartStatus: "VOLATILITY: +200% (Fortress mode)",
     statusIcon: "alive"
   },
   {
     id: 9,
     label: "LIFE 09",
-    subtitle: "THE IMMORTAL NINTH",
-    tag: "THE COMMUNITY FOREVER",
+    subtitle: "THE IMMORTAL PROPHECY",
+    tag: "THE SACRED SCROLL",
     color: "pink",
-    mascotImg: "/assets/mascot_main.webp",
-    mascotQuote: "“THE NINTH LIFE NEVER RUNS OUT.”",
-    story: "The ninth life isn't a stock tick. It's the degen community that will never sell, never surrender, and never read an obituary. $NINE is eternal.",
+    mascotImg: "/assets/meme_ancient_sage.webp",
+    mascotQuote: "“AS FORETOLD IN THE SACRED SCROLLS: LIFE NINE IS ETERNAL.”",
+    variants: [
+      { img: "/assets/meme_ancient_sage.webp", name: "GRAND SAGE", quote: "“AS FORETOLD IN THE SACRED SCROLLS: LIFE NINE IS ETERNAL.”" },
+      { img: "/assets/meme_gatsby_toast.webp", name: "VICTORY CHAMPAGNE", quote: "“CHEERS TO LIFE 9 AND THE GREATEST COMEBACK!”" },
+    ],
+    story: "The ancient scriptures were true. The ninth life isn't just another candle—it is the immortal soul of Nine the Cat and the decentralized community that will never surrender and never read an obituary. Nine the Cat is eternal.",
     chartStatus: "STATUS: IMMORTAL (Lives remaining: ∞)",
     statusIcon: "alive"
   }
@@ -128,7 +151,13 @@ const LIVES: LifeItem[] = [
 
 export const NineLives: React.FC = () => {
   const [activeLife, setActiveLife] = useState<number>(1);
+  const [selectedVariants, setSelectedVariants] = useState<Record<number, number>>({});
+
   const current = LIVES.find((l) => l.id === activeLife) || LIVES[0];
+  const activeVariantIdx = selectedVariants[activeLife] || 0;
+  const currentVariant = current.variants && current.variants[activeVariantIdx] ? current.variants[activeVariantIdx] : null;
+  const displayImg = currentVariant ? currentVariant.img : current.mascotImg;
+  const displayQuote = currentVariant ? currentVariant.quote : current.mascotQuote;
 
   const handleSelectLife = (id: number) => {
     setActiveLife(id);
@@ -159,16 +188,16 @@ export const NineLives: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff6b9d]/15 border border-[#ff6b9d]/30 text-[#ff6b9d] text-xs font-['JetBrains_Mono'] font-bold uppercase tracking-wider">
             <HeartPulse className="w-3.5 h-3.5 text-red-500 animate-pulse" />
-            THE INTERACTIVE NINE LIVES CHRONICLE
+            NINE THE CAT // THE INTERACTIVE 9 LIVES CHRONICLE
           </div>
 
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-['Titan_One'] text-white leading-tight">
             COUNTED OUT. <span className="text-[#ffb703]">EIGHT TIMES.</span><br />
-            STILL GOT <span className="text-[#00e676]">LIVES LEFT</span>.
+            NINE THE CAT <span className="text-[#00e676]">STILL HAS LIVES</span>.
           </h2>
 
           <p className="text-sm sm:text-base text-neutral-300 font-['Space_Grotesk']">
-            Click through all 9 lives below to watch the death-and-resurrection cycle unfold.
+            Click through all 9 lives below to watch Nine the Cat's legendary death-and-resurrection saga unfold.
           </p>
         </div>
 
@@ -224,9 +253,10 @@ export const NineLives: React.FC = () => {
             <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
               <div className="relative group cursor-pointer" onClick={() => soundFx.playMeow()}>
                 <img
-                  src={current.mascotImg}
+                  key={displayImg}
+                  src={displayImg}
                   alt={current.subtitle}
-                  className={`w-64 sm:w-80 max-h-[340px] object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.9)] transition-transform duration-300 ${
+                  className={`w-64 sm:w-80 max-h-[340px] object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.9)] transition-transform duration-300 animate-in fade-in zoom-in-95 duration-200 ${
                     current.statusIcon === 'dead' ? 'rotate-12 grayscale-[50%] brightness-75' : 'hover:scale-105'
                   }`}
                 />
@@ -237,9 +267,32 @@ export const NineLives: React.FC = () => {
                     current.statusIcon === 'dead' ? 'bg-red-500 text-white' : 'bg-white text-black'
                   }`}
                 >
-                  {current.mascotQuote}
+                  {displayQuote}
                 </div>
               </div>
+
+              {/* Variant Switcher Pills if available */}
+              {current.variants && current.variants.length > 1 && (
+                <div className="flex items-center gap-1.5 mt-3 bg-black/60 p-1 rounded-xl border border-neutral-800">
+                  {current.variants.map((v, i) => (
+                    <button
+                      key={v.name}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        soundFx.playBoing();
+                        setSelectedVariants((prev) => ({ ...prev, [activeLife]: i }));
+                      }}
+                      className={`px-2.5 py-1 rounded-lg text-[10px] font-['JetBrains_Mono'] font-bold border transition ${
+                        activeVariantIdx === i
+                          ? 'bg-[#ffb703] text-black border-black shadow-[2px_2px_0px_#000]'
+                          : 'bg-neutral-900/80 text-neutral-400 border-neutral-700 hover:text-white'
+                      }`}
+                    >
+                      {v.name}
+                    </button>
+                  ))}
+                </div>
+              )}
 
               {/* Status Stamp */}
               <div className="mt-4 flex items-center gap-2">

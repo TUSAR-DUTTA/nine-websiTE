@@ -21,13 +21,64 @@ import {
   Radio,
 } from 'lucide-react';
 
-const MASCOT_QUOTES = [
-  "What's an exit strategy?",
-  "Shorts never closed.",
-  "I am not a cat... wait, yes I am.",
-  "A cat has nine lives. Wall Street only has one balance sheet.",
-  "When they turn off the buy button, you turn on the diamond paws.",
-  "Just up.",
+interface MascotEntry {
+  quote: string;
+  image: string;
+  label: string;
+  badge: string;
+  status: string;
+}
+
+const MASCOT_ENTRIES: MascotEntry[] = [
+  {
+    quote: "What's an exit strategy? Nine the Cat's 9th life is eternal.",
+    image: "/assets/mascot/meme_nine_standing.webp",
+    label: "NINE THE CAT (CANON)",
+    badge: "OFFICIAL MASCOT",
+    status: "SOVEREIGN COMEBACK",
+  },
+  {
+    quote: "WE ARE GOING TO PARALLEL UNIVERSES! UNHINGED VICTORY!",
+    image: "/assets/mascot/mascot_main.webp",
+    label: "NINE THE CAT (VICTORY)",
+    badge: "SHORT SQUEEZE",
+    status: "SURVIVED: 140% SHORT",
+  },
+  {
+    quote: "You panic-sell on red candles. I adjust my tie and accumulate. We are not the same.",
+    image: "/assets/mascot/meme_wallstreet_suit.webp",
+    label: "NINE THE CAT (CEO MODE)",
+    badge: "$3B WAR CHEST",
+    status: "LIQUIDITY: FORTRESS",
+  },
+  {
+    quote: "A toast to the shorts who thought Life 8 was our last one.",
+    image: "/assets/mascot/meme_gatsby_toast.webp",
+    label: "NINE THE CAT (GATSBY)",
+    badge: "COMEBACK UNLOCKED",
+    status: "PROFIT: PARABOLIC",
+  },
+  {
+    quote: "As foretold in the sacred scrolls: The ninth life never runs out.",
+    image: "/assets/mascot/meme_ancient_sage.webp",
+    label: "NINE THE CAT (ANCIENT SAGE)",
+    badge: "SACRED SCROLL",
+    status: "PROPHECY: FULFILLED",
+  },
+  {
+    quote: "Red candles everywhere? Oblivious. Unbothered. Just enjoying my giant strawberry.",
+    image: "/assets/mascot/meme_strawberry_zen.webp",
+    label: "NINE THE CAT (ZEN BERRY)",
+    badge: "ZEN HODLER",
+    status: "ZEN MODE: 100%",
+  },
+  {
+    quote: "Hi! Are you here to declare me dead or join the comeback?",
+    image: "/assets/mascot/meme_baby_hi.webp",
+    label: "NINE THE CAT (BABY HI)",
+    badge: "HE SAYS HI",
+    status: "LIVES: 9 / 9 INTACT",
+  },
 ];
 
 export function HeroSection() {
@@ -35,6 +86,9 @@ export function HeroSection() {
   const [copiedCA, setCopiedCA] = useState(false);
   const [rightPanelTab, setRightPanelTab] = useState<'CHART' | 'MASCOT'>('MASCOT');
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+
+  const currentMascot = MASCOT_ENTRIES[currentQuoteIndex % MASCOT_ENTRIES.length];
+
   const copyContract = () => {
     soundManager.playClick();
     navigator.clipboard.writeText(TOKEN_INFO.contractAddress);
@@ -44,7 +98,7 @@ export function HeroSection() {
 
   const cycleQuote = () => {
     soundManager.playClick();
-    setCurrentQuoteIndex((prev) => (prev + 1) % MASCOT_QUOTES.length);
+    setCurrentQuoteIndex((prev) => (prev + 1) % MASCOT_ENTRIES.length);
   };
 
   return (
@@ -205,7 +259,7 @@ export function HeroSection() {
                         : 'text-zinc-400 hover:text-white'
                     }`}
                   >
-                    MEME MASCOT
+                    NINE THE CAT
                   </button>
                   <button
                     onClick={() => {
@@ -228,14 +282,14 @@ export function HeroSection() {
                 <div className="relative p-5 bg-[#08080c] flex flex-col">
                   {/* Mascot Header */}
                   <div className="flex items-center justify-between pb-3 border-b border-nine-border/70 mb-4">
-                    <div className="flex items-center gap-2.5">
-                      <div className="h-2 w-2 rounded-full bg-nine-green animate-ping" />
-                      <span className="text-xs font-bold text-white tracking-wider">
-                        $NINE ROARING FELINE
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <div className="h-2 w-2 rounded-full bg-nine-green animate-ping shrink-0" />
+                      <span className="text-xs font-bold text-white tracking-wider truncate">
+                        {currentMascot.label}
                       </span>
                     </div>
-                    <span className="text-[10px] text-nine-gold font-bold px-2 py-0.5 rounded bg-amber-950/60 border border-amber-500/30">
-                      OFFICIAL MASCOT
+                    <span className="text-[10px] text-nine-gold font-bold px-2 py-0.5 rounded bg-amber-950/60 border border-amber-500/30 shrink-0">
+                      {currentMascot.badge}
                     </span>
                   </div>
 
@@ -249,17 +303,18 @@ export function HeroSection() {
 
                     {/* Mascot Visual */}
                     <img
-                      src="/assets/mascot/mascot_main.webp"
-                      alt="$NINE Meme Mascot"
-                      className="relative z-10 h-56 w-auto object-contain filter drop-shadow-[0_0_20px_rgba(0,255,102,0.25)] group-hover:scale-105 transition-transform duration-300"
+                      key={currentMascot.image}
+                      src={currentMascot.image}
+                      alt={currentMascot.label}
+                      className="relative z-10 h-56 w-auto object-contain filter drop-shadow-[0_0_20px_rgba(0,255,102,0.25)] group-hover:scale-105 transition-transform duration-300 animate-in fade-in zoom-in-95 duration-200"
                     />
 
                     {/* HUD Scanner Badges */}
                     <div className="absolute top-2 left-2 z-20 text-[9px] bg-black/80 px-2 py-0.5 rounded text-nine-green font-mono border border-nine-green/40">
-                      SURVIVED: 140% SHORT
+                      {currentMascot.status}
                     </div>
                     <div className="absolute bottom-2 left-2 z-20 text-[9px] bg-black/80 px-2 py-0.5 rounded text-zinc-400 font-mono border border-zinc-800">
-                      LIVES: 9 / 9 INTACT
+                      VARIANT {((currentQuoteIndex % MASCOT_ENTRIES.length) + 1)} / {MASCOT_ENTRIES.length}
                     </div>
                   </div>
 
@@ -277,7 +332,7 @@ export function HeroSection() {
                     </div>
 
                     <p className="text-xs text-white font-bold italic leading-relaxed">
-                      "{MASCOT_QUOTES[currentQuoteIndex]}"
+                      "{currentMascot.quote}"
                     </p>
                   </div>
 

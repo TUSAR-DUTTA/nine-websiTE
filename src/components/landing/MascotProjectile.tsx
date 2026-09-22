@@ -11,19 +11,24 @@ interface ProjectileState {
   duration: number;
   rotation: number;
   image: string;
+  label: string;
 }
+
+const PROJECTILE_OPTIONS = [
+  { image: '/assets/mascot_main.webp', label: 'STILL ALIVE! 🚀' },
+  { image: '/assets/mascot_head_favicon.webp', label: 'NO DIE TODAY 😼' },
+  { image: '/assets/mascot_moonwatcher.webp', label: 'LOOKING AT MOON 🌕' },
+  { image: '/assets/meme_wallstreet_suit.webp', label: 'NOT THE SAME 👔' },
+  { image: '/assets/meme_gatsby_toast.webp', label: 'TOAST TO SHORTS! 🥂' },
+  { image: '/assets/meme_strawberry_zen.webp', label: 'NOM NOM BERRY 🍓' },
+  { image: '/assets/meme_baby_hi.webp', label: 'HI! 👋' },
+];
 
 export const MascotProjectile: React.FC = () => {
   const [projectile, setProjectile] = useState<ProjectileState | null>(null);
   const animFrameRef = useRef<number | null>(null);
   const startTimeRef = useRef<number>(0);
   const elementRef = useRef<HTMLDivElement | null>(null);
-
-  const images = [
-    '/assets/mascot_main.webp',
-    '/assets/mascot_head_favicon.webp',
-    '/assets/mascot_moonwatcher.webp'
-  ];
 
   const launchCat = useCallback(() => {
     // Check prefers-reduced-motion
@@ -41,6 +46,8 @@ export const MascotProjectile: React.FC = () => {
     const endY = screenH * (0.4 + Math.random() * 0.4);
     const peakY = screenH * (0.1 + Math.random() * 0.2); // Parabolic peak
 
+    const selected = PROJECTILE_OPTIONS[Math.floor(Math.random() * PROJECTILE_OPTIONS.length)];
+
     const newProj: ProjectileState = {
       id: Date.now(),
       startX,
@@ -50,14 +57,15 @@ export const MascotProjectile: React.FC = () => {
       endY,
       duration: 2200 + Math.random() * 600, // 2.2 - 2.8 seconds
       rotation: fromLeft ? 720 : -720,
-      image: images[Math.floor(Math.random() * images.length)]
+      image: selected.image,
+      label: selected.label,
     };
 
     setProjectile(newProj);
     startTimeRef.current = performance.now();
     soundFx.playBoing();
     soundFx.playMeow();
-  }, [images]);
+  }, []);
 
   // Periodic automatic launches (every 18-26 seconds)
   useEffect(() => {
@@ -140,7 +148,7 @@ export const MascotProjectile: React.FC = () => {
         />
         {/* Playful mini speech bubble or comet tail */}
         <div className="absolute -bottom-2 -left-6 bg-[#00e676] text-black font-['Titan_One'] text-[10px] px-2 py-0.5 rounded-full border border-black shadow-[2px_2px_0px_#000] rotate-[-12deg] whitespace-nowrap">
-          STILL ALIVE! 🚀
+          {projectile.label}
         </div>
       </div>
     </div>

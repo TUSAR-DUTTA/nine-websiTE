@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
           {/* Core Lore Subhead */}
           <div className="max-w-xl text-lg sm:text-xl text-neutral-300 font-['Space_Grotesk'] leading-relaxed font-medium">
             <p className="border-l-4 border-[#ffb703] pl-4 py-1 bg-[#121218]/60 rounded-r-lg">
-              <strong className="text-white font-bold">GME is the comeback. NINE is the nine lives.</strong> Every time the market writes the obituary, this cat finds another life and sends it anyway.
+              <strong className="text-white font-bold">GME is the comeback. NINE is the nine lives.</strong> Every time the market writes the obituary, <strong className="text-[#ffb703]">Nine the Cat</strong> finds another life and sends it anyway.
             </p>
           </div>
 
@@ -207,7 +207,7 @@ export const Hero: React.FC = () => {
             <div className="animate-float">
               <img
                 src="/assets/mascot_main.webp"
-                alt="NINE Primary Mascot"
+                alt="Nine the Cat - Official Mascot"
                 className="w-[280px] sm:w-[380px] md:w-[440px] xl:w-[480px] h-auto object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.9)] hover:scale-105 transition-transform duration-300"
                 loading="eager"
               />
@@ -215,7 +215,7 @@ export const Hero: React.FC = () => {
 
             {/* Playful Comic Speech Bubble */}
             <div className="absolute -top-3 -right-2 sm:-right-6 bg-white text-black font-['Titan_One'] text-xs sm:text-sm px-3.5 py-1.5 rounded-2xl border-3 border-black shadow-[4px_4px_0px_#000] rotate-[8deg] group-hover:rotate-[14deg] transition-transform animate-bounce">
-              STILL GOT 9 LIVES! 👅
+              NINE THE CAT HAS 9 LIVES! 👅
               <div className="absolute -bottom-2 left-4 w-3 h-3 bg-white border-r-3 border-b-3 border-black rotate-45" />
             </div>
 
