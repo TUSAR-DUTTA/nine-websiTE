@@ -16,6 +16,7 @@ function getPgPool() {
     pgPool = new Pool({
       connectionString: process.env.DATABASE_URL,
       ssl: { rejectUnauthorized: false },
+      connectionTimeoutMillis: 5000,
       max: 5,
     });
   }
@@ -23,6 +24,11 @@ function getPgPool() {
 }
 
 export async function GET() {
+  const dbDiag: { hasEnv: boolean; error: string | null } = {
+    hasEnv: Boolean(process.env.DATABASE_URL),
+    error: null,
+  };
+
   try {
     // 1. Try Supabase PostgreSQL Database
     const pool = getPgPool();
@@ -131,6 +137,7 @@ export async function GET() {
         });
       } catch (dbErr: any) {
         console.warn('Database query error, falling back to cache:', dbErr.message);
+        dbDiag.error = dbErr.message;
       }
     }
 
@@ -142,6 +149,7 @@ export async function GET() {
         lastUpdated: lastUpdatedAt || new Date().toISOString(),
         totalTracked: inMemoryWorkers.length,
         leaderboard: inMemoryWorkers,
+        dbStatus: dbDiag,
         formula: 'Score = (Posts * 0.20) + (ActiveDays * 0.40) + (Log10(Impressions) * 4.5) + (Consistency * 0.20)',
       });
     }
@@ -159,6 +167,7 @@ export async function GET() {
             lastUpdated: fileData.lastUpdated,
             totalTracked: fileData.workers.length,
             leaderboard: fileData.workers,
+            dbStatus: dbDiag,
             formula: 'Score = (Posts * 0.20) + (ActiveDays * 0.40) + (Log10(Impressions) * 4.5) + (Consistency * 0.20)',
           });
         }
@@ -185,6 +194,7 @@ export async function GET() {
         database: 'Supabase PostgreSQL (Port 6543 Pooler)',
       },
       leaderboard: [],
+      dbStatus: dbDiag,
       formula: 'Score = (Posts * 0.20) + (ActiveDays * 0.40) + (Log10(Impressions) * 4.5) + (Consistency * 0.20)',
     });
   } catch (err: any) {
