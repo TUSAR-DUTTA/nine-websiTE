@@ -197,7 +197,7 @@ export function NinePulseSection() {
                   <strong className="text-white">Trading Intensity (82%):</strong> Compares 1-hour swap counts to the 30-day moving average volume on decentralized liquidity pools.
                 </p>
                 <p>
-                  <strong className="text-white">Memetic Frequency (97%):</strong> Community Wall submissions, art creations, and reaction velocity across all nine chapters.
+                  <strong className="text-white">Memetic Frequency (97%):</strong> Community transmissions, art creations, and reaction velocity across all nine chapters.
                 </p>
                 <div className="mt-4 p-3 rounded bg-amber-950/20 border border-amber-500/30 text-nine-gold text-[11px]">
                   <strong>Notice:</strong> NINE Pulse is not a predictive price model or financial recommendation. It purely renders community and on-chain vitals.

@@ -1,0 +1,77 @@
+name: NINE Twitter Bag Worker Scraper
+
+on:
+  schedule:
+    # Runs every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      test_scrape:
+        description: 'Run targeted test scrape script instead of runner'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-bag-workers:
+    name: Scrape & Telemetry Sync
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Install Node Dependencies
+        run: npm install
+
+      - name: 🎭 Install Playwright Browsers & OS Dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: 🐈 Run Twitter Stealth Scraper for $NINE & @NineDcat
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          TWITTER_AUTH_TOKEN: ${{ secrets.TWITTER_AUTH_TOKEN }}
+          TWITTER_CT0: ${{ secrets.TWITTER_CT0 }}
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          HEADLESS: 'true'
+        run: |
+          if [ "${{ github.event.inputs.test_scrape }}" = "true" ]; then
+            echo "Running targeted test scrape for $nine / @NineDcat..."
+            node scripts/social-tracker/test_nine_scrape.js
+          else
+            echo "Running automated 6-hour scrape cycle..."
+            node scripts/social-tracker/runner.js --once
+          fi
+
+      - name: 💾 Commit & Push Updated Worker Cache
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/social-tracker/latest_workers.json
+          if git diff --staged --quiet; then
+            echo "No telemetry changes to commit."
+          else
+            git commit -m "chore(telemetry): automated sync for $nine bag workers [skip ci]"
+            git push
+          fi
+
+      - name: 📤 Upload Telemetry Snapshot Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latest-bag-workers-snapshot
+          path: scripts/social-tracker/latest_workers.json
+          retention-days: 7

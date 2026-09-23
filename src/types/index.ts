@@ -12,9 +12,7 @@ export type TabType =
   | 'TERMINAL'
   | 'GME_SAGA'
   | 'FUMBLES'
-  | 'BAGS'
-  | 'WALL'
-  | 'ARCADE';
+  | 'BAGS';
 
 export interface TradeHistoryItem {
   id: string;
@@ -156,77 +154,6 @@ export interface GmeSagaChapter {
   quote: string;
   quoteAuthor: string;
   iconType: 'SHORT_INTEREST' | 'BUY_BUTTON' | 'HEARINGS' | 'FUD_MEDIA' | 'REVIVAL' | 'IMMORTALITY';
-}
-
-export type ArcadeCategory = 'SKIN' | 'AURA_FX' | 'PET_CAT' | 'MONSTER';
-
-export interface ArcadeShowcase {
-  itemId: string;
-  name: string;
-  category: ArcadeCategory;
-  rarity: 'SURVIVOR' | 'DEGEN' | 'LEGENDARY' | 'ARTIFACT' | 'MYTHIC';
-  imageSrc?: string;
-  previewColor?: string;
-  effectType?: ProfileSkin;
-  petCatId?: number;
-  companionType?: 'cat' | 'monster' | 'fairy';
-  monsterId?: string;
-  fairyId?: number;
-}
-
-export interface WallPost {
-  id: string;
-  author: {
-    displayName: string;
-    address: string;
-    avatarUrl: string;
-    twitterHandle?: string;
-    customTitle?: string;
-    equippedSkin?: ProfileSkin;
-    equippedPet?: string;
-    equippedPetName?: string;
-    equippedPetCatId?: number;
-    equippedCompanionType?: 'cat' | 'monster' | 'fairy';
-    equippedMonsterId?: string;
-    equippedFairyId?: number;
-  };
-  content: string;
-  category: 'HOT' | 'NEW' | 'GME LORE' | 'FUMBLES' | 'ART' | 'BAG WORK' | 'MEMES';
-  timestamp: string;
-  tag?: string;
-  imageUrl?: string;
-  arcadeShowcase?: ArcadeShowcase;
-  pinned?: boolean;
-  reactions: {
-    cat: number;
-    skull: number;
-    fire: number;
-    pain: number;
-    comeback: number;
-    based: number;
-    fumble: number;
-  };
-  userReactions: string[];
-}
-
-export interface ArcadeItem {
-  id: string;
-  name: string;
-  category: ArcadeCategory;
-  priceInNine: number;
-  description: string;
-  rarity: 'SURVIVOR' | 'DEGEN' | 'LEGENDARY' | 'ARTIFACT' | 'MYTHIC';
-  previewClass?: string;
-  previewColor?: string;
-  effectType?: ProfileSkin;
-  imageSrc?: string; // animated GIF or sprite sheet
-  soundEffect?: string;
-  petAction?: string;
-  petCatId?: number; // 1 to 6
-  companionType?: 'cat' | 'monster' | 'fairy';
-  monsterId?: string; // 'doux' | 'mort' | 'tard' | 'vita' | 'loki' | 'kira' | 'nico' | 'olaf'
-  fairyId?: number;
-  owned?: boolean;
 }
 
 export interface WalletTrailStep {

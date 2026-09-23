@@ -3,7 +3,7 @@
 import React, { useState, useRef } from 'react';
 import { useNine } from '@/context/NineContext';
 import { soundManager } from '@/lib/sound';
-import { PixelCompanionAnimator } from '@/components/arcade/PixelCompanionAnimator';
+import { PixelCompanionAnimator } from '@/components/mascot/PixelCompanionAnimator';
 import {
   X,
   ExternalLink,
@@ -587,29 +587,17 @@ export function ProfileSlideOver() {
                   </div>
 
                   <p className="text-[11px] text-zinc-400 leading-relaxed">
-                    This is your authenticated command dossier on Robinhood Chain Mainnet (4663). Burn $NINE in the Armory to unlock exclusive CRT terminal skins and pixel companions, or manage wallet connectivity.
+                    This is your authenticated command dossier on Robinhood Chain Mainnet (4663). Manage your profile settings, inspect stats, and manage wallet connectivity.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-2.5 pt-1">
-                    <button
-                      onClick={() => {
-                        soundManager.playClick();
-                        closeProfileModal();
-                        setGlobalActiveTab('ARCADE');
-                      }}
-                      className="flex items-center justify-center gap-2 p-2.5 rounded-lg border border-amber-500/50 bg-amber-950/30 hover:bg-amber-900/50 text-nine-gold font-bold text-xs transition-all shadow-sm"
-                    >
-                      <Sparkles className="h-3.5 w-3.5 text-amber-400" />
-                      <span>ENTER ARMORY / ARCADE</span>
-                    </button>
-
+                  <div className="pt-1">
                     <button
                       onClick={() => {
                         soundManager.playClick();
                         closeProfileModal();
                         disconnectWallet();
                       }}
-                      className="flex items-center justify-center gap-2 p-2.5 rounded-lg border border-red-500/40 bg-red-950/30 hover:bg-red-900/50 text-red-300 font-bold text-xs transition-all shadow-sm"
+                      className="w-full flex items-center justify-center gap-2 p-2.5 rounded-lg border border-red-500/40 bg-red-950/30 hover:bg-red-900/50 text-red-300 font-bold text-xs transition-all shadow-sm"
                     >
                       <LogOut className="h-3.5 w-3.5 text-red-400" />
                       <span>DISCONNECT WALLET</span>
@@ -785,7 +773,7 @@ export function ProfileSlideOver() {
                   </div>
                 ) : (
                   <div className="text-center py-6 text-xs text-zinc-500">
-                    No companion currently equipped. Visit the Arcade to unlock one!
+                    No companion currently equipped.
                   </div>
                 )}
               </div>

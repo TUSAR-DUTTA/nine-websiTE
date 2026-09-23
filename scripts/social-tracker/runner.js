@@ -69,14 +69,24 @@ async function runSocialTrackingCycle() {
   console.log(`[CYCLE] Cycle complete. Next automated scrape scheduled for: ${nextRun.toLocaleString()}\n`);
 }
 
-// Start immediately on launch
-runSocialTrackingCycle();
+const isOnce = process.argv.includes('--once');
 
-// Set 6-hour interval loop
-setInterval(runSocialTrackingCycle, INTERVAL_MS);
+// Start immediately on launch
+runSocialTrackingCycle().then(() => {
+  if (isOnce) {
+    console.log('[RUNNER] Single cycle execution complete (--once). Exiting cleanly.');
+    process.exit(0);
+  }
+});
+
+// Set 6-hour interval loop if daemon mode
+if (!isOnce) {
+  setInterval(runSocialTrackingCycle, INTERVAL_MS);
+}
 
 // Handle process termination
 process.on('SIGINT', () => {
   console.log('[RUNNER] Gracefully stopping 6-hour tracking scheduler...');
   process.exit(0);
 });
+

@@ -105,22 +105,6 @@ export function Footer() {
               >
                 BAGS & WORKERS
               </button>
-              <button
-                onClick={() => setActiveTab('WALL')}
-                className="text-zinc-300 hover:text-white text-left transition-colors"
-              >
-                NINE WALL
-              </button>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <span className="text-[10px] text-zinc-500 uppercase font-bold">IDENTITY</span>
-              <button
-                onClick={() => setActiveTab('ARCADE')}
-                className="text-nine-gold hover:underline text-left transition-colors font-bold"
-              >
-                NINE ARCADE
-              </button>
             </div>
           </div>
         </div>

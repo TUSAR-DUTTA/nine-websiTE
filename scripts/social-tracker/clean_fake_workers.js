@@ -25,7 +25,7 @@ async function cleanFakeWorkers() {
   const delRes = await pool.query(deleteQuery);
   console.log(`[CLEANUP] Deleted ${delRes.rowCount} fake mock accounts from Supabase.`);
 
-  // 2. Recalculate ranks across real $AI workers
+  // 2. Recalculate ranks across real $NINE workers
   await pool.query(`
     WITH Ranked AS (
       SELECT id, ROW_NUMBER() OVER (ORDER BY bag_worker_score DESC, total_impressions DESC) as new_rank
@@ -36,7 +36,7 @@ async function cleanFakeWorkers() {
     FROM Ranked
     WHERE bag_workers.id = Ranked.id;
   `);
-  console.log('[CLEANUP] Ranks recalculated for real $AI bag workers.');
+  console.log('[CLEANUP] Ranks recalculated for real $NINE bag workers.');
 
   // 3. Fetch current real workers
   const res = await pool.query(`
@@ -45,7 +45,7 @@ async function cleanFakeWorkers() {
     ORDER BY rank ASC;
   `);
 
-  console.log(`[CLEANUP] Real $AI Workers in Database (${res.rows.length} total):`);
+  console.log(`[CLEANUP] Real $NINE Workers in Database (${res.rows.length} total):`);
   res.rows.slice(0, 10).forEach(r => {
     console.log(`  #${r.rank} @${r.twitter_handle} - Score: ${r.bag_worker_score} | Posts: ${r.posts_count} | Views: ${r.top_post_impressions}`);
   });

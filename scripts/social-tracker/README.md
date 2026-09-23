@@ -1,6 +1,6 @@
 # 🐈 Social Bag Worker Automation (Playwright Stealth + PostgreSQL)
 
-This system runs an automated stealth browser scraper every **6 hours** that tracks community members shilling, meming, and working the bag for `$AI` / `$NINE` on X (Twitter), calculates their **Bag Worker Score**, and pushes the ranked telemetry into your database.
+This system runs an automated stealth browser scraper every **6 hours** that tracks community members shilling, meming, and working the bag for `$nine` / `"nine the cat"` and interactions with the official account [@NineDcat](https://x.com/NineDcat) on X (Twitter), calculates their **Bag Worker Score**, and pushes the ranked telemetry into your database.
 
 ---
 
@@ -77,7 +77,7 @@ node scripts/social-tracker/runner.js
 Every worker is evaluated using the 4-factor formula:
 $$\text{Score (0-100)} = (\text{Posts} \times 0.20) + (\text{Active Days} \times 0.40) + (\log_{10}(\text{Impressions}) \times 4.5) + (\text{Consistency} \times 0.20)$$
 
-- **Posting Frequency (30 pts max)**: Verified posts with `$AI`, `$NINE`, `#RobinhoodChain`.
+- **Posting Frequency (30 pts max)**: Verified posts mentioning `$nine`, `"nine the cat"`, or official account `@NineDcat`.
 - **Active Days (35 pts max)**: Rewards sustained daily community presence over 1-day spam.
 - **Impressions (25 pts max)**: Algorithmic reach and timeline penetration.
 - **Consistency (10 pts max)**: Unbroken engagement streak.

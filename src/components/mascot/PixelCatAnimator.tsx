@@ -214,7 +214,7 @@ export function PixelCatAnimator({
         </div>
       </div>
 
-      {/* Optional Interactive Action Pills (e.g. for Arcade preview chamber) */}
+      {/* Optional Interactive Action Pills (e.g. for preview chamber) */}
       {showControls && (
         <div className="mt-2.5 flex flex-wrap items-center justify-center gap-1 font-mono text-[10px]">
           {(['idle', 'meow', 'walk', 'run', 'stretch', 'sitting', 'laying'] as CatActionType[]).map((act) => {

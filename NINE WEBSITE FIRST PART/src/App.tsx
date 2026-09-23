@@ -19,7 +19,7 @@ export default function App() {
       {/* Glass Break Transition Overlay (listens for nine:break-glass event) */}
       <GlassBreakTransition />
 
-      {/* Periodic Arcade Cat Projectile Layer */}
+      {/* Periodic Mascot Cat Projectile Layer */}
       <MascotProjectile />
 
       {/* Sticky Navbar & Ticker */}

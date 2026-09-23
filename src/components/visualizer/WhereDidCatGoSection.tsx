@@ -41,7 +41,6 @@ import {
 import {
   ROBINHOOD_CONFIG,
   DEFAULT_TOKEN_ADDRESS,
-  DEFAULT_ARCADE_ADDRESS,
   BURN_ADDRESS,
 } from '@/lib/onchain';
 
@@ -173,14 +172,14 @@ const RADAR_TRAILS: Record<string, RadarTrail> = {
       },
     ],
   },
-  arcade_burn: {
-    id: 'arcade_burn',
+  vault_burn: {
+    id: 'vault_burn',
     catId: 'TRAIL 02 // REAL-TIME DEAD VAULT BURN STREAM',
     totalMoved: 0,
     timestamp: 'Live On-Chain Dead Vault',
     story:
-      'Tracking real-time burn transactions from user wallets into the permanent Dead Vault (0x...dEaD). Every item purchased or incinerated sends $NINE directly to the dead address.',
-    verdict: 'DEFLATION ENGINE: 100% OF ARMORY TOKENS DESTROYED IN DEAD VAULT',
+      'Tracking real-time burn transactions from user wallets into the permanent Dead Vault (0x...dEaD). Every burn sends $NINE directly to the dead address.',
+    verdict: 'DEFLATION ENGINE: 100% OF INCINERATED TOKENS DESTROYED IN DEAD VAULT',
     steps: [
       {
         step: 1,
@@ -188,7 +187,7 @@ const RADAR_TRAILS: Record<string, RadarTrail> = {
         address: '0xOperative...DeadVault',
         amount: 25000,
         type: 'TRANSFER',
-        actionDesc: 'Operative signs purchase transaction on Robinhood Chain Mainnet (4663)',
+        actionDesc: 'Operative signs burn transaction on Robinhood Chain Mainnet (4663)',
       },
       {
         step: 2,
@@ -200,11 +199,11 @@ const RADAR_TRAILS: Record<string, RadarTrail> = {
       },
       {
         step: 3,
-        label: 'ARMORY ARSENAL UNLOCK GATEWAY',
-        address: DEFAULT_ARCADE_ADDRESS,
+        label: 'PERMANENT INCINERATION ROUTE',
+        address: BURN_ADDRESS,
         amount: 25000,
         type: 'GATEWAY',
-        actionDesc: 'Custom companions, CRT terminal skins, and pixel particle auras unlocked',
+        actionDesc: 'Direct burn verification on Robinhood Chain',
       },
       {
         step: 4,
@@ -1386,7 +1385,7 @@ export function WhereDidCatGoSection() {
                 {(
                   [
                     { key: 'genesis', label: '01 // GENESIS & SUPPLY' },
-                    { key: 'arcade_burn', label: '02 // DEAD VAULT BURNS' },
+                    { key: 'vault_burn', label: '02 // DEAD VAULT BURNS' },
                     { key: 'whale_flow', label: '03 // WHALE FLOW' },
                   ] as const
                 ).map((tab) => (

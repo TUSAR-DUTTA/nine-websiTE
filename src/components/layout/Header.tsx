@@ -6,7 +6,7 @@ import { useNine } from '@/context/NineContext';
 import { TOKEN_INFO } from '@/lib/data';
 import { TabType } from '@/types';
 import { soundManager } from '@/lib/sound';
-import { PixelCatAnimator } from '@/components/arcade/PixelCatAnimator';
+import { PixelCatAnimator } from '@/components/mascot/PixelCatAnimator';
 import {
   Volume2,
   VolumeX,
@@ -19,8 +19,6 @@ import {
   BookOpen,
   Flame,
   Trophy,
-  MessageSquare,
-  ShoppingBag,
   Copy,
   Check,
 } from 'lucide-react';
@@ -53,8 +51,6 @@ export function Header() {
     { id: 'TERMINAL', label: 'TERMINAL', icon: <Terminal className="h-3.5 w-3.5" /> },
     { id: 'FUMBLES', label: 'FUMBLES', icon: <Flame className="h-3.5 w-3.5 text-nine-red" /> },
     { id: 'BAGS', label: 'BAG WORKERS', icon: <Trophy className="h-3.5 w-3.5 text-nine-gold" /> },
-    { id: 'WALL', label: 'WALL', icon: <MessageSquare className="h-3.5 w-3.5" /> },
-    { id: 'ARCADE', label: 'ARCADE', icon: <ShoppingBag className="h-3.5 w-3.5 text-nine-gold" /> },
   ];
 
   return (

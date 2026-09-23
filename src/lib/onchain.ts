@@ -23,9 +23,6 @@ export const BURN_ADDRESS = '0x000000000000000000000000000000000000dEaD';
 export const DEFAULT_TOKEN_ADDRESS =
   process.env.NEXT_PUBLIC_TOKEN_ADDRESS || '';
 
-export const DEFAULT_ARCADE_ADDRESS =
-  process.env.NEXT_PUBLIC_ARCADE_ADDRESS || BURN_ADDRESS;
-
 export const ERC20_ABI = [
   'function name() view returns (string)',
   'function symbol() view returns (string)',
@@ -39,16 +36,6 @@ export const ERC20_ABI = [
   'function faucetMint(address to, uint256 amount)',
   'function burn(uint256 amount) returns (bool)',
   'event Transfer(address indexed from, address indexed to, uint256 value)',
-];
-
-export const ARCADE_BURNER_ABI = [
-  'function purchaseItem(string calldata itemId, uint256 tokenPrice) external',
-  'function isItemOwned(address user, string calldata itemId) external view returns (bool)',
-  'function batchCheckItems(address user, string[] calldata itemIds) external view returns (bool[] memory)',
-  'function totalTokensBurned() external view returns (uint256)',
-  'function totalPurchasesCount() external view returns (uint256)',
-  'function getMacroStats() external view returns (uint256 totalBurned, uint256 totalPurchases, address burnDest, address token)',
-  'event ArcadeItemBurned(address indexed buyer, string itemId, uint256 amountBurned, address indexed burnAddress, uint256 timestamp)',
 ];
 
 /**
@@ -139,37 +126,3 @@ export async function fetchTotalTokensBurned(
   }
 }
 
-/**
- * Fetch macro stats directly from NineArcadeBurner
- */
-export async function fetchMacroBurnStats(): Promise<{ totalBurned: number; totalPurchases: number }> {
-  try {
-    const provider = getTestnetProvider();
-    const arcadeContract = new ethers.Contract(DEFAULT_ARCADE_ADDRESS, ARCADE_BURNER_ABI, provider);
-    const stats = await arcadeContract.getMacroStats();
-    return {
-      totalBurned: Number(ethers.formatEther(stats[0])),
-      totalPurchases: Number(stats[1]),
-    };
-  } catch (err) {
-    console.warn('Could not fetch macro stats:', err);
-    return { totalBurned: 0, totalPurchases: 0 };
-  }
-}
-
-/**
- * Check if a user owns an item on-chain
- */
-export async function checkItemOwnershipOnChain(
-  userAddress: string,
-  itemId: string
-): Promise<boolean> {
-  try {
-    const provider = getTestnetProvider();
-    const arcadeContract = new ethers.Contract(DEFAULT_ARCADE_ADDRESS, ARCADE_BURNER_ABI, provider);
-    return await arcadeContract.isItemOwned(userAddress, itemId);
-  } catch (err) {
-    console.warn('Could not check item ownership on-chain:', err);
-    return false;
-  }
-}

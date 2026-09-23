@@ -4,7 +4,6 @@
   "rpcUrl": "https://rpc.testnet.chain.robinhood.com",
   "explorerUrl": "https://explorer.testnet.chain.robinhood.com",
   "tokenAddress": "0x3C6a27D9A8237Ee8fd563773F79138398197719d",
-  "arcadeAddress": "0xF5aC214A3Adf59820871DE9FB2762F3bE9bEb903",
   "burnAddress": "0x000000000000000000000000000000000000dEaD",
   "deployedAt": "2026-09-20T03:56:05.245Z",
   "deployer": "0x9A0eBCaAc94646e63737A79D6a48A9315bd2529B"

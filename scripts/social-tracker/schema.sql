@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS bag_workers (
     twitter_followers INT DEFAULT 0,
     
     -- On-Chain Bag Telemetry
-    token_balance NUMERIC(36, 18) DEFAULT 0,         -- Verified on-chain token balance ($AI or $NINE)
+    token_balance NUMERIC(36, 18) DEFAULT 0,         -- Verified on-chain token balance ($nine)
     holding_since TIMESTAMP WITH TIME ZONE,
     
     -- Bag Worker Scoring Metrics
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS worker_tweets (
     
     -- Metadata
     has_media BOOLEAN DEFAULT FALSE,
-    tickers_detected TEXT[] DEFAULT ARRAY['$AI']::TEXT[],
+    tickers_detected TEXT[] DEFAULT ARRAY['$nine']::TEXT[],
     posted_at TIMESTAMP WITH TIME ZONE NOT NULL,
     scraped_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );

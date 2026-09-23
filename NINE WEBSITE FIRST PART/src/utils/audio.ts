@@ -78,7 +78,7 @@ class RetroAudio {
     } catch {}
   }
 
-  // Cartoon arcade boing / jump
+  // Cartoon boing / jump
   playBoing() {
     if (!this.enabled) return;
     try {
@@ -165,7 +165,7 @@ class RetroAudio {
     } catch {}
   }
 
-  // Arcade Cha-Ching
+  // Cha-Ching
   playCash() {
     if (!this.enabled) return;
     try {

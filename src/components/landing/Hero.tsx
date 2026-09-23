@@ -150,7 +150,7 @@ export const Hero: React.FC = () => {
             </a>
 
             <a
-              href="https://x.com/"
+              href="https://x.com/NineDcat"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3.5 font-['Space_Grotesk'] font-bold text-sm tracking-wide text-white bg-[#0e0e14] border-2 border-neutral-700 rounded-2xl hover:border-white transition flex items-center gap-2"

@@ -28,7 +28,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterTerminal }) => 
       {/* Glass Break Transition Overlay (listens for nine:break-glass event) */}
       <GlassBreakTransition onComplete={onEnterTerminal} />
 
-      {/* Periodic Arcade Cat Projectile Layer */}
+      {/* Periodic Mascot Cat Projectile Layer */}
       <MascotProjectile />
 
       {/* Sticky Navbar & Ticker */}

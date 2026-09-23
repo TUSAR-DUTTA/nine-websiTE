@@ -3,7 +3,7 @@
 import React from 'react';
 import { useNine } from '@/context/NineContext';
 import { TabType } from '@/types';
-import { Terminal, BookOpen, Flame, Trophy, MessageSquare, ShoppingBag, User } from 'lucide-react';
+import { Terminal, BookOpen, Flame, Trophy, User } from 'lucide-react';
 
 export function MobileNav() {
   const { activeTab, setActiveTab, setViewLayer, isConnected, connectedProfile, openProfileModal, setWalletModalOpen } = useNine();
@@ -12,8 +12,6 @@ export function MobileNav() {
     { id: 'TERMINAL', label: 'TERMINAL', icon: <Terminal className="h-4 w-4" /> },
     { id: 'FUMBLES', label: 'FUMBLES', icon: <Flame className="h-4 w-4 text-nine-red" /> },
     { id: 'BAGS', label: 'WORKERS', icon: <Trophy className="h-4 w-4 text-nine-gold" /> },
-    { id: 'WALL', label: 'WALL', icon: <MessageSquare className="h-4 w-4" /> },
-    { id: 'ARCADE', label: 'ARCADE', icon: <ShoppingBag className="h-4 w-4 text-nine-green" /> },
   ];
 
   return (

@@ -1,6 +1,6 @@
 /**
  * Automated Playwright Stealth Scraper for Social Bag Working Telemetry
- * Targets: X/Twitter search for $AI, $NINE, #RobinhoodChain, #PonsLaunchpad
+ * Targets: Official @NineDcat account (https://x.com/NineDcat), ticker $nine, and "nine the cat"
  */
 
 const { chromium } = require('playwright');
@@ -9,10 +9,15 @@ const fs = require('fs');
 
 // Configurable scraping targets
 const SCRAPE_CONFIG = {
-  searchQuery: '($AI OR $NINE) (Robinhood OR "Robinhood Chain" OR "Artificial Inu" OR Pons)',
+  officialAccount: 'https://x.com/NineDcat',
+  officialHandle: 'NineDcat',
+  ticker: '$nine',
+  mascot: 'nine the cat',
+  searchQuery: '($nine OR $NINE OR "nine the cat" OR "Nine The Cat" OR @NineDcat)',
   targetUrls: [
-    'https://x.com/search?q=%28%24AI%20OR%20%24NINE%29%20%28Robinhood%20OR%20Pons%29&f=live',
-    'https://x.com/search?q=%23RobinhoodChain%20%24AI&f=live',
+    'https://x.com/NineDcat',
+    'https://x.com/search?q=%28%24nine%20OR%20%22nine%20the%20cat%22%20OR%20%40NineDcat%29&f=live',
+    'https://x.com/search?q=%40NineDcat&f=live',
   ],
   maxScrolls: 8,
   minDelayMs: 1500,
@@ -300,7 +305,7 @@ async function scrapeSocialBagWorkers() {
       consistencyScore: consistencyScore,
       customTitle: customTitle,
       latestPostQuote: `"${w.latestPostQuote}"`,
-      achievements: ['BAG WORKER', 'TIMELINE SUPPORTER', 'ROBINHOOD MEMER'],
+      achievements: ['$NINE BAG WORKER', 'NINE THE CAT WARRIOR', 'TIMELINE SUPPORTER'],
       recentTweets: w.recentTweets.slice(0, 5),
     });
   }

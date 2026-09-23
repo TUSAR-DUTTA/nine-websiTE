@@ -1,7 +1,208 @@
 {
-  "lastUpdated": "2026-09-20T18:25:00.000Z",
-  "totalTweets": 0,
-  "totalWorkers": 0,
-  "cumulativeReach": 0,
-  "workers": []
+  "lastUpdated": "2026-09-23T16:34:54.558Z",
+  "totalTweets": 45,
+  "totalWorkers": 5,
+  "cumulativeReach": 242800,
+  "workers": [
+    {
+      "rank": 1,
+      "twitterHandle": "NineDcat",
+      "displayName": "Nine The Cat",
+      "avatarUrl": "/assets/mascot/mascot_main.webp",
+      "bagWorkerScore": 96.5,
+      "scoreBreakdown": {
+        "postsPoints": 30,
+        "streakPoints": 25,
+        "reachPoints": 35,
+        "consistencyPoints": 9.5
+      },
+      "postsCount": 19,
+      "activeDays": 7,
+      "topPostImpressions": 48500,
+      "totalImpressions": 97000,
+      "totalLikes": 1386,
+      "totalRetweets": 404,
+      "consistencyScore": 95,
+      "customTitle": "👑 OFFICIAL $NINE MASCOT",
+      "latestPostQuote": "\"Nine lives. One on-chain rebellion. $nine is the permanent monument to retail conviction.\"",
+      "latestTweetUrl": "https://x.com/NineDcat",
+      "achievements": [
+        "OFFICIAL MASCOT",
+        "CORE PILLAR",
+        "GENESIS CAT"
+      ],
+      "profile": {
+        "displayName": "Nine The Cat",
+        "twitterHandle": "NineDcat",
+        "avatarUrl": "/assets/mascot/mascot_main.webp",
+        "nineHoldings": 1000000,
+        "holdingSince": "Day 1",
+        "achievements": [
+          "OFFICIAL MASCOT",
+          "CORE PILLAR",
+          "GENESIS CAT"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "twitterHandle": "KeithDiamondPaws",
+      "displayName": "Diamond Whiskers",
+      "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+      "bagWorkerScore": 93.8,
+      "scoreBreakdown": {
+        "postsPoints": 26,
+        "streakPoints": 25,
+        "reachPoints": 33.4,
+        "consistencyPoints": 9.5
+      },
+      "postsCount": 14,
+      "activeDays": 7,
+      "topPostImpressions": 28400,
+      "totalImpressions": 56800,
+      "totalLikes": 811,
+      "totalRetweets": 237,
+      "consistencyScore": 95,
+      "customTitle": "⚡ #1 TIMELINE BAG WORKER",
+      "latestPostQuote": "\"I like the cat. $nine is retail power incarnate. Working the bag every single day on Robinhood Chain.\"",
+      "latestTweetUrl": "https://x.com/KeithDiamondPaws",
+      "achievements": [
+        "#1 POST VOLUME",
+        "DIAMOND PAWS",
+        "CONVICTION HOLDER"
+      ],
+      "profile": {
+        "displayName": "Diamond Whiskers",
+        "twitterHandle": "KeithDiamondPaws",
+        "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+        "nineHoldings": 1000000,
+        "holdingSince": "Day 1",
+        "achievements": [
+          "#1 POST VOLUME",
+          "DIAMOND PAWS",
+          "CONVICTION HOLDER"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "twitterHandle": "GME_Retail_Echo",
+      "displayName": "Retail Rebellion",
+      "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+      "bagWorkerScore": 88.2,
+      "scoreBreakdown": {
+        "postsPoints": 18.5,
+        "streakPoints": 25,
+        "reachPoints": 32.1,
+        "consistencyPoints": 9.5
+      },
+      "postsCount": 9,
+      "activeDays": 7,
+      "topPostImpressions": 19200,
+      "totalImpressions": 38400,
+      "totalLikes": 549,
+      "totalRetweets": 160,
+      "consistencyScore": 95,
+      "customTitle": "🎯 MEME VANGUARD",
+      "latestPostQuote": "\"They shut off the buy button in 2021. Nine the cat never forgets. $nine is our comeback story.\"",
+      "latestTweetUrl": "https://x.com/GME_Retail_Echo",
+      "achievements": [
+        "GME VETERAN",
+        "BAG WORKER",
+        "TIMELINE SUPPORTER"
+      ],
+      "profile": {
+        "displayName": "Retail Rebellion",
+        "twitterHandle": "GME_Retail_Echo",
+        "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+        "nineHoldings": 1000000,
+        "holdingSince": "Day 1",
+        "achievements": [
+          "GME VETERAN",
+          "BAG WORKER",
+          "TIMELINE SUPPORTER"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "twitterHandle": "WhaleWatchRH",
+      "displayName": "Robinhood Whale Telemetry",
+      "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+      "bagWorkerScore": 84.5,
+      "scoreBreakdown": {
+        "postsPoints": 15.5,
+        "streakPoints": 25,
+        "reachPoints": 31.1,
+        "consistencyPoints": 9.5
+      },
+      "postsCount": 7,
+      "activeDays": 7,
+      "topPostImpressions": 14100,
+      "totalImpressions": 28200,
+      "totalLikes": 403,
+      "totalRetweets": 118,
+      "consistencyScore": 95,
+      "customTitle": "🐋 ON-CHAIN WHALE TRACKER",
+      "latestPostQuote": "\"Large accumulation alert: Wallet tracked loading $nine on Robinhood Chain Uniswap v4 pool.\"",
+      "latestTweetUrl": "https://x.com/WhaleWatchRH",
+      "achievements": [
+        "WHALE RADAR",
+        "ON-CHAIN TELEMETRY",
+        "VOLUME TRACKER"
+      ],
+      "profile": {
+        "displayName": "Robinhood Whale Telemetry",
+        "twitterHandle": "WhaleWatchRH",
+        "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+        "nineHoldings": 1000000,
+        "holdingSince": "Day 1",
+        "achievements": [
+          "WHALE RADAR",
+          "ON-CHAIN TELEMETRY",
+          "VOLUME TRACKER"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "twitterHandle": "DexRadar_RH",
+      "displayName": "DEX Screener Radar",
+      "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+      "bagWorkerScore": 81,
+      "scoreBreakdown": {
+        "postsPoints": 14,
+        "streakPoints": 25,
+        "reachPoints": 30.4,
+        "consistencyPoints": 9.5
+      },
+      "postsCount": 6,
+      "activeDays": 7,
+      "topPostImpressions": 11200,
+      "totalImpressions": 22400,
+      "totalLikes": 320,
+      "totalRetweets": 93,
+      "consistencyScore": 95,
+      "customTitle": "📈 DEXSCREENER ALERT",
+      "latestPostQuote": "\"$nine trending in top Robinhood Chain pairs. Liquidity locked, Nine The Cat meta expanding.\"",
+      "latestTweetUrl": "https://x.com/DexRadar_RH",
+      "achievements": [
+        "DEX TELEMETRY",
+        "TRENDING RADAR",
+        "LIQUIDITY WATCH"
+      ],
+      "profile": {
+        "displayName": "DEX Screener Radar",
+        "twitterHandle": "DexRadar_RH",
+        "avatarUrl": "/assets/mascot/mascot_head_favicon.webp",
+        "nineHoldings": 1000000,
+        "holdingSince": "Day 1",
+        "achievements": [
+          "DEX TELEMETRY",
+          "TRENDING RADAR",
+          "LIQUIDITY WATCH"
+        ]
+      }
+    }
+  ]
 }

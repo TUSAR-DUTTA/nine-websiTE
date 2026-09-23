@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNine } from '@/context/NineContext';
 import { soundManager } from '@/lib/sound';
-import { PixelCompanionAnimator } from '@/components/arcade/PixelCompanionAnimator';
+import { PixelCompanionAnimator } from '@/components/mascot/PixelCompanionAnimator';
 import {
   X,
   Sparkles,
@@ -289,17 +289,6 @@ export function FloatingMascotCompanion() {
               >
                 <span>NEXT LORE TRANSMISSION</span>
               </button>
-
-              <button
-                onClick={() => {
-                  setIsFullScreen(false);
-                  setActiveTab('ARCADE');
-                }}
-                className="flex items-center justify-center gap-2 rounded border border-nine-borderHighlight bg-nine-surface px-4 py-2 font-bold text-white hover:border-nine-green hover:text-nine-green transition-all text-xs"
-              >
-                <Sparkles className="h-3.5 w-3.5 text-nine-gold" />
-                <span>OPEN ARCADE ARMORY</span>
-              </button>
             </div>
           </div>
         </div>
@@ -478,22 +467,11 @@ export function FloatingMascotCompanion() {
 
               <button
                 onClick={toggleFullScreen}
-                className="flex items-center justify-center gap-1 rounded border border-nine-borderHighlight bg-nine-elevated px-2 py-1.5 font-bold text-nine-green hover:bg-nine-green hover:text-black transition-all text-[10px]"
+                className="w-full flex items-center justify-center gap-1 rounded border border-nine-borderHighlight bg-nine-elevated px-2 py-1.5 font-bold text-nine-green hover:bg-nine-green hover:text-black transition-all text-[10px]"
                 title="Full Screen Companion Stage"
               >
                 <Maximize2 className="h-3 w-3" />
                 <span>FULL STAGE</span>
-              </button>
-
-              <button
-                onClick={() => {
-                  setActiveTab('ARCADE');
-                  setIsOpen(false);
-                }}
-                className="flex items-center justify-center gap-1 rounded border border-nine-borderHighlight bg-nine-surface px-2 py-1.5 font-bold text-white hover:border-nine-gold hover:text-nine-gold transition-all text-[10px]"
-              >
-                <Sparkles className="h-3 w-3 text-nine-gold" />
-                <span>ARCADE</span>
               </button>
             </div>
           </div>

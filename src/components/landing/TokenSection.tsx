@@ -121,7 +121,7 @@ export const TokenSection: React.FC = () => {
             </a>
 
             <a
-              href="https://x.com/"
+              href="https://x.com/NineDcat"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-3 font-['Space_Grotesk'] font-bold text-xs uppercase text-white bg-neutral-900 border-2 border-neutral-700 rounded-xl hover:border-white transition flex items-center gap-1.5"

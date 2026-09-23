@@ -144,10 +144,10 @@ export function BagWorkersSection() {
             totalRetweets: item.totalRetweets || 0,
             consistencyScore,
             customTitle: item.customTitle || item.profile?.customTitle || '🐱 $NINE BAG WORKER',
-            latestPostQuote: item.latestPostQuote || '"Working the bag daily on Robinhood Chain."',
+            latestPostQuote: item.latestPostQuote || '"Working the $nine bag daily with Nine The Cat on Robinhood Chain."',
             latestTweetUrl: item.latestTweetUrl || `https://x.com/${item.twitterHandle}`,
             latestTweetTime: item.latestTweetTime,
-            achievements: item.achievements || item.profile?.achievements || ['$NINE HOLDER', 'BAG WORKER'],
+            achievements: item.achievements || item.profile?.achievements || ['$NINE HOLDER', 'NINE THE CAT', 'BAG WORKER'],
             profile: item.profile || {
               displayName: item.displayName,
               twitterHandle: item.twitterHandle,
@@ -321,9 +321,27 @@ export function BagWorkersSection() {
                 SUPABASE LIVE SYNC
               </span>
             </h2>
+            <div className="flex items-center gap-2 mt-3 flex-wrap">
+              <a
+                href="https://x.com/NineDcat"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-black bg-nine-gold hover:bg-amber-400 px-3 py-1 rounded transition-colors shadow-[0_0_12px_rgba(255,215,0,0.3)]"
+              >
+                <span>𝕏 TARGET ACCOUNT: @NineDcat</span>
+                <ExternalLink className="h-3 w-3" />
+              </a>
+              <span className="text-[11px] text-zinc-300 border border-zinc-800 bg-black/60 px-2.5 py-1 rounded flex items-center gap-1.5">
+                <span className="text-zinc-500">TRACKING:</span>
+                <strong className="text-nine-gold">$nine</strong>
+                <span className="text-zinc-600">•</span>
+                <strong className="text-white">nine the cat</strong>
+              </span>
+            </div>
             <p className="mt-2 text-xs sm:text-sm text-zinc-400 max-w-3xl leading-relaxed">
               Automated social telemetry tracking community effort, viral memes, and daily consistency for{' '}
-              <strong className="text-white">$NINE</strong> on Robinhood Chain.
+              <strong className="text-white">$nine</strong> and <strong className="text-white">nine the cat</strong>, monitoring mentions and replies for official mascot{' '}
+              <a href="https://x.com/NineDcat" target="_blank" rel="noreferrer" className="text-nine-gold hover:underline font-bold">@NineDcat</a>.
               Powered by a 6-hour Playwright stealth daemon and verified PostgreSQL database.
             </p>
           </div>
@@ -376,7 +394,7 @@ export function BagWorkersSection() {
               <span className="text-xs text-zinc-500 font-normal ml-1.5">Accounts</span>
             </div>
             <div className="text-[10px] text-zinc-400 mt-0.5 truncate">
-              Robinhood Chain $NINE community
+              Robinhood Chain $nine & @NineDcat community
             </div>
           </div>
 
@@ -390,7 +408,7 @@ export function BagWorkersSection() {
               <span className="text-xs text-zinc-500 font-normal ml-1.5">Broadcasts</span>
             </div>
             <div className="text-[10px] text-zinc-400 mt-0.5">
-              Scraped via Stealth Browser
+              Scraped via Stealth ($nine / Nine The Cat)
             </div>
           </div>
 
@@ -746,7 +764,7 @@ export function BagWorkersSection() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search handle, quote, tag..."
+                placeholder="Search $nine bag workers, @NineDcat, tags..."
                 className="w-full rounded-lg border border-nine-border bg-black/60 pl-8 pr-7 py-1.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-nine-gold font-mono"
               />
               {searchQuery && (

@@ -10,7 +10,6 @@ import {
   AlertTriangle,
   Server,
   Activity,
-  Trash2,
   Plus,
   Radio,
   Sliders,
@@ -18,8 +17,8 @@ import {
 } from 'lucide-react';
 
 export function AdminDashboardModal() {
-  const { isAdminModalOpen, setAdminModalOpen, wallPosts } = useNine();
-  const [activeTab, setActiveTab] = useState<'HEALTH' | 'MODERATION' | 'CHAPTERS' | 'ALERT'>('HEALTH');
+  const { isAdminModalOpen, setAdminModalOpen } = useNine();
+  const [activeTab, setActiveTab] = useState<'HEALTH' | 'CHAPTERS' | 'ALERT'>('HEALTH');
   const [alertBroadcastText, setAlertBroadcastText] = useState('THE CAT IS MOVING: LIFE 04 BREAKOUT IN PROGRESS');
   const [broadcastSent, setBroadcastSent] = useState(false);
   const [streamSpeed, setStreamSpeed] = useState('NORMAL');
@@ -53,7 +52,7 @@ export function AdminDashboardModal() {
 
         {/* Tab Navigation */}
         <div className="flex items-center gap-2 border-b border-nine-border pb-3 mb-6 text-xs">
-          {(['HEALTH', 'MODERATION', 'CHAPTERS', 'ALERT'] as const).map((tab) => (
+          {(['HEALTH', 'CHAPTERS', 'ALERT'] as const).map((tab) => (
             <button
               key={tab}
               onClick={() => {
@@ -124,44 +123,7 @@ export function AdminDashboardModal() {
           </div>
         )}
 
-        {/* TAB 2: WALL MODERATION */}
-        {activeTab === 'MODERATION' && (
-          <div className="space-y-3 text-xs">
-            <div className="text-xs text-zinc-400 font-bold uppercase mb-2">
-              RECENT WALL TRANSMISSIONS ({wallPosts.length} ACTIVE)
-            </div>
-
-            {wallPosts.map((post) => (
-              <div
-                key={post.id}
-                className="flex items-center justify-between rounded border border-nine-border bg-nine-bg p-3"
-              >
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-bold text-white">{post.author.displayName}</span>
-                    <span className="text-[10px] text-zinc-500">[{post.category}]</span>
-                  </div>
-                  <p className="text-xs text-zinc-300 truncate max-w-md mt-0.5">{post.content}</p>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] px-2 py-0.5 rounded bg-nine-greenMuted text-nine-green font-bold">
-                    APPROVED
-                  </span>
-                  <button
-                    onClick={() => soundManager.playClick()}
-                    className="p-1 text-zinc-500 hover:text-nine-red transition-colors"
-                    title="Flag / Redact"
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* TAB 3: CHAPTERS LORE */}
+        {/* TAB 2: CHAPTERS LORE */}
         {activeTab === 'CHAPTERS' && (
           <div className="space-y-4 text-xs">
             <div className="rounded border border-nine-border bg-nine-bg p-4">

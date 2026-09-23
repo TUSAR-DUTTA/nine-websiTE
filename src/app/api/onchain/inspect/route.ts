@@ -3,10 +3,8 @@ import { ethers } from 'ethers';
 import {
   ROBINHOOD_CONFIG,
   DEFAULT_TOKEN_ADDRESS,
-  DEFAULT_ARCADE_ADDRESS,
   BURN_ADDRESS,
   ERC20_ABI,
-  ARCADE_BURNER_ABI,
 } from '@/lib/onchain';
 
 export const dynamic = 'force-dynamic';
@@ -25,7 +23,6 @@ export async function GET(req: NextRequest) {
 
     const provider = new ethers.JsonRpcProvider(ROBINHOOD_CONFIG.rpcUrl);
     const tokenContract = new ethers.Contract(DEFAULT_TOKEN_ADDRESS, ERC20_ABI, provider);
-    const arcadeContract = new ethers.Contract(DEFAULT_ARCADE_ADDRESS, ARCADE_BURNER_ABI, provider);
 
     const [balanceWei, ethBalanceWei, txCount, code, currentBlock] = await Promise.all([
       tokenContract.balanceOf(address).catch(() => BigInt(0)),
@@ -39,7 +36,6 @@ export async function GET(req: NextRequest) {
     const ethBalance = Number(ethers.formatEther(ethBalanceWei));
     const isContract = code !== '0x';
 
-    // Check ownership of classic arcade items if applicable
     const isDeadAddress = address.toLowerCase() === BURN_ADDRESS.toLowerCase();
 
     return NextResponse.json({

@@ -17,7 +17,6 @@ import {
   BookOpen,
   Trophy,
   Volume2,
-  Sparkles,
   Radio,
 } from 'lucide-react';
 
@@ -214,23 +213,23 @@ export function HeroSection() {
               <button
                 onClick={() => {
                   soundManager.playClick();
-                  setActiveTab('ARCADE');
+                  setActiveTab('FUMBLES');
                 }}
-                className="flex items-center gap-2 rounded border border-nine-gold/60 bg-nine-surface px-5 py-3 font-bold text-nine-gold hover:bg-amber-950/30 transition-all uppercase"
+                className="flex items-center gap-2 rounded border border-nine-borderHighlight bg-nine-surface px-5 py-3 font-bold text-nine-red hover:bg-red-950/30 transition-all uppercase"
               >
-                <Sparkles className="h-4 w-4" />
-                <span>VISIT ARCADE</span>
+                <Flame className="h-4 w-4 text-nine-red" />
+                <span>FUMBLE BOARD</span>
               </button>
 
               <button
                 onClick={() => {
                   soundManager.playClick();
-                  setActiveTab('WALL');
+                  setActiveTab('BAGS');
                 }}
                 className="flex items-center gap-2 rounded border border-nine-borderHighlight bg-nine-surface px-4 py-3 font-bold text-white hover:border-nine-green hover:text-nine-green transition-all uppercase"
               >
                 <Trophy className="h-4 w-4 text-nine-gold" />
-                <span>TRANSMIT ON WALL</span>
+                <span>BAG WORKERS</span>
               </button>
             </div>
           </div>
@@ -340,17 +339,10 @@ export function HeroSection() {
                   <div className="mt-4 pt-3 border-t border-nine-border flex items-center justify-between gap-3">
                     <button
                       onClick={cycleQuote}
-                      className="flex-1 flex items-center justify-center gap-2 rounded bg-nine-green py-2 px-3 text-xs font-black text-black hover:bg-emerald-400 transition-all shadow-[0_0_15px_rgba(0,255,102,0.25)] uppercase tracking-wider"
+                      className="w-full flex items-center justify-center gap-2 rounded bg-nine-green py-2 px-3 text-xs font-black text-black hover:bg-emerald-400 transition-all shadow-[0_0_15px_rgba(0,255,102,0.25)] uppercase tracking-wider"
                     >
                       <Radio className="h-4 w-4" />
                       <span>NEXT TRANSMISSION</span>
-                    </button>
-
-                    <button
-                      onClick={() => setActiveTab('ARCADE')}
-                      className="flex items-center gap-1.5 rounded border border-nine-borderHighlight bg-nine-surface px-3 py-2 text-xs font-bold text-zinc-200 hover:text-nine-green transition-all uppercase"
-                    >
-                      <span>ARCADE GEAR →</span>
                     </button>
                   </div>
                 </div>

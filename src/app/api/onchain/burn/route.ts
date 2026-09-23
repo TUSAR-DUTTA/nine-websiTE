@@ -3,10 +3,8 @@ import { ethers } from 'ethers';
 import {
   ROBINHOOD_CONFIG,
   DEFAULT_TOKEN_ADDRESS,
-  DEFAULT_ARCADE_ADDRESS,
   BURN_ADDRESS,
   ERC20_ABI,
-  ARCADE_BURNER_ABI,
 } from '@/lib/onchain';
 
 export const dynamic = 'force-dynamic';
@@ -14,11 +12,12 @@ export const dynamic = 'force-dynamic';
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { itemId, priceInNine, buyerAddress } = body;
+    const { burnAmount, priceInNine, reason } = body;
+    const amountToBurn = burnAmount || priceInNine;
 
-    if (!itemId || !priceInNine || priceInNine <= 0) {
+    if (!amountToBurn || amountToBurn <= 0) {
       return NextResponse.json(
-        { success: false, error: 'Invalid item ID or price' },
+        { success: false, error: 'Invalid burn amount' },
         { status: 400 }
       );
     }
@@ -37,7 +36,7 @@ export async function POST(req: Request) {
 
     const tokenContract = new ethers.Contract(DEFAULT_TOKEN_ADDRESS, ERC20_ABI, signer);
 
-    const priceWei = ethers.parseEther(priceInNine.toString());
+    const priceWei = ethers.parseEther(amountToBurn.toString());
 
     // 1. Verify relayer has enough balance
     const relayerBalance = await tokenContract.balanceOf(relayerAddress).catch(() => BigInt(0));
@@ -45,38 +44,18 @@ export async function POST(req: Request) {
       return NextResponse.json(
         {
           success: false,
-          error: `Relayer wallet balance (${ethers.formatEther(relayerBalance)} $NINE) is insufficient for ${priceInNine} $NINE burn.`,
+          error: `Relayer wallet balance (${ethers.formatEther(relayerBalance)} $NINE) is insufficient for ${amountToBurn} $NINE burn.`,
         },
         { status: 400 }
       );
     }
 
-    let txHash = '';
-    let blockNumber = 0;
-
-    // 2. Execute Burn: Direct dead address transfer or via arcade burner
-    const isDirectBurn = DEFAULT_ARCADE_ADDRESS.toLowerCase() === BURN_ADDRESS.toLowerCase();
-
-    if (isDirectBurn) {
-      console.log(`Executing direct burn transfer of ${priceInNine} $NINE to ${BURN_ADDRESS}...`);
-      const transferTx = await tokenContract.transfer(BURN_ADDRESS, priceWei);
-      const receipt = await transferTx.wait(1);
-      txHash = receipt?.hash || transferTx.hash;
-      blockNumber = receipt?.blockNumber || 0;
-    } else {
-      const arcadeContract = new ethers.Contract(DEFAULT_ARCADE_ADDRESS, ARCADE_BURNER_ABI, signer);
-      const currentAllowance = await tokenContract.allowance(relayerAddress, DEFAULT_ARCADE_ADDRESS);
-      if (currentAllowance < priceWei) {
-        console.log(`Approving arcade burner contract for ${priceInNine} $NINE...`);
-        const approveTx = await tokenContract.approve(DEFAULT_ARCADE_ADDRESS, ethers.MaxUint256);
-        await approveTx.wait(1);
-      }
-      console.log(`Executing purchaseItem("${itemId}", ${priceInNine}) on-chain...`);
-      const purchaseTx = await arcadeContract.purchaseItem(itemId, priceWei);
-      const receipt = await purchaseTx.wait(1);
-      txHash = receipt?.hash || purchaseTx.hash;
-      blockNumber = receipt?.blockNumber || 0;
-    }
+    // 2. Execute Direct Burn Transfer to Dead Address
+    console.log(`Executing direct burn transfer of ${amountToBurn} $NINE to ${BURN_ADDRESS}...`);
+    const transferTx = await tokenContract.transfer(BURN_ADDRESS, priceWei);
+    const receipt = await transferTx.wait(1);
+    const txHash = receipt?.hash || transferTx.hash;
+    const blockNumber = receipt?.blockNumber || 0;
 
     // 3. Verify post-burn balance of the dead address
     const deadBalanceWei = await tokenContract.balanceOf(BURN_ADDRESS).catch(() => BigInt(0));
@@ -85,8 +64,8 @@ export async function POST(req: Request) {
       success: true,
       txHash,
       blockNumber,
-      itemId,
-      burnedAmount: priceInNine,
+      reason: reason || 'Community on-chain burn',
+      burnedAmount: amountToBurn,
       burnAddress: BURN_ADDRESS,
       explorerUrl: `${ROBINHOOD_CONFIG.blockExplorerUrl}/tx/${txHash}`,
       newDeadBalance: Number(ethers.formatEther(deadBalanceWei)),
@@ -103,4 +82,3 @@ export async function POST(req: Request) {
     );
   }
 }
-

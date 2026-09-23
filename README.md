@@ -60,37 +60,28 @@ An underground crypto terminal, digital identity network, and community comeback
      - Abbreviated wallet address with copy function.
      - Holdings in $NINE and USD value, holding duration ("Since 58 days ago"), buy/sell history summary.
      - X statistics, social activity density gauge, and community status labels.
-     - Equipped Arcade Skin styling effects.
+     - Equipped Skin styling effects.
      - Interactive tip tool to send $NINE to community members.
 
-9. **Nine Wall (Community Graffiti & Memes)**:
-   - Live message board with filters for `HOT`, `NEW`, `COMEBACKS`, `FUMBLES`, `ART`, and `BAG WORK`.
-   - Client and server-side anti-spam verification, character limits, rate limiting.
-   - Multi-emoji status reaction bar.
-
-10. **"Where Did The Cat Go?" (Wallet Trail Visualizer)**:
+9. **"Where Did The Cat Go?" (Wallet Trail Visualizer)**:
     - Step-by-step animated tracking of large on-chain token migrations from cold storage through multi-sig buffers into DEX liquidity pools.
 
-11. **NINE Pulse & The Comeback Signal**:
+10. **NINE Pulse & The Comeback Signal**:
     - Live ecosystem activity gauges: Community (94%), Social (89%), Trading (82%), Memes (97%).
     - "THE CAT IS MOVING" Comeback Radar indicator with transparent calculation formulas.
 
-12. **The Nine Arcade (Digital Identity Marketplace)**:
-    - Burn or spend $NINE to acquire terminal skins (`GME TERMINAL`, `CRT BURNT`, `RED ALERT`, `AFTER THE CRASH`, `CAT IN THE DARK`, `NINE LIVES GOLD`).
-    - Live real-time preview on the user's active dossier with instant equipment and balance deductions.
-
-13. **The Comeback Archive**:
+11. **The Comeback Archive**:
     - Permanent historical timeline instead of a roadmap: `SURVIVAL → CRASH → SILENCE → COMEBACK → NEW CHAPTER`.
     - Detailed chapters documenting the Day 1 dump, the Delisting FUD, and the 900-Post Raid.
 
-14. **Audio Synthesizer**:
+12. **Audio Synthesizer**:
     - Subtle retro terminal beeps, clicks, and comeback chimes generated via the Web Audio API without heavy external audio files.
 
-15. **Wallet Connection & Persona Switcher**:
+13. **Wallet Connection & Persona Switcher**:
     - Demo persona switcher allowing instant testing as a Whale Titan, Bag Worker, Fumble Survivor, or fresh new wallet.
 
-16. **Hidden Admin Dashboard (`/admin`)**:
-    - Moderation tools for wall posts, stream speed controls, simulated Chapter triggers, and emergency alert broadcasts.
+14. **Hidden Admin Dashboard (`/admin`)**:
+    - Stream speed controls, simulated Chapter triggers, and emergency alert broadcasts.
 
 ---
 

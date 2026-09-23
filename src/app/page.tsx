@@ -6,9 +6,7 @@ import { HeroSection } from '@/components/hero/HeroSection';
 import { LiveTerminalSection } from '@/components/terminal/LiveTerminalSection';
 import { FumbleBoardSection } from '@/components/fumbles/FumbleBoardSection';
 import { BagWorkersSection } from '@/components/social/BagWorkersSection';
-import { NineWallSection } from '@/components/social/NineWallSection';
 import { NinePulseSection } from '@/components/pulse/NinePulseSection';
-import { NineArcadeSection } from '@/components/arcade/NineArcadeSection';
 import { GmeSagaSection } from '@/components/saga/GmeSagaSection';
 
 export default function HomePage() {
@@ -44,20 +42,6 @@ export default function HomePage() {
       {activeTab === 'BAGS' && (
         <div className="flex flex-col w-full animate-fadeIn">
           <BagWorkersSection />
-        </div>
-      )}
-
-      {/* TAB 4: WALL (Community Memes & Graffiti) */}
-      {activeTab === 'WALL' && (
-        <div className="flex flex-col w-full animate-fadeIn">
-          <NineWallSection />
-        </div>
-      )}
-
-      {/* TAB 5: ARCADE (Digital Identity Marketplace) */}
-      {activeTab === 'ARCADE' && (
-        <div className="flex flex-col w-full animate-fadeIn">
-          <NineArcadeSection />
         </div>
       )}
     </div>

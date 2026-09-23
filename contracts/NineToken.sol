@@ -71,7 +71,7 @@ contract NineToken {
     }
 
     /**
-     * @dev Testnet Faucet: allows anyone to claim 50,000 $NINE for testing arcade purchases.
+     * @dev Testnet Faucet: allows anyone to claim 50,000 $NINE for testing.
      */
     function faucetMint(address to, uint256 amount) external {
         require(to != address(0), "Cannot mint to zero address");
