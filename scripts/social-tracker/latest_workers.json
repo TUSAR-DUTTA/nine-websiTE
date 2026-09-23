@@ -1,48 +1,7 @@
 {
-  "lastUpdated": "2026-09-23T17:36:47.787Z",
+  "lastUpdated": "2026-09-23T17:40:00.000Z",
   "totalTweets": 0,
-  "totalWorkers": 1,
-  "cumulativeReach": 97000,
-  "workers": [
-    {
-      "rank": 1,
-      "twitterHandle": "NineDcat",
-      "displayName": "Nine The Cat",
-      "avatarUrl": "/assets/mascot/mascot_main.webp",
-      "bagWorkerScore": 96.5,
-      "scoreBreakdown": {
-        "postsPoints": 30,
-        "streakPoints": 25,
-        "reachPoints": 35,
-        "consistencyPoints": 9.5
-      },
-      "postsCount": 19,
-      "activeDays": 7,
-      "topPostImpressions": 48500,
-      "totalImpressions": 97000,
-      "totalLikes": 1386,
-      "totalRetweets": 404,
-      "consistencyScore": 95,
-      "customTitle": "👑 OFFICIAL $NINE MASCOT",
-      "latestPostQuote": "\"Nine lives. One on-chain rebellion. $nine is the permanent monument to retail conviction.\"",
-      "latestTweetUrl": "https://x.com/NineDcat",
-      "achievements": [
-        "OFFICIAL MASCOT",
-        "CORE PILLAR",
-        "GENESIS CAT"
-      ],
-      "profile": {
-        "displayName": "Nine The Cat",
-        "twitterHandle": "NineDcat",
-        "avatarUrl": "/assets/mascot/mascot_main.webp",
-        "nineHoldings": 1000000,
-        "holdingSince": "Day 1",
-        "achievements": [
-          "OFFICIAL MASCOT",
-          "CORE PILLAR",
-          "GENESIS CAT"
-        ]
-      }
-    }
-  ]
+  "totalWorkers": 0,
+  "cumulativeReach": 0,
+  "workers": []
 }
