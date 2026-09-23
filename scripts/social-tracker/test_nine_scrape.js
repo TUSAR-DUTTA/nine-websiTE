@@ -35,12 +35,11 @@ async function runTestNineScrape() {
   console.log('Search Query: ($nine OR "nine the cat" OR @NineDcat)');
   console.log('===============================================================');
 
-  if (!fs.existsSync(SESSION_FILE)) {
-    console.error('ERROR: twitter_session.json not found! Run save_twitter_session.js first.');
-    process.exit(1);
-  }
+  const hasSessionFile = fs.existsSync(SESSION_FILE);
+  const authToken = process.env.TWITTER_AUTH_TOKEN;
+  const ct0 = process.env.TWITTER_CT0;
 
-  console.log('[1/4] Launching Playwright Stealth with saved Twitter session...');
+  console.log('[1/4] Launching Playwright Stealth...');
   const browser = await chromium.launch({
     headless: true,
     args: [
@@ -52,11 +51,23 @@ async function runTestNineScrape() {
   });
 
   const context = await browser.newContext({
-    storageState: SESSION_FILE,
+    storageState: hasSessionFile ? SESSION_FILE : undefined,
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
     viewport: { width: 1440, height: 900 },
     locale: 'en-US',
   });
+
+  if (!hasSessionFile && authToken && ct0) {
+    console.log('[SCRAPER] Injecting authenticated Twitter/X session cookies from env...');
+    await context.addCookies([
+      { name: 'auth_token', value: authToken, domain: '.x.com', path: '/' },
+      { name: 'ct0', value: ct0, domain: '.x.com', path: '/' },
+    ]);
+  } else if (hasSessionFile) {
+    console.log(`[SCRAPER] Loaded session state from ${SESSION_FILE}`);
+  } else {
+    console.log('[SCRAPER] Notice: Running in unauthenticated stealth mode.');
+  }
 
   const page = await context.newPage();
 
