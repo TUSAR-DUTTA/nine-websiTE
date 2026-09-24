@@ -11,7 +11,6 @@ import {
   Volume2,
   VolumeX,
   ExternalLink,
-  TrendingUp,
   Activity,
   Terminal,
   BookOpen,
@@ -147,33 +146,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Live Market Chips (Desktop) */}
-        <div className="hidden xl:flex items-center gap-3 text-xs font-mono">
-          <div className="flex items-center gap-2 rounded border border-nine-border bg-nine-surface/80 px-2.5 py-1">
-            <span className="text-zinc-500 text-[10px]">PRICE</span>
-            <span className="font-bold text-white">
-              {TOKEN_INFO.priceUSD > 0 ? `$${TOKEN_INFO.priceUSD.toFixed(5)}` : 'LAUNCHING SOON'}
-            </span>
-            {TOKEN_INFO.change24h > 0 && (
-              <span className="flex items-center text-nine-green font-bold text-[10px]">
-                <TrendingUp className="h-3 w-3 mr-0.5" />
-                +{TOKEN_INFO.change24h}%
-              </span>
-            )}
-          </div>
-
-          <div className="flex items-center gap-2 rounded border border-nine-border bg-nine-surface/80 px-2.5 py-1">
-            <span className="text-zinc-500 text-[10px]">MCAP</span>
-            <span className="font-bold text-white">
-              {TOKEN_INFO.marketCapUSD > 0 ? `$${(TOKEN_INFO.marketCapUSD / 1000000).toFixed(2)}M` : 'TBA'}
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 rounded border border-nine-border bg-nine-surface/80 px-2.5 py-1">
-            <span className="text-zinc-500 text-[10px]">HOLDERS</span>
-            <span className="font-bold text-nine-green">{TOKEN_INFO.holdersCount.toLocaleString()}</span>
-          </div>
-        </div>
 
         {/* Right Actions: Audio, Admin, Wallet */}
         <div className="flex items-center gap-3">
