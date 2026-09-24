@@ -12,7 +12,6 @@ import {
   HelpCircle,
   Award,
   RefreshCw,
-  Plus,
   X,
   Radio,
   Clock,
@@ -97,15 +96,6 @@ export function BagWorkersSection() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<SortOption>('SCORE');
   const [showFormulaModal, setShowFormulaModal] = useState(false);
-
-  // Test My Bag Work Modal
-  const [isTestModalOpen, setIsTestModalOpen] = useState(false);
-  const [testHandle, setTestHandle] = useState('');
-  const [testPosts, setTestPosts] = useState('14');
-  const [testActiveDays, setTestActiveDays] = useState('5');
-  const [testImpressions, setTestImpressions] = useState('45000');
-  const [testQuote, setTestQuote] = useState('Holding strong & grinding on Robinhood Chain timeline! $NINE');
-  const [calculatedScore, setCalculatedScore] = useState<number | null>(null);
 
   const fetchBagWorkers = async () => {
     setIsLoading(true);
@@ -228,72 +218,6 @@ export function BagWorkersSection() {
     return [...workers].sort((a, b) => a.rank - b.rank).slice(0, 3);
   }, [workers]);
 
-  const calculateCustomScore = () => {
-    const p = parseInt(testPosts, 10) || 1;
-    const a = parseInt(testActiveDays, 10) || 1;
-    const imp = parseInt(testImpressions, 10) || 1000;
-    const consistency = Math.min(100, Math.round((a / 7) * 70 + (p / 10) * 30));
-
-    const pScore = Math.min(30, p * 1.5 + 5.0);
-    const aScore = Math.min(25, a * 5.0);
-    const impScore = Math.min(35, Math.log10(Math.max(10, imp)) * 7.5);
-    const cScore = Math.min(10, consistency * 0.1);
-
-    const total = Number(Math.min(100, Math.max(10, pScore + aScore + impScore + cScore)).toFixed(1));
-    setCalculatedScore(total);
-    soundManager.playComebackChime();
-  };
-
-  const handleAddCustomWorker = () => {
-    if (!testHandle.trim() || calculatedScore === null) return;
-    const handleClean = testHandle.replace('@', '').trim();
-
-    const p = parseInt(testPosts, 10) || 1;
-    const a = parseInt(testActiveDays, 10) || 1;
-    const imp = parseInt(testImpressions, 10) || 1000;
-
-    const newWorker: BagWorkerItem = {
-      rank: 1,
-      twitterHandle: handleClean,
-      displayName: `@${handleClean}`,
-      avatarUrl: '/assets/mascot/mascot_head_favicon.webp',
-      bagWorkerScore: calculatedScore,
-      scoreBreakdown: {
-        postsPoints: Number(Math.min(30.0, p * 1.5 + 5.0).toFixed(1)),
-        streakPoints: Number(Math.min(25.0, a * 5.0).toFixed(1)),
-        reachPoints: Number(Math.min(35.0, Math.log10(Math.max(10, imp)) * 7.5).toFixed(1)),
-        consistencyPoints: 8.5,
-      },
-      postsCount: p,
-      activeDays: a,
-      topPostImpressions: imp,
-      totalImpressions: imp,
-      consistencyScore: 85,
-      customTitle: '🧪 SIMULATED BAG WORKER',
-      latestPostQuote: `"${testQuote}"`,
-      latestTweetUrl: `https://x.com/${handleClean}`,
-      achievements: ['SIMULATION VERIFIED', 'COMMUNITY WORKER', '$NINE HOLDER'],
-      profile: {
-        displayName: `@${handleClean}`,
-        twitterHandle: handleClean,
-        avatarUrl: '/assets/mascot/mascot_head_favicon.webp',
-        nineHoldings: 0,
-        holdingSince: 'Today',
-        achievements: ['SIMULATION VERIFIED', 'BAG WORKER'],
-      },
-    };
-
-    // Re-rank array
-    const updated = [newWorker, ...workers].sort((a, b) => b.bagWorkerScore - a.bagWorkerScore);
-    updated.forEach((w, idx) => {
-      w.rank = idx + 1;
-    });
-
-    setWorkers(updated);
-    setIsTestModalOpen(false);
-    soundManager.playComebackChime();
-  };
-
   const formatViews = (views: number) => {
     if (views >= 1000000) return `${(views / 1000000).toFixed(1)}M`;
     if (views >= 1000) return `${(views / 1000).toFixed(1)}K`;
@@ -348,16 +272,6 @@ export function BagWorkersSection() {
 
           {/* Action Toolbar */}
           <div className="flex flex-wrap items-center gap-2 text-xs">
-            <button
-              onClick={() => {
-                soundManager.playClick();
-                setIsTestModalOpen(true);
-              }}
-              className="flex items-center gap-1.5 rounded-lg border border-nine-gold/70 bg-gradient-to-r from-amber-950/60 to-amber-900/40 px-3.5 py-2 text-amber-300 hover:text-white hover:border-nine-gold transition-all font-bold shadow-[0_0_15px_rgba(255,215,0,0.15)]"
-            >
-              <Plus className="h-4 w-4 text-nine-gold" />
-              <span>SIMULATE BAG WORK</span>
-            </button>
 
             <button
               onClick={fetchBagWorkers}
@@ -1100,126 +1014,6 @@ export function BagWorkersSection() {
         </div>
       )}
 
-      {/* Test / Simulate Bag Work Interactive Modal */}
-      {isTestModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 font-mono">
-          <div className="relative w-full max-w-lg rounded-2xl border border-nine-border bg-[#0f1016] p-6 shadow-2xl">
-            <div className="flex items-center justify-between border-b border-nine-border pb-3 mb-4">
-              <div className="flex items-center gap-2 text-xs text-nine-gold font-bold uppercase">
-                <Award className="h-4 w-4" />
-                <span>SIMULATE & TEST BAG WORKER SCORE</span>
-              </div>
-              <button
-                onClick={() => setIsTestModalOpen(false)}
-                className="text-zinc-500 hover:text-white"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            </div>
-
-            <div className="space-y-4 text-xs text-zinc-300 leading-relaxed">
-              <p className="text-zinc-400">
-                Simulate or test social tracking parameters to preview your Bag Worker Score and leaderboard placement:
-              </p>
-
-              <div>
-                <label className="text-[10px] text-zinc-500 uppercase font-bold block mb-1">X/Twitter Handle</label>
-                <div className="relative flex items-center">
-                  <span className="absolute left-3 text-zinc-500">@</span>
-                  <input
-                    type="text"
-                    value={testHandle}
-                    onChange={(e) => setTestHandle(e.target.value)}
-                    placeholder="yourhandle"
-                    className="w-full rounded-lg border border-nine-border bg-black/60 pl-8 pr-3 py-2 text-xs text-white focus:outline-none focus:border-nine-gold font-mono"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-3">
-                <div>
-                  <label className="text-[10px] text-zinc-500 uppercase font-bold block mb-1">Posts Count</label>
-                  <input
-                    type="number"
-                    value={testPosts}
-                    onChange={(e) => setTestPosts(e.target.value)}
-                    className="w-full rounded-lg border border-nine-border bg-black/60 px-3 py-2 text-xs text-white focus:outline-none focus:border-nine-gold font-mono"
-                  />
-                </div>
-                <div>
-                  <label className="text-[10px] text-zinc-500 uppercase font-bold block mb-1">Active Days</label>
-                  <input
-                    type="number"
-                    value={testActiveDays}
-                    onChange={(e) => setTestActiveDays(e.target.value)}
-                    className="w-full rounded-lg border border-nine-border bg-black/60 px-3 py-2 text-xs text-white focus:outline-none focus:border-nine-gold font-mono"
-                  />
-                </div>
-                <div>
-                  <label className="text-[10px] text-zinc-500 uppercase font-bold block mb-1">Peak Reach</label>
-                  <input
-                    type="number"
-                    value={testImpressions}
-                    onChange={(e) => setTestImpressions(e.target.value)}
-                    className="w-full rounded-lg border border-nine-border bg-black/60 px-3 py-2 text-xs text-white focus:outline-none focus:border-nine-gold font-mono"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="text-[10px] text-zinc-500 uppercase font-bold block mb-1">Latest Post / Meme Quote</label>
-                <input
-                  type="text"
-                  value={testQuote}
-                  onChange={(e) => setTestQuote(e.target.value)}
-                  className="w-full rounded-lg border border-nine-border bg-black/60 px-3 py-2 text-xs text-white focus:outline-none focus:border-nine-gold font-mono"
-                />
-              </div>
-
-              {/* Calculated Score Result Banner */}
-              {calculatedScore !== null && (
-                <div className="rounded-xl border border-nine-gold/50 bg-gradient-to-r from-amber-950/50 to-[#141208] p-4 text-center shadow-inner">
-                  <div className="text-[10px] text-zinc-400 uppercase font-bold">PROJECTED BAG WORKER SCORE</div>
-                  <div className="text-3xl font-black text-nine-gold mt-1 drop-shadow-[0_0_12px_rgba(255,215,0,0.5)]">
-                    {calculatedScore} <span className="text-sm font-normal text-zinc-400">/ 100</span>
-                  </div>
-                  <div className="text-[11px] text-zinc-400 mt-1">
-                    Breakdown: Posts ({Math.min(30, (parseInt(testPosts, 10) || 1) * 1.5 + 5.0).toFixed(1)} pts) + Streak ({Math.min(25, (parseInt(testActiveDays, 10) || 1) * 5.0).toFixed(1)} pts) + Reach ({Math.min(35, Math.log10(Math.max(10, parseInt(testImpressions, 10) || 1000)) * 7.5).toFixed(1)} pts)
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <div className="mt-6 flex items-center justify-between gap-3">
-              <button
-                type="button"
-                onClick={calculateCustomScore}
-                className="rounded-lg border border-nine-gold bg-transparent px-4 py-2 text-xs font-bold text-nine-gold hover:bg-nine-gold/10 transition-colors"
-              >
-                CALCULATE SCORE
-              </button>
-
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setIsTestModalOpen(false)}
-                  className="rounded-lg border border-nine-border px-3 py-2 text-xs text-zinc-400 hover:text-white"
-                >
-                  CANCEL
-                </button>
-                <button
-                  type="button"
-                  onClick={handleAddCustomWorker}
-                  disabled={calculatedScore === null || !testHandle.trim()}
-                  className="rounded-lg bg-white px-4 py-2 text-xs font-bold text-black hover:bg-nine-gold transition-colors disabled:opacity-40"
-                >
-                  PUSH TO LEADERBOARD
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
