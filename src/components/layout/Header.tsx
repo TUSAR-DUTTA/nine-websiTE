@@ -10,7 +10,6 @@ import { PixelCatAnimator } from '@/components/mascot/PixelCatAnimator';
 import {
   Volume2,
   VolumeX,
-  Wallet,
   ExternalLink,
   TrendingUp,
   Activity,
@@ -30,7 +29,6 @@ export function Header() {
     setViewLayer,
     isConnected,
     connectedProfile,
-    setWalletModalOpen,
     openProfileModal,
     isSoundMuted,
     toggleSound,
@@ -202,7 +200,7 @@ export function Header() {
             <span className="sm:hidden">BUY</span>
           </a>
 
-          {isConnected && connectedProfile ? (
+          {isConnected && connectedProfile && (
             <button
               onClick={() => openProfileModal(connectedProfile)}
               className="flex items-center gap-2 rounded border border-nine-green/60 bg-nine-greenMuted/20 px-3 py-1.5 text-xs font-mono text-white hover:border-nine-green hover:bg-nine-greenMuted/40 transition-all shadow-[0_0_12px_rgba(0,255,102,0.15)]"
@@ -223,14 +221,6 @@ export function Header() {
                 <span className="font-bold text-nine-green leading-none">{connectedProfile.displayName}</span>
                 <span className="text-[10px] text-zinc-400 leading-none mt-0.5">{connectedProfile.shortAddress}</span>
               </div>
-            </button>
-          ) : (
-            <button
-              onClick={() => setWalletModalOpen(true)}
-              className="flex items-center gap-2 rounded border border-nine-borderHighlight bg-white px-3.5 py-1.5 text-xs font-mono font-bold text-black hover:bg-nine-green hover:border-nine-green transition-all shadow-sm"
-            >
-              <Wallet className="h-3.5 w-3.5" />
-              <span>CONNECT</span>
             </button>
           )}
         </div>
