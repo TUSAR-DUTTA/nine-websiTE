@@ -192,7 +192,9 @@ export const Navbar: React.FC = () => {
 
             {/* Buy CTA */}
             <a
-              href="#token"
+              href="https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => soundFx.playCash()}
               className="inline-flex items-center justify-center gap-1.5 px-4 py-2 font-['Titan_One'] text-xs tracking-wide text-black bg-[#00e676] border-2 border-black rounded-lg shadow-[3px_3px_0px_#000] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#000] hover:bg-[#33ff99] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_#000] transition"
             >
@@ -294,7 +296,9 @@ export const Navbar: React.FC = () => {
                 YEET CAT PROJECTILE
               </button>
               <a
-                href="#token"
+                href="https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => {
                   soundFx.playCash();
                   setMobileMenuOpen(false);

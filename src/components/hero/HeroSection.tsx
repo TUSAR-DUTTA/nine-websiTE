@@ -128,8 +128,15 @@ export function HeroSection() {
             <span className="text-zinc-500">CHAIN:</span>
             <span className="text-nine-gold font-bold">ROBINHOOD (4663)</span>
             <span className="text-zinc-600">|</span>
-            <span className="text-zinc-500">DEX:</span>
-            <span className="text-white font-bold">UNISWAP V4</span>
+            <span className="text-zinc-500">LAUNCHPAD:</span>
+            <a
+              href="https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-nine-gold font-bold underline transition-colors"
+            >
+              PONS FAMILY ↗
+            </a>
             <span className="text-zinc-600">|</span>
             <span className="text-zinc-400 font-mono">SUPPLY: 1,000,000,000</span>
           </div>
@@ -197,6 +204,17 @@ export function HeroSection() {
 
             {/* Action Buttons to Switch Tabs */}
             <div className="mt-7 flex flex-wrap items-center gap-3 font-mono text-xs">
+              <a
+                href="https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => soundManager.playClick()}
+                className="flex items-center gap-2 rounded bg-nine-green px-5 py-3 font-black text-black hover:bg-emerald-400 hover:shadow-[0_0_20px_rgba(0,255,102,0.4)] transition-all uppercase tracking-wider shadow-lg"
+              >
+                <Zap className="h-4 w-4 fill-black" />
+                <span>BUY ON LAUNCHPAD</span>
+              </a>
+
               <button
                 onClick={() => {
                   soundManager.playClick();
@@ -204,7 +222,7 @@ export function HeroSection() {
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                   else setActiveTab('GME_SAGA');
                 }}
-                className="flex items-center gap-2 rounded bg-nine-green px-5 py-3 font-black text-black hover:bg-emerald-400 hover:shadow-[0_0_20px_rgba(0,255,102,0.4)] transition-all uppercase tracking-wider"
+                className="flex items-center gap-2 rounded border border-nine-borderHighlight bg-nine-surface px-5 py-3 font-bold text-white hover:border-nine-green hover:text-nine-green transition-all uppercase"
               >
                 <BookOpen className="h-4 w-4" />
                 <span>EXPLORE GME SAGA</span>

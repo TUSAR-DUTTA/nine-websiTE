@@ -6,8 +6,9 @@ export const Hero: React.FC = () => {
   const [copied, setCopied] = useState<boolean>(false);
   const [mascotBoings, setMascotBoings] = useState<number>(0);
 
-  // Contract address placeholder as strictly requested in prompt
-  const CONTRACT_ADDRESS = "[INSERT CONTRACT ADDRESS]";
+  // Official Contract Address & Launchpad
+  const CONTRACT_ADDRESS = "0x697518845e7c5DEE323720871D8bE03F9D3Fc901";
+  const LAUNCHPAD_URL = "https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(CONTRACT_ADDRESS);
@@ -131,21 +132,23 @@ export const Hero: React.FC = () => {
             </button>
 
             <a
-              href="#token"
+              href={LAUNCHPAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => soundFx.playCash()}
               className="px-7 py-3.5 font-['Titan_One'] text-base tracking-wide text-black bg-[#00e676] border-3 border-black rounded-2xl shadow-[5px_5px_0px_#000] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000] hover:bg-[#2bff95] active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0px_#000] transition flex items-center gap-2"
             >
               <TrendingUp className="w-5 h-5 text-black" />
-              BUY $NINE
+              BUY ON LAUNCHPAD
             </a>
 
             <a
-              href="https://dexscreener.com/"
+              href={`https://robinhoodchain.blockscout.com/token/${CONTRACT_ADDRESS}`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3.5 font-['Space_Grotesk'] font-bold text-sm tracking-wide text-white bg-[#15151e] border-3 border-black rounded-2xl shadow-[5px_5px_0px_#000] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000] hover:border-neutral-500 active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0px_#000] transition flex items-center gap-2"
             >
-              VIEW CHART
+              VIEW ON EXPLORER
               <ArrowUpRight className="w-4 h-4 text-neutral-400" />
             </a>
 

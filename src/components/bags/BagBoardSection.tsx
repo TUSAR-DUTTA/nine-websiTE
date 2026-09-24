@@ -47,14 +47,25 @@ export function BagBoardSection() {
               <Trophy className="h-8 w-8 text-nine-gold animate-bounce" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white uppercase tracking-wider">
-              AWAITING ON-CHAIN RANKING • RECALCULATED ON TOKEN LAUNCH
+              TOKEN OFFICIALLY LAUNCHED • INDEXING ON-CHAIN HOLDERS
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 mt-2 max-w-xl mx-auto leading-relaxed">
-              On-chain bag holders, accumulator titans, and top conviction wallets will be automatically indexed here as blocks are mined on Robinhood Chain Mainnet.
+              $NINE is officially live on Pons Family Launchpad! On-chain bag holders, accumulator titans, and top conviction wallets are being automatically indexed here as blocks are mined on Robinhood Chain Mainnet.
             </p>
-            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-950/30 px-3.5 py-1 text-xs text-emerald-400 font-bold">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>LISTENING FOR ON-CHAIN $NINE HOLDER ACCUMULATION</span>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded bg-nine-green px-4 py-2 text-xs text-black font-black hover:bg-emerald-400 transition-all uppercase shadow-md"
+              >
+                <Zap className="h-3.5 w-3.5 fill-black" />
+                <span>BUY ON LAUNCHPAD</span>
+              </a>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-950/30 px-3.5 py-1 text-xs text-emerald-400 font-bold">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>LISTENING FOR ON-CHAIN ACCUMULATION</span>
+              </div>
             </div>
           </div>
         ) : (

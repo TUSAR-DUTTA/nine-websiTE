@@ -5,10 +5,11 @@ import { soundFx } from '@/utils/audio';
 export const TokenSection: React.FC = () => {
   const [copied, setCopied] = useState<boolean>(false);
 
-  // Exact placeholders as strictly commanded by prompt
-  const NETWORK = "[INSERT NETWORK]";
-  const CONTRACT_ADDRESS = "[INSERT CONTRACT ADDRESS]";
-  const DEX_PLATFORM = "[INSERT DEX]";
+  // Official Token Parameters
+  const NETWORK = "Robinhood Chain (4663)";
+  const CONTRACT_ADDRESS = "0x697518845e7c5DEE323720871D8bE03F9D3Fc901";
+  const DEX_PLATFORM = "Pons Family Launchpad";
+  const LAUNCHPAD_URL = "https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901";
 
   const copyAddress = () => {
     navigator.clipboard.writeText(CONTRACT_ADDRESS);
@@ -102,7 +103,9 @@ export const TokenSection: React.FC = () => {
           {/* Action Links Buttons */}
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-6 border-t border-neutral-800 mt-6">
             <a
-              href="#token"
+              href={LAUNCHPAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => soundFx.playCash()}
               className="px-6 py-3 font-['Titan_One'] text-xs uppercase tracking-wider text-black bg-[#00e676] border-2 border-black rounded-xl shadow-[3px_3px_0px_#000] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_#000] transition flex items-center gap-1.5"
             >
@@ -111,12 +114,12 @@ export const TokenSection: React.FC = () => {
             </a>
 
             <a
-              href="https://dexscreener.com/"
+              href={`https://robinhoodchain.blockscout.com/token/${CONTRACT_ADDRESS}`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 font-['Space_Grotesk'] font-bold text-xs uppercase text-white bg-neutral-900 border-2 border-black rounded-xl shadow-[3px_3px_0px_#000] hover:border-neutral-500 transition flex items-center gap-1.5"
             >
-              VIEW LIVE CHART
+              VIEW ON BLOCKSCOUT
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
 
@@ -147,22 +150,22 @@ export const TokenSection: React.FC = () => {
             {
               step: "01",
               title: "CREATE A WALLET",
-              desc: "Download a trusted web3 wallet compatible with [INSERT NETWORK] (e.g. Phantom, MetaMask)."
+              desc: "Download an EVM-compatible Web3 wallet like MetaMask, Rabby, or Robinhood Wallet."
             },
             {
               step: "02",
               title: "ACQUIRE GAS",
-              desc: "Purchase native tokens to fund your swap and cover network transaction fees."
+              desc: "Ensure you have ETH on Robinhood Chain Mainnet (Chain ID 4663) to cover gas fees."
             },
             {
               step: "03",
-              title: "CONNECT TO DEX",
-              desc: "Navigate to [INSERT DEX], connect your wallet, and paste the official $NINE contract address."
+              title: "CONNECT TO LAUNCHPAD",
+              desc: "Navigate to Pons Family Launchpad, connect your wallet, and locate the official $NINE pool."
             },
             {
               step: "04",
               title: "HODL 9 LIVES",
-              desc: "Swap for $NINE. Set slippage appropriately. Never read the obituary."
+              desc: "Swap for $NINE. Secure your bag and join the immortal retail comeback."
             }
           ].map((item, idx) => (
             <div

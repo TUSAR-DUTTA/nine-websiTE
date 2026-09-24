@@ -19,9 +19,13 @@ export const ROBINHOOD_TESTNET_CONFIG = ROBINHOOD_MAINNET_CONFIG;
 
 export const BURN_ADDRESS = '0x000000000000000000000000000000000000dEaD';
 
-// Official $NINE Token Contract on Robinhood Chain Mainnet (Awaiting official launch CA)
+// Official $NINE Token Contract on Robinhood Chain Mainnet
 export const DEFAULT_TOKEN_ADDRESS =
-  process.env.NEXT_PUBLIC_TOKEN_ADDRESS || '';
+  process.env.NEXT_PUBLIC_TOKEN_ADDRESS || '0x697518845e7c5DEE323720871D8bE03F9D3Fc901';
+
+export const LAUNCHPAD_URL =
+  process.env.NEXT_PUBLIC_LAUNCHPAD_URL ||
+  'https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901';
 
 export const ERC20_ABI = [
   'function name() view returns (string)',

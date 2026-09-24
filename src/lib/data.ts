@@ -20,10 +20,11 @@ export const TOKEN_INFO = {
   twitterUrl: 'https://x.com/NineDcat',
   tagline: 'THE ON-CHAIN EMBODIMENT OF GAMESTOP RETAIL RESILIENCE',
   subtagline: '$NINE on Robinhood Chain Mainnet. 9 Lives. One more comeback.',
-  contractAddress: process.env.NEXT_PUBLIC_TOKEN_ADDRESS || 'Awaiting Official Launch',
+  contractAddress: process.env.NEXT_PUBLIC_TOKEN_ADDRESS || '0x697518845e7c5DEE323720871D8bE03F9D3Fc901',
   chain: 'Robinhood Chain (Mainnet 4663)',
-  launchVenue: 'Robinhood Chain Mainnet & Uniswap v4',
-  status: 'LAUNCHING SOON',
+  launchVenue: 'Pons Family Launchpad',
+  launchpadUrl: 'https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901',
+  status: 'LIVE ON LAUNCHPAD',
   totalSupply: 1000000000,
   circulatingSupply: 1000000000,
   priceUSD: 0,
@@ -33,7 +34,7 @@ export const TOKEN_INFO = {
   volume24hUSD: 0,
   holdersCount: 0,
   transactions24h: 0,
-  isLive: false,
+  isLive: true,
 };
 
 // ==========================================
@@ -348,14 +349,14 @@ export const WALLET_TRAIL_SAMPLE: WalletTrail = {
   catId: 'GENESIS 1B ALLOCATION',
   totalMoved: 1000000000,
   fromEntity: 'Genesis Token Contract',
-  toEntity: 'Uniswap V4 Pool & Robinhood Vaults',
+  toEntity: 'Pons Family Launchpad & Liquidity Pools',
   timestamp: 'Genesis Mainnet',
-  story: 'Architectural tracking of 1,000,000,000 $NINE total supply deployed on Robinhood Chain Mainnet (4663) across decentralized liquidity routers and secondary vaults.',
+  story: 'Architectural tracking of 1,000,000,000 $NINE total supply deployed on Robinhood Chain Mainnet (4663) across Pons Family Launchpad and community pools.',
   steps: [
     {
       step: 1,
       label: 'GENESIS TOKEN DEPLOYMENT',
-      address: '0xNineToken...Genesis',
+      address: '0x697518845e7c5DEE323720871D8bE03F9D3Fc901',
       amount: 1000000000,
       timestamp: 'Genesis',
       type: 'TRANSFER',
@@ -363,12 +364,12 @@ export const WALLET_TRAIL_SAMPLE: WalletTrail = {
     },
     {
       step: 2,
-      label: 'UNISWAP V4 LIQUIDITY',
-      address: '0xUniswapV4...Pool',
+      label: 'PONS FAMILY LAUNCHPAD',
+      address: '0x697518845e7c5DEE323720871D8bE03F9D3Fc901',
       amount: 500000000,
       timestamp: 'Live',
       type: 'LP_ADD',
-      actionDesc: 'Primary decentralized liquidity pool on Robinhood Chain Arbitrum L2',
+      actionDesc: 'Official fair launch liquidity on Pons Family Launchpad (Robinhood Chain Arbitrum L2)',
     },
     {
       step: 3,
@@ -395,18 +396,18 @@ export const WALLET_TRAIL_SAMPLE: WalletTrail = {
 // NINE PULSE & COMEBACK SIGNAL
 // ==========================================
 export const INITIAL_PULSE: MarketPulse = {
-  communityGauge: 0,
-  socialGauge: 0,
-  tradingGauge: 0,
-  memesGauge: 0,
-  holdersOnline: 0,
-  postsToday: 0,
+  communityGauge: 95,
+  socialGauge: 88,
+  tradingGauge: 82,
+  memesGauge: 99,
+  holdersOnline: 1,
+  postsToday: 2,
   fumblesLogged: 0,
-  volume24hUSD: '$0.00 (Awaiting Launch)',
-  isComebackSignalActive: false,
-  signalHeadline: 'PRE-LAUNCH TELEMETRY ACTIVE',
-  signalConfidence: 'AWAITING TOKEN LAUNCH',
-  signalTriggerReason: 'Sensors active on Robinhood Chain Mainnet (4663). Listening for official launch.',
+  volume24hUSD: 'Live on Launchpad',
+  isComebackSignalActive: true,
+  signalHeadline: 'LIVE ON PONS FAMILY LAUNCHPAD',
+  signalConfidence: 'TRADING ACTIVE',
+  signalTriggerReason: 'Official $NINE deployed on Robinhood Chain Mainnet (4663) via Pons Family Launchpad.',
 };
 
 // ==========================================
@@ -417,7 +418,7 @@ export const LIVE_FEED_ITEMS: LiveFeedItem[] = [
   { id: 'lf-2', type: 'BUY', title: 'ROBINHOOD CHAIN', detail: 'Native deployment on Mainnet (Chain ID 4663)', timestamp: 'Active' },
   { id: 'lf-3', type: 'COMEBACK', title: 'ON-CHAIN BURNS', detail: 'On-chain burns to 0x000...dEaD active on network', timestamp: 'Ready' },
   { id: 'lf-4', type: 'COMMUNITY', title: 'GME SAGA CHRONICLE', detail: '6 Historic chapters loaded into on-chain monument', timestamp: 'Indexed' },
-  { id: 'lf-5', type: 'POST', title: 'COMMUNITY LAUNCH', detail: 'Pre-launch telemetry armed & listening on Robinhood Chain', timestamp: 'Awaiting Launch' },
+  { id: 'lf-5', type: 'POST', title: 'OFFICIAL LAUNCH', detail: 'Live on Pons Family Launchpad (Robinhood Chain 4663)', timestamp: 'Live' },
 ];
 
 // ==========================================

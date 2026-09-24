@@ -29,7 +29,7 @@ export interface LiveTokenMarketData {
 }
 
 export const ROBINHOOD_CONFIG_FUMBLES = {
-  tokenAddress: process.env.NEXT_PUBLIC_TOKEN_ADDRESS || '',
+  tokenAddress: process.env.NEXT_PUBLIC_TOKEN_ADDRESS || '0x697518845e7c5DEE323720871D8bE03F9D3Fc901',
   tokenSymbol: 'NINE',
   tokenName: '$NINE',
   pairAddress: process.env.NEXT_PUBLIC_PAIR_ADDRESS || '',

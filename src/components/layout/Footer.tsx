@@ -58,9 +58,9 @@ export function Footer() {
                 Every cat has nine lives. But some cats just refuse to stay dead.
                 That is $NINE. The on-chain monument to the GameStop retail uprising.
               </p>
-              <div className="mt-3 flex items-center gap-2">
+              <div className="mt-3 flex flex-wrap items-center gap-2">
                 <span className="text-zinc-600">CONTRACT:</span>
-                <span className="text-zinc-300 text-[11px] select-all bg-nine-surface px-2 py-0.5 rounded border border-nine-border">
+                <span className="text-zinc-300 text-[11px] select-all bg-nine-surface px-2 py-0.5 rounded border border-nine-border font-mono">
                   {TOKEN_INFO.contractAddress}
                 </span>
                 <button
@@ -70,6 +70,14 @@ export function Footer() {
                 >
                   {copied ? <Check className="h-3.5 w-3.5 text-nine-green" /> : <Copy className="h-3.5 w-3.5" />}
                 </button>
+                <a
+                  href="https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-nine-green hover:underline text-[11px] font-bold ml-1"
+                >
+                  Pons Family Launchpad ↗
+                </a>
               </div>
             </div>
           </div>

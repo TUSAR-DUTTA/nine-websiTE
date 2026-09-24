@@ -20,6 +20,7 @@ import {
   Trophy,
   Copy,
   Check,
+  Zap,
 } from 'lucide-react';
 
 export function Header() {
@@ -189,6 +190,17 @@ export function Header() {
           >
             {isSoundMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
           </button>
+
+          <a
+            href="https://www.ponsfamily.com/launchpad/0x697518845e7c5DEE323720871D8bE03F9D3Fc901"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 rounded bg-nine-green px-3 py-1.5 text-xs font-mono font-black text-black hover:bg-emerald-400 hover:shadow-[0_0_15px_rgba(0,255,102,0.4)] transition-all uppercase tracking-wider"
+          >
+            <Zap className="h-3.5 w-3.5 fill-black" />
+            <span className="hidden sm:inline">BUY ON LAUNCHPAD</span>
+            <span className="sm:hidden">BUY</span>
+          </a>
 
           {isConnected && connectedProfile ? (
             <button
