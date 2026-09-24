@@ -63,7 +63,7 @@ export const DeadAgainInteractive: React.FC = () => {
         <div className="space-y-3 mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 border border-red-500/30 text-red-400 text-xs font-['JetBrains_Mono'] font-bold uppercase tracking-wider">
             <Skull className="w-3.5 h-3.5" />
-            INTERACTIVE TEST FACILITY
+            THE FLATLINE CHAMBER
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-['Titan_One'] text-white leading-tight">

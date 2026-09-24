@@ -11,7 +11,6 @@ import {
   Volume2,
   VolumeX,
   Wallet,
-  Shield,
   ExternalLink,
   TrendingUp,
   Activity,
@@ -35,7 +34,6 @@ export function Header() {
     isSoundMuted,
     toggleSound,
     liveFeed,
-    setAdminModalOpen,
   } = useNine();
 
   const [copiedContract, setCopiedContract] = useState(false);
@@ -190,14 +188,6 @@ export function Header() {
             title={isSoundMuted ? 'Unmute Terminal Audio' : 'Mute Terminal Audio'}
           >
             {isSoundMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-          </button>
-
-          <button
-            onClick={() => setAdminModalOpen(true)}
-            className="p-2 rounded border border-nine-border text-zinc-500 hover:text-zinc-300 hover:border-zinc-400 transition-all"
-            title="Admin Protocol Gateway"
-          >
-            <Shield className="h-4 w-4" />
           </button>
 
           {isConnected && connectedProfile ? (

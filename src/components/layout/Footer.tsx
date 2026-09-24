@@ -112,7 +112,7 @@ export function Footer() {
         {/* Disclaimer & Transparency Note */}
         <div className="mt-8 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row justify-between gap-4 text-[10px] text-zinc-600">
           <p>
-            $NINE is a decentralized memecoin honoring GameStop financial history. Not financial advice. Demo data and simulated terminal telemetry labeled for testing.
+            $NINE is a decentralized community memecoin honoring GameStop retail resilience history. Not financial advice. Always conduct your own research.
           </p>
           <div className="flex items-center gap-4">
             <span>VERSION 2.0.0-PROD</span>
