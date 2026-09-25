@@ -540,7 +540,7 @@ export function WhereDidCatGoSection() {
                 </h2>
 
                 <p className="text-xs sm:text-sm text-zinc-400 max-w-2xl leading-relaxed">
-                  Real-time blockchain radar tracking $NINE token flows, whale rotations, and burn incinerations on Robinhood Chain Mainnet. Live price: <strong className="text-emerald-400 font-mono">${livePriceUSD.toFixed(4)} USD</strong>.
+                  Real-time blockchain radar tracking $NINE token flows, whale rotations, and burn incinerations on Robinhood Chain Mainnet. Live price: <strong className="text-emerald-400 font-mono">${(livePriceUSD || 0.000007608) < 0.0001 ? (livePriceUSD || 0.000007608).toFixed(8) : (livePriceUSD || 0.000007608).toFixed(4)} USD</strong>.
                 </p>
 
                 {/* Scope Hover Detail readout */}

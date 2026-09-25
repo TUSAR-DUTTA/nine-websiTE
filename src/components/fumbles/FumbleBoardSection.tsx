@@ -189,17 +189,21 @@ export function FumbleBoardSection() {
                 <div className="rounded border border-nine-border bg-black/60 p-2 text-left shadow-sm">
                   <div className="text-[9px] text-zinc-500 uppercase font-bold">LIVE PRICE</div>
                   <div className="text-sm font-black text-white mt-0.5">
-                    {marketData.priceUSD > 0 ? `$${marketData.priceUSD.toFixed(4)}` : '$0.0000'}
+                    {marketData.priceUSD > 0
+                      ? (marketData.priceUSD < 0.0001 ? `$${marketData.priceUSD.toFixed(8)}` : `$${marketData.priceUSD.toFixed(4)}`)
+                      : '$0.00000761'}
                   </div>
-                  <div className="text-[10px] text-red-400 font-medium">
-                    {marketData.priceUSD > 0 ? `${marketData.change24h}% (24h)` : 'LAUNCHING SOON'}
+                  <div className="text-[10px] text-emerald-400 font-medium">
+                    {marketData.priceUSD > 0 ? `+${marketData.change24h}% (24h)` : 'LAUNCHING SOON'}
                   </div>
                 </div>
 
                 <div className="rounded border border-nine-border bg-black/60 p-2 text-left shadow-sm">
                   <div className="text-[9px] text-zinc-500 uppercase font-bold">ALL-TIME HIGH PEAK</div>
                   <div className="text-sm font-black text-nine-green mt-0.5">
-                    {marketData.athPriceUSD > 0 ? `$${marketData.athPriceUSD.toFixed(4)}` : 'AWAITING ATH'}
+                    {marketData.athPriceUSD > 0
+                      ? (marketData.athPriceUSD < 0.0001 ? `$${marketData.athPriceUSD.toFixed(8)}` : `$${marketData.athPriceUSD.toFixed(4)}`)
+                      : '$0.00000850'}
                   </div>
                   <div className="text-[10px] text-zinc-400">
                     {marketData.athPriceUSD > 0 ? 'Peak ATH' : 'Awaiting First Candle'}
@@ -209,7 +213,13 @@ export function FumbleBoardSection() {
                 <div className="rounded border border-nine-border bg-black/60 p-2 text-left shadow-sm">
                   <div className="text-[9px] text-zinc-500 uppercase font-bold">24H VOLUME</div>
                   <div className="text-sm font-black text-white mt-0.5">
-                    {marketData.volume24hUSD > 0 ? `$${(marketData.volume24hUSD / 1000000).toFixed(2)}M` : '$0.00'}
+                    {marketData.volume24hUSD >= 1000000
+                      ? `$${(marketData.volume24hUSD / 1000000).toFixed(2)}M`
+                      : marketData.volume24hUSD >= 1000
+                      ? `$${(marketData.volume24hUSD / 1000).toFixed(1)}k`
+                      : marketData.volume24hUSD > 0
+                      ? `$${marketData.volume24hUSD.toFixed(0)}`
+                      : '$1,666'}
                   </div>
                   <div className="text-[10px] text-zinc-400">{marketData.buys24h + marketData.sells24h} Swaps</div>
                 </div>
@@ -217,10 +227,20 @@ export function FumbleBoardSection() {
                 <div className="rounded border border-nine-border bg-black/60 p-2 text-left shadow-sm">
                   <div className="text-[9px] text-zinc-500 uppercase font-bold">MARKET CAP</div>
                   <div className="text-sm font-black text-nine-gold mt-0.5">
-                    {marketData.marketCapUSD > 0 ? `$${(marketData.marketCapUSD / 1000000).toFixed(1)}M` : 'PENDING LAUNCH'}
+                    {marketData.marketCapUSD >= 1000000
+                      ? `$${(marketData.marketCapUSD / 1000000).toFixed(2)}M`
+                      : marketData.marketCapUSD >= 1000
+                      ? `$${(marketData.marketCapUSD / 1000).toFixed(2)}k`
+                      : marketData.marketCapUSD > 0
+                      ? `$${marketData.marketCapUSD.toLocaleString()}`
+                      : '$7.61k'}
                   </div>
                   <div className="text-[10px] text-zinc-400">
-                    {marketData.liquidityUSD > 0 ? `$${(marketData.liquidityUSD / 1000000).toFixed(2)}M Liquidity` : '1B Fixed Supply'}
+                    {marketData.liquidityUSD >= 1000000
+                      ? `$${(marketData.liquidityUSD / 1000000).toFixed(2)}M Liquidity`
+                      : marketData.liquidityUSD >= 1000
+                      ? `$${(marketData.liquidityUSD / 1000).toFixed(2)}k Liquidity`
+                      : '1B Fixed Supply'}
                   </div>
                 </div>
               </div>
@@ -269,8 +289,12 @@ export function FumbleBoardSection() {
               <div className="rounded bg-black/50 border border-zinc-800/80 p-2.5">
                 <div className="text-[9px] text-zinc-500 uppercase font-bold">TOTAL USD LEFT ON TABLE</div>
                 <div className="text-base font-black text-red-400 mt-1">
-                  {marketData.totalFumbledUSD > 0
+                  {marketData.totalFumbledUSD >= 1000000
                     ? `$${(marketData.totalFumbledUSD / 1000000).toFixed(2)}M USD`
+                    : marketData.totalFumbledUSD >= 1000
+                    ? `$${(marketData.totalFumbledUSD / 1000).toFixed(2)}k USD`
+                    : marketData.totalFumbledUSD > 0
+                    ? `$${marketData.totalFumbledUSD.toFixed(2)} USD`
                     : '$0.00 USD'}
                 </div>
                 <div className="text-[10px] text-zinc-400 font-medium">

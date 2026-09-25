@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { FUMBLES_DATA, detectFumble } from '@/lib/data';
 import { fetchRobinhoodChainLiveFumbles } from '@/lib/liveFumbles';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const data = await fetchRobinhoodChainLiveFumbles();

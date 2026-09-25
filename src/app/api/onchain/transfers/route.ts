@@ -4,70 +4,51 @@ import {
   ROBINHOOD_CONFIG,
   DEFAULT_TOKEN_ADDRESS,
   BURN_ADDRESS,
-  ERC20_ABI,
 } from '@/lib/onchain';
+import {
+  NINE_LAUNCH_BLOCK,
+  GME_TOKEN_ADDRESS,
+  resolveLaunchedToken,
+  fetchPonsCurveTelemetry,
+  getEntityTag,
+  getLiveGmePriceUSD,
+  PONS_CURVE_ABI,
+  PONS_TOKEN_ABI,
+} from '@/lib/pons';
 
 export const dynamic = 'force-dynamic';
 
-// Dynamic price caching
-let cachedPriceUSD = 0;
-let lastPriceFetchTimestamp = 0;
-
-async function getLivePriceUSD(): Promise<number> {
-  if (!DEFAULT_TOKEN_ADDRESS || !DEFAULT_TOKEN_ADDRESS.startsWith('0x') || DEFAULT_TOKEN_ADDRESS === '0x0000000000000000000000000000000000000000') {
-    return 0;
-  }
-  const now = Date.now();
-  if (now - lastPriceFetchTimestamp < 30000 && cachedPriceUSD > 0) {
-    return cachedPriceUSD;
-  }
-  try {
-    const res = await fetch(
-      `https://api.dexscreener.com/latest/dex/tokens/${DEFAULT_TOKEN_ADDRESS}`,
-      { next: { revalidate: 30 } }
-    );
-    if (res.ok) {
-      const data = await res.json();
-      if (data?.pairs?.[0]?.priceUsd) {
-        cachedPriceUSD = parseFloat(data.pairs[0].priceUsd);
-        lastPriceFetchTimestamp = now;
-      }
-    }
-  } catch (err) {
-    // Keep cached fallback
-  }
-  return cachedPriceUSD;
+// ============================================================================
+// IN-MEMORY INDEXING CACHE FOR ULTRA-FAST TELEMETRY
+// ============================================================================
+interface CachedRawTrade {
+  type: 'BUY' | 'SELL';
+  txHash: string;
+  blockNumber: number;
+  from: string;
+  to: string;
+  amount: number; // NINE tokens
+  quoteAmount: number; // GME quote asset
+  fee: number;
+  tax: number;
 }
 
-// Known Robinhood Chain Entities
-const KNOWN_ENTITIES: Record<string, { label: string; type: 'BURN' | 'DEX' | 'ROUTER' | 'TOKEN' | 'WHALE' }> = {
-  [BURN_ADDRESS.toLowerCase()]: { label: '🔥 Dead Burn Vault', type: 'BURN' },
-  ...(DEFAULT_TOKEN_ADDRESS && DEFAULT_TOKEN_ADDRESS.startsWith('0x') ? { [DEFAULT_TOKEN_ADDRESS.toLowerCase()]: { label: '🐱 $NINE Token Contract', type: 'TOKEN' } } : {}),
-  '0x8366a39cc670b4001a1121b8f6a443a643e40951': { label: '🔄 Uniswap v4 Router / Pool', type: 'DEX' },
-  '0x6f02324d20cc679d0e585290caa6b16bacbc0f77': { label: '⚡ Uniswap v4 Settlement Vault', type: 'ROUTER' },
-  '0x35d217b10f974a49f1bfd369fc5c85b597ae09a1': { label: '⚡ Robinhood DEX Settlement', type: 'ROUTER' },
-  '0x0000000071647c6c1ae028daf9f80c000beac2cc': { label: '⚡ DEX Execution Agent', type: 'ROUTER' },
-  '0x204faca1764b154221e35c0d20abb3c525710498': { label: '🐋 Whale Alpha Operative', type: 'WHALE' },
-  '0xd246c518244a6e41f71d89d3f6aeb81b837565cc': { label: '💼 Active Bag Worker', type: 'WHALE' },
-  '0x8f10b468b06c6fd214b65f87778827f7d113f996': { label: '💼 Active Bag Worker #2', type: 'WHALE' },
-  '0xd1843da3ef8336d0464a6d9935119964d6243167': { label: '💼 Active Bag Worker #3', type: 'WHALE' },
-  '0x69322d1527f0071de9b265fc213c8645e93f1f9f': { label: '💼 Active Operative #4', type: 'WHALE' },
-  '0x02b50609956ae61f528a0c3b428476657d3334f2': { label: '🛡️ Diamond Paws Holder', type: 'WHALE' },
-};
-
-function getAddressTag(address: string): { label: string; isKnown: boolean; type: string } {
-  const lower = address.toLowerCase();
-  if (KNOWN_ENTITIES[lower]) {
-    return { label: KNOWN_ENTITIES[lower].label, isKnown: true, type: KNOWN_ENTITIES[lower].type };
-  }
-  return {
-    label: `${address.slice(0, 6)}...${address.slice(-4)}`,
-    isKnown: false,
-    type: 'OPERATIVE',
-  };
+interface CachedRawTransfer {
+  txHash: string;
+  blockNumber: number;
+  from: string;
+  to: string;
+  amount: number;
 }
 
-// Robinhood Chain block time is ~0.12 seconds per block (~8 blocks per second)
+let cachedCurveAddress = '';
+let cachedPairAddress = '';
+let lastIndexedBlock = 0;
+let cachedTrades: CachedRawTrade[] = [];
+let cachedTransfers: CachedRawTransfer[] = [];
+let isIndexing = false;
+
+// Robinhood Chain block time is ~0.12 seconds (~8 blocks/sec)
 function calculateBlockTime(blocksAgo: number): { desc: string; exactTime: string } {
   const approxSeconds = Math.max(1, Math.round(blocksAgo * 0.12));
   const txDate = new Date(Date.now() - approxSeconds * 1000);
@@ -80,10 +61,14 @@ function calculateBlockTime(blocksAgo: number): { desc: string; exactTime: strin
     const mins = Math.floor(approxSeconds / 60);
     const secs = approxSeconds % 60;
     desc = secs > 0 ? `${mins}m ${secs}s ago` : `${mins}m ago`;
-  } else {
+  } else if (approxSeconds < 86400) {
     const hours = Math.floor(approxSeconds / 3600);
     const mins = Math.floor((approxSeconds % 3600) / 60);
     desc = mins > 0 ? `${hours}h ${mins}m ago` : `${hours}h ago`;
+  } else {
+    const days = Math.floor(approxSeconds / 86400);
+    const hours = Math.floor((approxSeconds % 86400) / 3600);
+    desc = hours > 0 ? `${days}d ${hours}h ago` : `${days}d ago`;
   }
   return { desc, exactTime };
 }
@@ -108,6 +93,8 @@ export interface FormattedTransfer {
   toType: string;
   amount: number;
   amountUSD: number;
+  quoteAmount?: number;
+  quoteSymbol?: string;
   transferType: TransferCategory;
   explorerUrl: string;
   timestampDesc: string;
@@ -133,13 +120,134 @@ export interface TopActiveMover {
   txCount: number;
 }
 
+/**
+ * Performs parallel indexing of the Pons bonding curve and token transfers
+ */
+async function syncOnChainActivity(
+  provider: ethers.JsonRpcProvider,
+  curveAddress: string,
+  tokenAddress: string,
+  currentBlock: number
+) {
+  if (isIndexing) return;
+  isIndexing = true;
+
+  try {
+    const curve = new ethers.Contract(curveAddress, PONS_CURVE_ABI, provider);
+    const token = new ethers.Contract(tokenAddress, PONS_TOKEN_ABI, provider);
+
+    // If curve changed or first run, initialize from launch block
+    if (cachedCurveAddress !== curveAddress.toLowerCase() || lastIndexedBlock === 0) {
+      cachedCurveAddress = curveAddress.toLowerCase();
+      cachedTrades = [];
+      cachedTransfers = [];
+      lastIndexedBlock = NINE_LAUNCH_BLOCK;
+    }
+
+    const startFrom = lastIndexedBlock;
+    if (startFrom >= currentBlock) {
+      isIndexing = false;
+      return;
+    }
+
+    // Break into parallel ranges of up to 100,000 blocks
+    const chunkSize = 100000;
+    const ranges: { from: number; to: number }[] = [];
+    for (let f = startFrom; f <= currentBlock; f += chunkSize) {
+      const t = Math.min(currentBlock, f + chunkSize - 1);
+      ranges.push({ from: f, to: t });
+    }
+
+    const results = await Promise.all(
+      ranges.map(async ({ from, to }) => {
+        try {
+          const [buys, sells, transfers] = await Promise.all([
+            curve.queryFilter(curve.filters.CurveBuy(), from, to).catch(() => []),
+            curve.queryFilter(curve.filters.CurveSell(), from, to).catch(() => []),
+            token.queryFilter(token.filters.Transfer(), from, to).catch(() => []),
+          ]);
+          return { buys, sells, transfers };
+        } catch (err) {
+          console.warn(`Query range [${from} - ${to}] failed:`, err);
+          return { buys: [], sells: [], transfers: [] };
+        }
+      })
+    );
+
+    const newTrades: CachedRawTrade[] = [];
+    for (const r of results) {
+      for (const b of r.buys as any[]) {
+        newTrades.push({
+          type: 'BUY',
+          txHash: b.transactionHash,
+          blockNumber: b.blockNumber,
+          from: b.args[0], // buyer
+          to: b.args[1],   // recipient
+          amount: Number(ethers.formatEther(b.args[3])), // tokensOut
+          quoteAmount: Number(ethers.formatEther(b.args[2])), // quoteIn (GME)
+          fee: Number(ethers.formatEther(b.args[4])),
+          tax: Number(ethers.formatEther(b.args[5])),
+        });
+      }
+      for (const s of r.sells as any[]) {
+        newTrades.push({
+          type: 'SELL',
+          txHash: s.transactionHash,
+          blockNumber: s.blockNumber,
+          from: s.args[0], // seller
+          to: s.args[1],   // recipient
+          amount: Number(ethers.formatEther(s.args[2])), // tokensIn
+          quoteAmount: Number(ethers.formatEther(s.args[3])), // quoteOut (GME)
+          fee: Number(ethers.formatEther(s.args[4])),
+          tax: Number(ethers.formatEther(s.args[5])),
+        });
+      }
+    }
+
+    const newTransfers: CachedRawTransfer[] = [];
+    for (const r of results) {
+      for (const t of r.transfers as any[]) {
+        newTransfers.push({
+          txHash: t.transactionHash,
+          blockNumber: t.blockNumber,
+          from: t.args[0],
+          to: t.args[1],
+          amount: Number(ethers.formatEther(t.args[2])),
+        });
+      }
+    }
+
+    // Merge & deduplicate
+    const tradeMap = new Map<string, CachedRawTrade>();
+    for (const t of [...cachedTrades, ...newTrades]) {
+      tradeMap.set(`${t.txHash.toLowerCase()}-${t.type}-${t.amount}`, t);
+    }
+    cachedTrades = Array.from(tradeMap.values());
+
+    const transferMap = new Map<string, CachedRawTransfer>();
+    for (const t of [...cachedTransfers, ...newTransfers]) {
+      transferMap.set(`${t.txHash.toLowerCase()}-${t.from}-${t.to}-${t.amount}`, t);
+    }
+    cachedTransfers = Array.from(transferMap.values());
+
+    lastIndexedBlock = currentBlock;
+  } catch (err) {
+    console.error('Error syncing onchain activity:', err);
+  } finally {
+    isIndexing = false;
+  }
+}
+
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const targetWallet = searchParams.get('wallet');
 
-    // If token contract address is not yet configured on Robinhood Chain, return clean launch-ready telemetry
-    if (!DEFAULT_TOKEN_ADDRESS || !DEFAULT_TOKEN_ADDRESS.startsWith('0x') || DEFAULT_TOKEN_ADDRESS === '0x0000000000000000000000000000000000000000') {
+    const provider = new ethers.JsonRpcProvider(ROBINHOOD_CONFIG.rpcUrl);
+
+    // 1. Resolve token launch & curve from Pons Factory
+    const launch = await resolveLaunchedToken(provider, DEFAULT_TOKEN_ADDRESS);
+    if (!launch || !launch.curve || launch.curve === ethers.ZeroAddress) {
       return NextResponse.json({
         success: true,
         transfers: [],
@@ -155,42 +263,127 @@ export async function GET(req: NextRequest) {
       });
     }
 
-    const [priceUSD, provider] = await Promise.all([
-      getLivePriceUSD(),
-      new ethers.JsonRpcProvider(ROBINHOOD_CONFIG.rpcUrl),
-    ]);
+    // 2. Fetch live curve telemetry & current block
+    const telemetry = await fetchPonsCurveTelemetry(provider, DEFAULT_TOKEN_ADDRESS);
+    const currentBlock = telemetry?.currentBlock || (await provider.getBlockNumber());
+    const livePriceUSD = telemetry?.spotPriceUSD || 0.000007608;
+    const priceInQuote = telemetry?.spotPriceInQuote || 0.0000003223;
+    const quoteSymbol = telemetry?.pairSymbol || 'GME';
+    const gmePriceUSD = telemetry?.gmePriceUSD || 23.602;
+    const marketCapUSD = telemetry?.marketCapUSD || livePriceUSD * 1000000000;
+    const raisedUSD = telemetry?.raisedUSD || 0;
 
-    const tokenContract = new ethers.Contract(DEFAULT_TOKEN_ADDRESS, ERC20_ABI, provider);
-    const currentBlock = await provider.getBlockNumber();
+    // 3. Ensure events are synced
+    await syncOnChainActivity(provider, launch.curve, DEFAULT_TOKEN_ADDRESS, currentBlock);
+
+    // 4. Build unified transfer log
+    const tradeTxHashes = new Set(cachedTrades.map((t) => t.txHash.toLowerCase()));
+    const unifiedFeed: FormattedTransfer[] = [];
+
+    // Add DEX Buys & Sells from Curve
+    for (const trade of cachedTrades) {
+      const fromAddr = trade.type === 'BUY' ? launch.curve : trade.from;
+      const toAddr = trade.type === 'BUY' ? trade.to : launch.curve;
+
+      const fromInfo = getEntityTag(fromAddr, launch.curve, DEFAULT_TOKEN_ADDRESS);
+      const toInfo = getEntityTag(toAddr, launch.curve, DEFAULT_TOKEN_ADDRESS);
+
+      // Exact USD value of the trade settled on the curve (quote in / quote out * GME price)
+      const rawTradeUSD = trade.quoteAmount * gmePriceUSD;
+      const amountUSD = rawTradeUSD < 0.01 ? Number(rawTradeUSD.toFixed(4)) : Number(rawTradeUSD.toFixed(2));
+      const isWhale = trade.amount >= 5000000 || amountUSD >= 50;
+
+      let transferType: TransferCategory =
+        trade.type === 'BUY'
+          ? isWhale
+            ? 'WHALE_BUY'
+            : 'DEX_BUY'
+          : isWhale
+          ? 'WHALE_SELL'
+          : 'DEX_SELL';
+
+      const blocksAgo = Math.max(0, currentBlock - trade.blockNumber);
+      const { desc, exactTime } = calculateBlockTime(blocksAgo);
+
+      unifiedFeed.push({
+        txHash: trade.txHash,
+        blockNumber: trade.blockNumber,
+        from: fromAddr,
+        to: toAddr,
+        fromTag: fromInfo.label,
+        toTag: toInfo.label,
+        fromType: fromInfo.type,
+        toType: toInfo.type,
+        amount: trade.amount,
+        amountUSD,
+        quoteAmount: Number(trade.quoteAmount.toFixed(4)),
+        quoteSymbol,
+        transferType,
+        explorerUrl: `${ROBINHOOD_CONFIG.blockExplorerUrl}/tx/${trade.txHash}`,
+        timestampDesc: desc,
+        exactTime,
+      });
+    }
+
+    // Add non-curve transfers (Burns and P2P transfers)
+    for (const t of cachedTransfers) {
+      if (tradeTxHashes.has(t.txHash.toLowerCase())) continue; // Skip if already part of a curve buy/sell
+      if (t.from === ethers.ZeroAddress) continue; // Skip initial genesis mint to curve
+
+      const isBurn = t.to.toLowerCase() === BURN_ADDRESS.toLowerCase();
+      const rawTransferUSD = t.amount * livePriceUSD;
+      const amountUSD = rawTransferUSD < 0.01 ? Number(rawTransferUSD.toFixed(4)) : Number(rawTransferUSD.toFixed(2));
+      const isWhale = t.amount >= 5000000 || amountUSD >= 50;
+
+      const fromInfo = getEntityTag(t.from, launch.curve, DEFAULT_TOKEN_ADDRESS);
+      const toInfo = getEntityTag(t.to, launch.curve, DEFAULT_TOKEN_ADDRESS);
+
+      let transferType: TransferCategory = 'TRANSFER';
+      if (isBurn) {
+        transferType = 'BURN';
+      } else if (isWhale) {
+        transferType = 'WHALE_TRANSFER';
+      }
+
+      const blocksAgo = Math.max(0, currentBlock - t.blockNumber);
+      const { desc, exactTime } = calculateBlockTime(blocksAgo);
+
+      unifiedFeed.push({
+        txHash: t.txHash,
+        blockNumber: t.blockNumber,
+        from: t.from,
+        to: t.to,
+        fromTag: fromInfo.label,
+        toTag: toInfo.label,
+        fromType: fromInfo.type,
+        toType: toInfo.type,
+        amount: t.amount,
+        amountUSD,
+        quoteAmount: 0,
+        quoteSymbol,
+        transferType,
+        explorerUrl: `${ROBINHOOD_CONFIG.blockExplorerUrl}/tx/${t.txHash}`,
+        timestampDesc: desc,
+        exactTime,
+      });
+    }
+
+    // Sort by block number descending (most recent first)
+    unifiedFeed.sort((a, b) => b.blockNumber - a.blockNumber);
 
     // ========================================================
-    // CASE A: WALLET SPECIFIC PATH TRACER ("WHERE DID THE CAT GO?")
+    // CASE A: WALLET SPECIFIC DOSSIER TRACER
     // ========================================================
     if (targetWallet && ethers.isAddress(targetWallet)) {
-      const filterFrom = tokenContract.filters.Transfer(targetWallet, null);
-      const filterTo = tokenContract.filters.Transfer(null, targetWallet);
+      const targetLower = targetWallet.toLowerCase();
+      const walletTransfers = unifiedFeed.filter(
+        (item) => item.from.toLowerCase() === targetLower || item.to.toLowerCase() === targetLower
+      );
 
-      // Search last 18,000 blocks (~35-45 minutes on Robinhood chain)
-      const lookback = 18000;
-      const startBlock = Math.max(0, currentBlock - lookback);
-
-      const [logsFrom, logsTo, walletBalanceWei] = await Promise.all([
-        tokenContract.queryFilter(filterFrom, startBlock, currentBlock).catch(() => []),
-        tokenContract.queryFilter(filterTo, startBlock, currentBlock).catch(() => []),
-        tokenContract.balanceOf(targetWallet).catch(() => BigInt(0)),
-      ]);
-
+      const tokenContract = new ethers.Contract(DEFAULT_TOKEN_ADDRESS, PONS_TOKEN_ABI, provider);
+      const walletBalanceWei = await tokenContract.balanceOf(targetWallet).catch(() => 0n);
       const walletBalance = Number(ethers.formatEther(walletBalanceWei));
-      const walletBalanceUSD = Number((walletBalance * priceUSD).toFixed(2));
-
-      const allLogs = [...logsFrom, ...logsTo];
-      const seen = new Set<string>();
-      const uniqueLogs = allLogs.filter((log: any) => {
-        const key = `${log.transactionHash}-${log.index ?? log.logIndex ?? ''}`;
-        if (seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      });
+      const walletBalanceUSD = Number((walletBalance * livePriceUSD).toFixed(2));
 
       let totalInflow = 0;
       let totalOutflow = 0;
@@ -199,80 +392,32 @@ export async function GET(req: NextRequest) {
       const sendersMap = new Map<string, { total: number; count: number }>();
       const receiversMap = new Map<string, { total: number; count: number }>();
 
-      const formattedTransfers: FormattedTransfer[] = uniqueLogs.map((log: any) => {
-        const from = log.args[0];
-        const to = log.args[1];
-        const amount = Number(ethers.formatEther(log.args[2]));
-        const amountUSD = Number((amount * priceUSD).toFixed(2));
-        const fromInfo = getAddressTag(from);
-        const toInfo = getAddressTag(to);
-
-        const isIncoming = to.toLowerCase() === targetWallet.toLowerCase();
+      walletTransfers.forEach((tx) => {
+        const isIncoming = tx.to.toLowerCase() === targetLower;
         if (isIncoming) {
-          totalInflow += amount;
-          const prev = sendersMap.get(from.toLowerCase()) || { total: 0, count: 0 };
-          sendersMap.set(from.toLowerCase(), { total: prev.total + amount, count: prev.count + 1 });
+          totalInflow += tx.amount;
+          const prev = sendersMap.get(tx.from.toLowerCase()) || { total: 0, count: 0 };
+          sendersMap.set(tx.from.toLowerCase(), { total: prev.total + tx.amount, count: prev.count + 1 });
         } else {
-          totalOutflow += amount;
-          const prev = receiversMap.get(to.toLowerCase()) || { total: 0, count: 0 };
-          receiversMap.set(to.toLowerCase(), { total: prev.total + amount, count: prev.count + 1 });
-          if (to.toLowerCase() === BURN_ADDRESS.toLowerCase()) {
-            burnContribution += amount;
+          totalOutflow += tx.amount;
+          const prev = receiversMap.get(tx.to.toLowerCase()) || { total: 0, count: 0 };
+          receiversMap.set(tx.to.toLowerCase(), { total: prev.total + tx.amount, count: prev.count + 1 });
+          if (tx.to.toLowerCase() === BURN_ADDRESS.toLowerCase()) {
+            burnContribution += tx.amount;
           }
         }
-
-        const isBurn = to.toLowerCase() === BURN_ADDRESS.toLowerCase();
-        const isFromDEX = fromInfo.type === 'DEX' || fromInfo.type === 'ROUTER';
-        const isToDEX = toInfo.type === 'DEX' || toInfo.type === 'ROUTER';
-        const isWhaleAmount = amount >= 5000 || amountUSD >= 1000;
-
-        let transferType: TransferCategory = 'TRANSFER';
-        if (isBurn) {
-          transferType = 'BURN';
-        } else if (isFromDEX) {
-          transferType = isWhaleAmount ? 'WHALE_BUY' : 'DEX_BUY';
-        } else if (isToDEX) {
-          transferType = isWhaleAmount ? 'WHALE_SELL' : 'DEX_SELL';
-        } else if (isWhaleAmount) {
-          transferType = 'WHALE_TRANSFER';
-        } else {
-          transferType = 'TRANSFER';
-        }
-
-        const blocksAgo = Math.max(0, currentBlock - log.blockNumber);
-        const { desc, exactTime } = calculateBlockTime(blocksAgo);
-
-        return {
-          txHash: log.transactionHash,
-          blockNumber: log.blockNumber,
-          from,
-          to,
-          fromTag: fromInfo.label,
-          toTag: toInfo.label,
-          fromType: fromInfo.type,
-          toType: toInfo.type,
-          amount,
-          amountUSD,
-          transferType,
-          explorerUrl: `${ROBINHOOD_CONFIG.blockExplorerUrl}/tx/${log.transactionHash}`,
-          timestampDesc: desc,
-          exactTime,
-        };
       });
 
-      formattedTransfers.sort((a, b) => b.blockNumber - a.blockNumber);
-
-      // Build Top Senders Breakdown
       const topSenders: CounterpartySummary[] = Array.from(sendersMap.entries())
         .map(([addr, data]) => {
-          const info = getAddressTag(addr);
+          const info = getEntityTag(addr, launch.curve, DEFAULT_TOKEN_ADDRESS);
           const pct = totalInflow > 0 ? Math.round((data.total / totalInflow) * 100) : 0;
           return {
             address: addr,
             tag: info.label,
             type: info.type,
             totalAmount: Number(data.total.toFixed(2)),
-            totalUSD: Number((data.total * priceUSD).toFixed(2)),
+            totalUSD: Number((data.total * livePriceUSD).toFixed(2)),
             count: data.count,
             percentage: pct,
           };
@@ -280,17 +425,16 @@ export async function GET(req: NextRequest) {
         .sort((a, b) => b.totalAmount - a.totalAmount)
         .slice(0, 5);
 
-      // Build Top Receivers Breakdown
       const topReceivers: CounterpartySummary[] = Array.from(receiversMap.entries())
         .map(([addr, data]) => {
-          const info = getAddressTag(addr);
+          const info = getEntityTag(addr, launch.curve, DEFAULT_TOKEN_ADDRESS);
           const pct = totalOutflow > 0 ? Math.round((data.total / totalOutflow) * 100) : 0;
           return {
             address: addr,
             tag: info.label,
             type: info.type,
             totalAmount: Number(data.total.toFixed(2)),
-            totalUSD: Number((data.total * priceUSD).toFixed(2)),
+            totalUSD: Number((data.total * livePriceUSD).toFixed(2)),
             count: data.count,
             percentage: pct,
           };
@@ -298,8 +442,7 @@ export async function GET(req: NextRequest) {
         .sort((a, b) => b.totalAmount - a.totalAmount)
         .slice(0, 5);
 
-      // Cat Retention Score & Flow Metrics
-      const isDead = targetWallet.toLowerCase() === BURN_ADDRESS.toLowerCase();
+      const isDead = targetLower === BURN_ADDRESS.toLowerCase();
       let retentionRate = 0;
       if (isDead) {
         retentionRate = 100;
@@ -309,26 +452,25 @@ export async function GET(req: NextRequest) {
         retentionRate = 100;
       }
 
-      // Classification Verdict & Detailed Story
       let verdict = 'ACTIVE BAG WORKER';
-      let verdictDetail = 'Trading and transacting on Robinhood Chain Mainnet.';
+      let verdictDetail = 'Trading and transacting on Pons Launchpad v2 (Robinhood Chain).';
 
       if (isDead) {
         verdict = 'PERMANENT DEFLATIONARY DEAD VAULT';
         verdictDetail = 'Tokens here are verifiably destroyed and permanently unspendable forever.';
-      } else if (walletBalance > 50000 && retentionRate >= 70) {
+      } else if (walletBalance > 10000000 && retentionRate >= 70) {
         verdict = 'DIAMOND PAWS MEGA-WHALE';
         verdictDetail = `Retaining ${retentionRate}% of all received $NINE in diamond hands conviction.`;
       } else if (totalInflow > 0 && totalOutflow === 0) {
         verdict = 'PURE ACCUMULATOR (0% OUTFLOW)';
-        verdictDetail = 'Wallet has only received tokens and never sold or transferred a single $NINE out.';
-      } else if (totalOutflow > totalInflow * 1.5) {
-        verdict = 'DEX ROTATOR / DISTRIBUTOR';
-        verdictDetail = 'Actively circulating and distributing bags back into DEX liquidity.';
+        verdictDetail = 'Wallet has only accumulated on the curve and never sold a single $NINE.';
+      } else if (totalOutflow > totalInflow * 1.2) {
+        verdict = 'CURVE ROTATOR / PAPERHAND TRADER';
+        verdictDetail = 'Liquidated position back into the Pons bonding curve.';
       } else if (burnContribution > 0) {
         verdict = 'COMMUNITY BURN CONTRIBUTOR';
         verdictDetail = `Has personally incinerated ${burnContribution.toLocaleString()} $NINE to the Dead Vault.`;
-      } else if (walletBalance > 2000) {
+      } else if (walletBalance > 100000) {
         verdict = 'STRATEGIC BAG HOLDER';
         verdictDetail = `Maintaining a solid bag of ${Math.round(walletBalance).toLocaleString()} $NINE on-chain.`;
       }
@@ -338,138 +480,86 @@ export async function GET(req: NextRequest) {
         isWalletQuery: true,
         targetWallet,
         currentBlock,
-        livePriceUSD: priceUSD,
+        livePriceUSD,
+        priceInQuote,
+        quoteSymbol,
         walletBalance,
         walletBalanceUSD,
         totalInflow: Number(totalInflow.toFixed(2)),
-        totalInflowUSD: Number((totalInflow * priceUSD).toFixed(2)),
+        totalInflowUSD: Number((totalInflow * livePriceUSD).toFixed(2)),
         totalOutflow: Number(totalOutflow.toFixed(2)),
-        totalOutflowUSD: Number((totalOutflow * priceUSD).toFixed(2)),
+        totalOutflowUSD: Number((totalOutflow * livePriceUSD).toFixed(2)),
         netFlow: Number((totalInflow - totalOutflow).toFixed(2)),
-        netFlowUSD: Number(((totalInflow - totalOutflow) * priceUSD).toFixed(2)),
+        netFlowUSD: Number(((totalInflow - totalOutflow) * livePriceUSD).toFixed(2)),
         burnContribution: Number(burnContribution.toFixed(2)),
         retentionRate,
         verdict,
         verdictDetail,
         topSenders,
         topReceivers,
-        transfersCount: formattedTransfers.length,
-        transfers: formattedTransfers,
+        transfersCount: walletTransfers.length,
+        transfers: walletTransfers,
       });
     }
 
     // ========================================================
-    // CASE B: MACRO REAL-TIME ON-CHAIN MOVEMENT STREAM
+    // CASE B: MACRO REAL-TIME TERMINAL STREAM
     // ========================================================
-    const lookback = 3500;
-    const startBlock = Math.max(0, currentBlock - lookback);
-    const filter = tokenContract.filters.Transfer();
-    const logs = await tokenContract.queryFilter(filter, startBlock, currentBlock);
-
     let totalVolumeMoved = 0;
-    let whaleMovesCount = 0;
-    let burnsCount = 0;
     let dexBuysCount = 0;
     let dexSellsCount = 0;
-    let p2pCount = 0;
+    let burnsCount = 0;
+    let whaleMovesCount = 0;
 
     const volumeByWallet = new Map<string, { volume: number; txCount: number }>();
     const uniqueWallets = new Set<string>();
 
-    const formattedTransfers: FormattedTransfer[] = logs.map((log: any) => {
-      const from = log.args[0];
-      const to = log.args[1];
-      const amount = Number(ethers.formatEther(log.args[2]));
-      const amountUSD = Number((amount * priceUSD).toFixed(2));
-      totalVolumeMoved += amount;
+    for (const item of unifiedFeed) {
+      totalVolumeMoved += item.amount;
+      uniqueWallets.add(item.from.toLowerCase());
+      uniqueWallets.add(item.to.toLowerCase());
 
-      uniqueWallets.add(from.toLowerCase());
-      uniqueWallets.add(to.toLowerCase());
+      const fromVol = volumeByWallet.get(item.from.toLowerCase()) || { volume: 0, txCount: 0 };
+      volumeByWallet.set(item.from.toLowerCase(), {
+        volume: fromVol.volume + item.amount,
+        txCount: fromVol.txCount + 1,
+      });
 
-      // Track volume by wallet
-      const fromVol = volumeByWallet.get(from.toLowerCase()) || { volume: 0, txCount: 0 };
-      volumeByWallet.set(from.toLowerCase(), { volume: fromVol.volume + amount, txCount: fromVol.txCount + 1 });
-
-      const toVol = volumeByWallet.get(to.toLowerCase()) || { volume: 0, txCount: 0 };
-      volumeByWallet.set(to.toLowerCase(), { volume: toVol.volume + amount, txCount: toVol.txCount + 1 });
-
-      const fromInfo = getAddressTag(from);
-      const toInfo = getAddressTag(to);
-
-      const isBurn = to.toLowerCase() === BURN_ADDRESS.toLowerCase();
-      const isFromDEX = fromInfo.type === 'DEX' || fromInfo.type === 'ROUTER';
-      const isToDEX = toInfo.type === 'DEX' || toInfo.type === 'ROUTER';
-      const isWhaleAmount = amount >= 5000 || amountUSD >= 1000;
-
-      let transferType: TransferCategory = 'TRANSFER';
-      if (isBurn) {
-        transferType = 'BURN';
-        burnsCount++;
-      } else if (isFromDEX) {
-        if (isWhaleAmount) {
-          transferType = 'WHALE_BUY';
-          whaleMovesCount++;
-        } else {
-          transferType = 'DEX_BUY';
-        }
+      if (item.transferType === 'DEX_BUY' || item.transferType === 'WHALE_BUY') {
         dexBuysCount++;
-      } else if (isToDEX) {
-        if (isWhaleAmount) {
-          transferType = 'WHALE_SELL';
-          whaleMovesCount++;
-        } else {
-          transferType = 'DEX_SELL';
-        }
-        dexSellsCount++;
-      } else if (isWhaleAmount) {
-        transferType = 'WHALE_TRANSFER';
-        whaleMovesCount++;
-        p2pCount++;
-      } else {
-        transferType = 'TRANSFER';
-        p2pCount++;
       }
+      if (item.transferType === 'DEX_SELL' || item.transferType === 'WHALE_SELL') {
+        dexSellsCount++;
+      }
+      if (item.transferType === 'BURN') {
+        burnsCount++;
+      }
+      if (
+        item.transferType === 'WHALE_BUY' ||
+        item.transferType === 'WHALE_SELL' ||
+        item.transferType === 'WHALE_TRANSFER'
+      ) {
+        whaleMovesCount++;
+      }
+    }
 
-      const blocksAgo = Math.max(0, currentBlock - log.blockNumber);
-      const { desc, exactTime } = calculateBlockTime(blocksAgo);
-
-      return {
-        txHash: log.transactionHash,
-        blockNumber: log.blockNumber,
-        from,
-        to,
-        fromTag: fromInfo.label,
-        toTag: toInfo.label,
-        fromType: fromInfo.type,
-        toType: toInfo.type,
-        amount,
-        amountUSD,
-        transferType,
-        explorerUrl: `${ROBINHOOD_CONFIG.blockExplorerUrl}/tx/${log.transactionHash}`,
-        timestampDesc: desc,
-        exactTime,
-      };
-    });
-
-    formattedTransfers.sort((a, b) => b.blockNumber - a.blockNumber);
-
-    // Filter out contracts from top movers to show prominent participants
     const topActiveMovers: TopActiveMover[] = Array.from(volumeByWallet.entries())
       .filter(([addr]) => {
         const lower = addr.toLowerCase();
         return (
           lower !== DEFAULT_TOKEN_ADDRESS.toLowerCase() &&
+          lower !== launch.curve.toLowerCase() &&
           lower !== BURN_ADDRESS.toLowerCase()
         );
       })
       .map(([addr, data]) => {
-        const info = getAddressTag(addr);
+        const info = getEntityTag(addr, launch.curve, DEFAULT_TOKEN_ADDRESS);
         return {
           address: addr,
           tag: info.label,
           type: info.type,
           volume: Math.round(data.volume),
-          volumeUSD: Math.round(data.volume * priceUSD),
+          volumeUSD: Math.round(data.volume * livePriceUSD),
           txCount: data.txCount,
         };
       })
@@ -480,20 +570,32 @@ export async function GET(req: NextRequest) {
       success: true,
       isWalletQuery: false,
       currentBlock,
-      livePriceUSD: priceUSD,
-      totalTrackedInWindow: formattedTransfers.length,
+      livePriceUSD,
+      priceInQuote,
+      quoteSymbol,
+      gmePriceUSD,
+      marketCapUSD,
+      raisedUSD,
+      curveAddress: launch.curve,
+      pairTokenAddress: launch.pairToken,
+      phase: launch.phase,
+      phaseLabel: telemetry?.phaseLabel || 'NotGraduated',
+      quoteRaised: telemetry?.realQuoteRaised || 0,
+      quoteThreshold: telemetry?.quoteThreshold || 369,
+      graduationProgressPct: telemetry?.graduationProgressPct || 0,
+      sellableTokens: telemetry?.sellableTokens || 0,
+      totalTrackedInWindow: unifiedFeed.length,
       totalVolumeMoved: Math.round(totalVolumeMoved),
-      totalVolumeUSD: Math.round(totalVolumeMoved * priceUSD),
+      totalVolumeUSD: Math.round(totalVolumeMoved * livePriceUSD),
       whaleMovesCount,
       burnsCount,
       dexBuysCount,
       dexSellsCount,
-      p2pCount,
       activeWalletsCount: uniqueWallets.size,
       tokenSymbol: 'NINE',
       tokenName: 'NINE',
       topActiveMovers,
-      transfers: formattedTransfers.slice(0, 60),
+      transfers: unifiedFeed.slice(0, 100),
     });
   } catch (error: any) {
     console.error('Error fetching onchain transfers:', error);

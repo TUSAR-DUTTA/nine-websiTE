@@ -8,7 +8,7 @@ export async function GET() {
       token: TOKEN_INFO,
       pulse: INITIAL_PULSE,
       serverTime: new Date().toISOString(),
-      network: 'Base Mainnet',
+      network: 'Robinhood Chain (Mainnet 4663)',
       rpcStatus: 'HEALTHY',
     },
   });
