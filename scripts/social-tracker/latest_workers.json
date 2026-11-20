@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T03:31:09.421Z",
+  "lastUpdated": "2026-11-20T05:31:24.163Z",
   "workers": [
     {
       "twitterHandle": "NineDcat",
@@ -8,8 +8,8 @@
       "bagWorkerScore": 24.5,
       "postsCount": 10,
       "activeDays": 3,
-      "topPostImpressions": 319,
-      "totalImpressions": 1143,
+      "topPostImpressions": 323,
+      "totalImpressions": 1156,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 60,
@@ -28,7 +28,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 319,
+          "impressions": 323,
           "postedAt": "2026-09-24T17:44:07.000Z"
         },
         {
@@ -38,7 +38,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 44,
+          "impressions": 45,
           "postedAt": "2026-09-26T11:37:01.000Z"
         },
         {
@@ -48,7 +48,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 53,
+          "impressions": 54,
           "postedAt": "2026-09-25T20:22:36.000Z"
         },
         {
@@ -58,7 +58,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 128,
+          "impressions": 129,
           "postedAt": "2026-09-25T15:08:17.000Z"
         },
         {
@@ -68,26 +68,59 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 131,
+          "impressions": 132,
           "postedAt": "2026-09-25T08:08:29.000Z"
         }
       ],
       "rank": 1
     },
     {
+      "twitterHandle": "NineMileMetals",
+      "displayName": "Nine Mile Metals Ltd.",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2108234036078366720/c5IStvBM_normal.jpg",
+      "bagWorkerScore": 20.7,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 7700,
+      "totalImpressions": 7700,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"$NINE\n  Claude.\n\nThe \n$ANT\n IPO is here. Anthropic (\n@AnthropicAI\n) hits the Nasdaq today after the biggest IPO in history: $81.3B raised at\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2123444702808588534",
+          "text": "$NINE\n  Claude.\n\nThe \n$ANT\n IPO is here. Anthropic (\n@AnthropicAI\n) hits the Nasdaq today after the biggest IPO in history: $81.3B raised at roughly a $1.5 trillion valuation.\n\nSo we had a little fun with a question nobody on Wall Street is asking: how much copper does the biggest",
+          "url": "https://x.com/NineMileMetals/status/2123444702808588534",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 7700,
+          "postedAt": "2026-11-19T15:54:03.000Z"
+        }
+      ],
+      "rank": 2
+    },
+    {
       "twitterHandle": "TheTokenXpress",
-      "displayName": "The Token Xpress 🚀",
+      "displayName": "The Token Xpress ",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1818313639389995008/hryUvbMd_normal.jpg",
-      "bagWorkerScore": 13.2,
+      "bagWorkerScore": 13.3,
       "postsCount": 4,
       "activeDays": 2,
-      "topPostImpressions": 14,
-      "totalImpressions": 43,
+      "topPostImpressions": 15,
+      "totalImpressions": 47,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 32,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Your project shows promise! Let’s discuss potential collaborations. ➡️💬\"",
+      "latestPostQuote": "\"Your project shows promise! Let’s discuss potential collaborations. \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -96,96 +129,43 @@
       "recentTweets": [
         {
           "tweetId": "2103517604375908384",
-          "text": "Your project shows promise! Let’s discuss potential collaborations. ➡️💬",
+          "text": "Your project shows promise! Let’s discuss potential collaborations. ",
           "url": "https://x.com/TheTokenXpress/status/2103517604375908384",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 11,
+          "impressions": 12,
           "postedAt": "2026-09-25T16:10:53.000Z"
         },
         {
           "tweetId": "2103466950881919085",
-          "text": "Your project shows promise! Let’s discuss potential collaborations. ➡️💬",
+          "text": "Your project shows promise! Let’s discuss potential collaborations. ",
           "url": "https://x.com/TheTokenXpress/status/2103466950881919085",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 7,
+          "impressions": 8,
           "postedAt": "2026-09-25T12:49:36.000Z"
         },
         {
           "tweetId": "2103205181706080595",
-          "text": "Your project shows promise! Let’s discuss potential collaborations. ➡️💬",
+          "text": "Your project shows promise! Let’s discuss potential collaborations. ",
           "url": "https://x.com/TheTokenXpress/status/2103205181706080595",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 11,
+          "impressions": 12,
           "postedAt": "2026-09-24T19:29:25.000Z"
         },
         {
           "tweetId": "2103198459222426039",
-          "text": "Your project shows promise! Let’s discuss potential collaborations. ➡️💬",
+          "text": "Your project shows promise! Let’s discuss potential collaborations. ",
           "url": "https://x.com/TheTokenXpress/status/2103198459222426039",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 14,
+          "impressions": 15,
           "postedAt": "2026-09-24T19:02:42.000Z"
-        }
-      ],
-      "rank": 2
-    },
-    {
-      "twitterHandle": "tommy_GV1",
-      "displayName": "Tommy Crypto",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2092101383327559680/9v_XI7sA_normal.jpg",
-      "bagWorkerScore": 11.6,
-      "postsCount": 3,
-      "activeDays": 1,
-      "topPostImpressions": 32,
-      "totalImpressions": 69,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 19,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Feel free to send a DM 🌟\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2103507860038779354",
-          "text": "Feel free to send a DM 🌟",
-          "url": "https://x.com/tommy_GV1/status/2103507860038779354",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 32,
-          "postedAt": "2026-09-25T15:32:09.000Z"
-        },
-        {
-          "tweetId": "2103482009695945030",
-          "text": "Waiting for your DM friend 🤝",
-          "url": "https://x.com/tommy_GV1/status/2103482009695945030",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 31,
-          "postedAt": "2026-09-25T13:49:26.000Z"
-        },
-        {
-          "tweetId": "2103481985285144909",
-          "text": "Great project follow back let's chat 🤝",
-          "url": "https://x.com/tommy_GV1/status/2103481985285144909",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 6,
-          "postedAt": "2026-09-25T13:49:20.000Z"
         }
       ],
       "rank": 3
@@ -194,16 +174,16 @@
       "twitterHandle": "_Niss0",
       "displayName": "THE CRYPTO DEV",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1985693502559092736/7g3FdWy-_normal.jpg",
-      "bagWorkerScore": 11.6,
+      "bagWorkerScore": 11.7,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 50,
-      "totalImpressions": 62,
+      "topPostImpressions": 51,
+      "totalImpressions": 64,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"This could easily catch major attention 🚀 Would love to collab\"",
+      "latestPostQuote": "\"This could easily catch major attention  Would love to collab\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -212,41 +192,94 @@
       "recentTweets": [
         {
           "tweetId": "2103486031811268911",
-          "text": "This could easily catch major attention 🚀 Would love to collab",
+          "text": "This could easily catch major attention  Would love to collab",
           "url": "https://x.com/_Niss0/status/2103486031811268911",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 12,
+          "impressions": 13,
           "postedAt": "2026-09-25T14:05:25.000Z"
         },
         {
           "tweetId": "2103486005773017377",
-          "text": "Interested in a collab 👏",
+          "text": "Interested in a collab ",
           "url": "https://x.com/_Niss0/status/2103486005773017377",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 50,
+          "impressions": 51,
           "postedAt": "2026-09-25T14:05:19.000Z"
         }
       ],
       "rank": 4
     },
     {
+      "twitterHandle": "tommy_GV1",
+      "displayName": "Tommy Crypto",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2092101383327559680/9v_XI7sA_normal.jpg",
+      "bagWorkerScore": 11.6,
+      "postsCount": 3,
+      "activeDays": 1,
+      "topPostImpressions": 33,
+      "totalImpressions": 72,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 19,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"Feel free to send a DM \"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2103507860038779354",
+          "text": "Feel free to send a DM ",
+          "url": "https://x.com/tommy_GV1/status/2103507860038779354",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 33,
+          "postedAt": "2026-09-25T15:32:09.000Z"
+        },
+        {
+          "tweetId": "2103482009695945030",
+          "text": "Waiting for your DM friend ",
+          "url": "https://x.com/tommy_GV1/status/2103482009695945030",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 32,
+          "postedAt": "2026-09-25T13:49:26.000Z"
+        },
+        {
+          "tweetId": "2103481985285144909",
+          "text": "Great project follow back let's chat ",
+          "url": "https://x.com/tommy_GV1/status/2103481985285144909",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 7,
+          "postedAt": "2026-09-25T13:49:20.000Z"
+        }
+      ],
+      "rank": 5
+    },
+    {
       "twitterHandle": "DefiSparco",
       "displayName": "Sparco DeFi",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1929977262012542976/PU105QNR_normal.jpg",
-      "bagWorkerScore": 11,
+      "bagWorkerScore": 11.1,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 36,
-      "totalImpressions": 68,
+      "topPostImpressions": 37,
+      "totalImpressions": 70,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Could we discuss a possible collaboration? 🚀\"",
+      "latestPostQuote": "\"Could we discuss a possible collaboration? \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -255,84 +288,41 @@
       "recentTweets": [
         {
           "tweetId": "2103514618140172562",
-          "text": "Could we discuss a possible collaboration? 🚀",
+          "text": "Could we discuss a possible collaboration? ",
           "url": "https://x.com/DefiSparco/status/2103514618140172562",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 32,
+          "impressions": 33,
           "postedAt": "2026-09-25T15:59:01.000Z"
         },
         {
           "tweetId": "2103514592798536041",
-          "text": "I have something interesting to discuss contact me 💎",
+          "text": "I have something interesting to discuss contact me ",
           "url": "https://x.com/DefiSparco/status/2103514592798536041",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 36,
+          "impressions": 37,
           "postedAt": "2026-09-25T15:58:54.000Z"
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "twitterHandle": "dkurtnd",
-      "displayName": "Daniel Cooper",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733797160263680/-yt8bY03_normal.jpg",
-      "bagWorkerScore": 10.9,
-      "postsCount": 2,
-      "activeDays": 2,
-      "topPostImpressions": 1,
-      "totalImpressions": 2,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 26,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by fo\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121796035442073806",
-          "text": "$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by following his tradesdes . An outstanding stock analyst\n 🔗\n@WallStreetMatt\n\nHe is an excellent stock analyst—be sure to follow him.",
-          "url": "https://x.com/dkurtnd/status/2121796035442073806",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 1,
-          "postedAt": "2026-11-15T02:42:50.000Z"
-        },
-        {
-          "tweetId": "2121578235654008838",
-          "text": "$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by following his tradesdes . An outstanding stock analyst\n 🔗\n@WallStreetMatt\n\nHe is an excellent stock analyst—be sure to follow him.",
-          "url": "https://x.com/dkurtnd/status/2121578235654008838",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 1,
-          "postedAt": "2026-11-14T12:17:23.000Z"
         }
       ],
       "rank": 6
     },
     {
-      "twitterHandle": "HeitorMarback",
-      "displayName": "Christopher Reed",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512506128896000/O7u6siYR_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 2,
+      "twitterHandle": "Lovers9629",
+      "displayName": "Daniel",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2115009595198320640/SlF8Rf84_normal.jpg",
+      "bagWorkerScore": 10.3,
+      "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 0,
-      "totalImpressions": 0,
+      "topPostImpressions": 38,
+      "totalImpressions": 38,
       "totalLikes": 0,
       "totalRetweets": 0,
-      "consistencyScore": 16,
+      "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this bl\"",
+      "latestPostQuote": "\" Markets move fast. Stay informed and keep your watchlist updated.\n\nWe share market observations, stock discussions, and research on compani\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -340,42 +330,32 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2121790683946336263",
-          "text": "The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this blogger,\nFollow him 👉  \n@WallStreetMatt\n\n\nHis analysis and predictions are incredibly accurate; I've made a lot of money following his advice.",
-          "url": "https://x.com/HeitorMarback/status/2121790683946336263",
+          "tweetId": "2123076123575697730",
+          "text": " Markets move fast. Stay informed and keep your watchlist updated.\n\nWe share market observations, stock discussions, and research on companies worth following.\n\nStocks we're watching:\n\n$CLB\n \n$LBRT\n \n$NINE\n \n$PUMP\n\n\n Join the discussion: \nhttps://\nwa.me/17126575245\n\nReply \"Hot Stocks\" to",
+          "url": "https://x.com/Lovers9629/status/2123076123575697730",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 0,
-          "postedAt": "2026-11-15T02:21:34.000Z"
-        },
-        {
-          "tweetId": "2121776893976543348",
-          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
-          "url": "https://x.com/HeitorMarback/status/2121776893976543348",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 0,
-          "postedAt": "2026-11-15T01:26:46.000Z"
+          "impressions": 38,
+          "postedAt": "2026-11-18T15:29:27.000Z"
         }
       ],
       "rank": 7
     },
     {
-      "twitterHandle": "Noahhh_ppp",
-      "displayName": "Emily Johnson",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2116928793713528833/qGGBBA3S_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
+      "twitterHandle": "GlobaICryptoHub",
+      "displayName": "Global Crypto Hub | GCH ",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1813585104037412865/LlJHjuRM_normal.jpg",
+      "bagWorkerScore": 10.1,
+      "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 0,
-      "totalImpressions": 0,
+      "topPostImpressions": 23,
+      "totalImpressions": 35,
       "totalLikes": 0,
       "totalRetweets": 0,
-      "consistencyScore": 13,
+      "consistencyScore": 16,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this bl\"",
+      "latestPostQuote": "\"Let’s make moves, DM me \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -383,22 +363,131 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2121786609935044625",
-          "text": "The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this blogger,\nFollow him 👉  \n@WallStreetMatt\n\n\nHis analysis and predictions are incredibly accurate; I've made a lot of money following his advice.",
-          "url": "https://x.com/Noahhh_ppp/status/2121786609935044625",
+          "tweetId": "2103539288935977151",
+          "text": "Let’s make moves, DM me ",
+          "url": "https://x.com/GlobaICryptoHub/status/2103539288935977151",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 0,
-          "postedAt": "2026-11-15T02:05:23.000Z"
+          "impressions": 12,
+          "postedAt": "2026-09-25T17:37:03.000Z"
+        },
+        {
+          "tweetId": "2103488969082392932",
+          "text": "Let’s make moves, DM me ",
+          "url": "https://x.com/GlobaICryptoHub/status/2103488969082392932",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 23,
+          "postedAt": "2026-09-25T14:17:05.000Z"
         }
       ],
       "rank": 8
     },
     {
-      "twitterHandle": "vipfromSelen",
-      "displayName": "Brian Thompson",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512405813813249/WxDFG8oD_normal.jpg",
+      "twitterHandle": "V01id_",
+      "displayName": "Alexande",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2115007786803208193/eI0MA9wV_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 28,
+      "totalImpressions": 28,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\" Markets move fast. Stay informed and keep your watchlist updated.\n\nWe share market observations, stock discussions, and research on compani\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2123481933409607779",
+          "text": " Markets move fast. Stay informed and keep your watchlist updated.\n\nWe share market observations, stock discussions, and research on companies worth following.\n\nStocks we're watching:\n\n$WTTR\n \n$PUMP\n \n$NINE\n \n$AROC\n\n\n Join the discussion: \nhttps://\nwa.me/17126575245\n\nReply \"Hot Stocks\"",
+          "url": "https://x.com/V01id_/status/2123481933409607779",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 28,
+          "postedAt": "2026-11-19T18:21:59.000Z"
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "twitterHandle": "mmmchii34",
+      "displayName": "Jonathan",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2115009163021410305/MIiUzaNh_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 20,
+      "totalImpressions": 20,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\" Stock market discussions. Fresh research. New watchlist ideas.\nConnect with fellow investors and follow developments in actively watched st\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2123474929731448923",
+          "text": " Stock market discussions. Fresh research. New watchlist ideas.\nConnect with fellow investors and follow developments in actively watched stocks.\nFeatured tickers:\n\n$NOV\n \n$WTTR\n \n$PUMP\n \n$NINE\n\nJoin our WhatsApp group:\n \nhttps://\nwa.me/17126575245\nReply \"Hot Stocks\" to get started.",
+          "url": "https://x.com/mmmchii34/status/2123474929731448923",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 20,
+          "postedAt": "2026-11-19T17:54:10.000Z"
+        }
+      ],
+      "rank": 10
+    },
+    {
+      "twitterHandle": "bossofgolia",
+      "displayName": "Mia Harrison",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733800364806145/VgA75B3w_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 11,
+      "totalImpressions": 11,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"Notice\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my te\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2123431694145659312",
+          "text": "Notice\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
+          "url": "https://x.com/bossofgolia/status/2123431694145659312",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 11,
+          "postedAt": "2026-11-19T15:02:21.000Z"
+        }
+      ],
+      "rank": 11
+    },
+    {
+      "twitterHandle": "sarai_ortegon",
+      "displayName": "Sophia Anderson",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2117291490208878592/Wsa8B1Eg_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
@@ -408,7 +497,7 @@
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this bl\"",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -416,131 +505,32 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2121725137410256942",
-          "text": "The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this blogger,\nFollow him 👉  \n@WallStreetMatt\n\n\nHis analysis and predictions are incredibly accurate; I've made a lot of money following his advice.",
-          "url": "https://x.com/vipfromSelen/status/2121725137410256942",
+          "tweetId": "2123429805270175808",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/sarai_ortegon/status/2123429805270175808",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
           "impressions": 3,
-          "postedAt": "2026-11-14T22:01:07.000Z"
-        }
-      ],
-      "rank": 9
-    },
-    {
-      "twitterHandle": "abbasshigree",
-      "displayName": "Evelyn Turner",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733790772363264/oFrDBnpT_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 1,
-      "totalImpressions": 1,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this bl\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121711819106742435",
-          "text": "The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this blogger,\nFollow him 👉  \n@WallStreetMatt\n\n\nHis analysis and predictions are incredibly accurate; I've made a lot of money following his advice.",
-          "url": "https://x.com/abbasshigree/status/2121711819106742435",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 1,
-          "postedAt": "2026-11-14T21:08:11.000Z"
-        }
-      ],
-      "rank": 10
-    },
-    {
-      "twitterHandle": "xmessyme",
-      "displayName": "Michael Carter",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512396016156672/-eHgt1TS_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 0,
-      "totalImpressions": 0,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121701883991724064",
-          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
-          "url": "https://x.com/xmessyme/status/2121701883991724064",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 0,
-          "postedAt": "2026-11-14T20:28:43.000Z"
-        }
-      ],
-      "rank": 11
-    },
-    {
-      "twitterHandle": "peace_torinouta",
-      "displayName": "Matthew Collins",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512436704796672/aTVFIV9K_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 0,
-      "totalImpressions": 0,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by fo\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121682988354412729",
-          "text": "$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by following his tradesdes . An outstanding stock analyst\n 🔗\n@WallStreetMatt\n\nHe is an excellent stock analyst—be sure to follow him.",
-          "url": "https://x.com/peace_torinouta/status/2121682988354412729",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 0,
-          "postedAt": "2026-11-14T19:13:38.000Z"
+          "postedAt": "2026-11-19T14:54:51.000Z"
         }
       ],
       "rank": 12
     },
     {
-      "twitterHandle": "WAHIDHU29688198",
-      "displayName": "Alan McKinley",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2118395053853057024/-WTEENnV_normal.jpg",
+      "twitterHandle": "bbf_koshigaya",
+      "displayName": "US Stock Recommendations",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2121636845591384064/QJ1UPAHD_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 26,
-      "totalImpressions": 26,
+      "topPostImpressions": 6,
+      "totalImpressions": 6,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"📉 Stocks to Watch: \n$NICK\n \n$NINE\n and \n$NKTR\n\n\nGet free daily U.S. market updates, stock research, and company insights. Reach me directly\"",
+      "latestPostQuote": "\"Discussion is now open\n\n            \n$NINE\n\n\n \nhttps://\nwa.me/13072639591\n\nIf you hold any of the stocks mentioned above and would like to s\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -548,32 +538,32 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2121682643381293387",
-          "text": "📉 Stocks to Watch: \n$NICK\n \n$NINE\n and \n$NKTR\n\n\nGet free daily U.S. market updates, stock research, and company insights. Reach me directly through WhatsApp: \nhttps://\nwa.me/12024092166\n\nAnalyze market movements, business developments, and",
-          "url": "https://x.com/WAHIDHU29688198/status/2121682643381293387",
+          "tweetId": "2123266494306066943",
+          "text": "Discussion is now open\n\n            \n$NINE\n\n\n \nhttps://\nwa.me/13072639591\n\nIf you hold any of the stocks mentioned above and would like to stay informed about their market movements and analysis, please click the link in my profile or the link provided above \n\n Engage with",
+          "url": "https://x.com/bbf_koshigaya/status/2123266494306066943",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 26,
-          "postedAt": "2026-11-14T19:12:15.000Z"
+          "impressions": 6,
+          "postedAt": "2026-11-19T04:05:55.000Z"
         }
       ],
       "rank": 13
     },
     {
-      "twitterHandle": "bossofgolia",
-      "displayName": "Mia Harrison",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733800364806145/VgA75B3w_normal.jpg",
+      "twitterHandle": "febtheteen",
+      "displayName": "Harper Wilson",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193184051716096/4RtkTGNA_normal.jpg",
       "bagWorkerScore": 10,
-      "postsCount": 1,
+      "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 0,
-      "totalImpressions": 0,
+      "topPostImpressions": 3,
+      "totalImpressions": 5,
       "totalLikes": 0,
       "totalRetweets": 0,
-      "consistencyScore": 13,
+      "consistencyScore": 16,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -581,154 +571,32 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2121642804049015086",
-          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
-          "url": "https://x.com/bossofgolia/status/2121642804049015086",
+          "tweetId": "2123196146139246798",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/febtheteen/status/2123196146139246798",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 0,
-          "postedAt": "2026-11-14T16:33:57.000Z"
+          "impressions": 3,
+          "postedAt": "2026-11-18T23:26:22.000Z"
+        },
+        {
+          "tweetId": "2123041176668537153",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/febtheteen/status/2123041176668537153",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 2,
+          "postedAt": "2026-11-18T13:10:35.000Z"
         }
       ],
       "rank": 14
     },
     {
-      "twitterHandle": "tar0t_",
-      "displayName": "Lucas Morgan",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193187826503680/txp1Bgh-_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 1,
-      "totalImpressions": 1,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121586442392760709",
-          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
-          "url": "https://x.com/tar0t_/status/2121586442392760709",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 1,
-          "postedAt": "2026-11-14T12:49:59.000Z"
-        }
-      ],
-      "rank": 15
-    },
-    {
-      "twitterHandle": "Galaxyfanfern",
-      "displayName": "Steven Foster",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512503734026240/Nmtt3TKb_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 1,
-      "totalImpressions": 1,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121579743778939379",
-          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
-          "url": "https://x.com/Galaxyfanfern/status/2121579743778939379",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 1,
-          "postedAt": "2026-11-14T12:23:22.000Z"
-        }
-      ],
-      "rank": 16
-    },
-    {
-      "twitterHandle": "Burginberrywoo",
-      "displayName": "Liam Anderson",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733790130630656/bn-1FMQr_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 1,
-      "totalImpressions": 1,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by fo\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121577924554051625",
-          "text": "$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by following his tradesdes . An outstanding stock analyst\n 🔗\n@WallStreetMatt\n\nHe is an excellent stock analyst—be sure to follow him.",
-          "url": "https://x.com/Burginberrywoo/status/2121577924554051625",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 1,
-          "postedAt": "2026-11-14T12:16:08.000Z"
-        }
-      ],
-      "rank": 17
-    },
-    {
       "twitterHandle": "yenogbra",
       "displayName": "Yen Obaji",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1559497041172209665/XY1W5m_A_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 1,
-      "totalImpressions": 1,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2121576027868774406",
-          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
-          "url": "https://x.com/yenogbra/status/2121576027868774406",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 1,
-          "postedAt": "2026-11-14T12:08:36.000Z"
-        }
-      ],
-      "rank": 18
-    },
-    {
-      "twitterHandle": "febtheteen",
-      "displayName": "Harper Wilson",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193184051716096/4RtkTGNA_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
@@ -738,7 +606,7 @@
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -746,32 +614,164 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2121575065984856157",
-          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
-          "url": "https://x.com/febtheteen/status/2121575065984856157",
+          "tweetId": "2123099717831893321",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/yenogbra/status/2123099717831893321",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
           "impressions": 2,
-          "postedAt": "2026-11-14T12:04:47.000Z"
+          "postedAt": "2026-11-18T17:03:12.000Z"
+        }
+      ],
+      "rank": 15
+    },
+    {
+      "twitterHandle": "_ressen_",
+      "displayName": "Abigail Walker",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193205606227968/E7lIzJYx_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 5,
+      "totalImpressions": 5,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2123072193588563975",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/_ressen_/status/2123072193588563975",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 5,
+          "postedAt": "2026-11-18T15:13:50.000Z"
+        }
+      ],
+      "rank": 16
+    },
+    {
+      "twitterHandle": "esmilodonte73",
+      "displayName": "Amelia Foster",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733877166624768/ju1k9hQj_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 3,
+      "totalImpressions": 3,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2123053697529979024",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/esmilodonte73/status/2123053697529979024",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 3,
+          "postedAt": "2026-11-18T14:00:20.000Z"
+        }
+      ],
+      "rank": 17
+    },
+    {
+      "twitterHandle": "cutehusee",
+      "displayName": "Kevin Sullivan",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512522008612864/z91xSc2p_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 3,
+      "totalImpressions": 3,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2122990734299345295",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/cutehusee/status/2122990734299345295",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 3,
+          "postedAt": "2026-11-18T09:50:08.000Z"
+        }
+      ],
+      "rank": 18
+    },
+    {
+      "twitterHandle": "MaddTakeyama",
+      "displayName": "Richard Bennett",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512473619185664/5CO1jVTc_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 2,
+      "totalImpressions": 2,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2122984725388427599",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/MaddTakeyama/status/2122984725388427599",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 2,
+          "postedAt": "2026-11-18T09:26:16.000Z"
         }
       ],
       "rank": 19
     },
     {
-      "twitterHandle": "GlobaICryptoHub",
-      "displayName": "Global Crypto Hub | GCH 🌏",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/1813585104037412865/LlJHjuRM_normal.jpg",
+      "twitterHandle": "dewduedew",
+      "displayName": "Amelia Foster",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733792345227264/YEqcAOnh_normal.jpg",
       "bagWorkerScore": 10,
-      "postsCount": 2,
+      "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 22,
-      "totalImpressions": 33,
+      "topPostImpressions": 1,
+      "totalImpressions": 1,
       "totalLikes": 0,
       "totalRetweets": 0,
-      "consistencyScore": 16,
+      "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Let’s make moves, DM me ❤️\"",
+      "latestPostQuote": "\"A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -779,24 +779,14 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2103539288935977151",
-          "text": "Let’s make moves, DM me ❤️",
-          "url": "https://x.com/GlobaICryptoHub/status/2103539288935977151",
+          "tweetId": "2122937865076359580",
+          "text": "A dedicated WhatsApp group for \n$NINE\n holders is now online!\n\nAll investors holding \n$NINE\n stock are welcome to join this exclusive group to discuss the stock and get the latest information.\nClick this link to join:\nhttps://\nstockswhatsapp.app/vmaHqe\n#Stocks",
+          "url": "https://x.com/dewduedew/status/2122937865076359580",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 11,
-          "postedAt": "2026-09-25T17:37:03.000Z"
-        },
-        {
-          "tweetId": "2103488969082392932",
-          "text": "Let’s make moves, DM me ❤️",
-          "url": "https://x.com/GlobaICryptoHub/status/2103488969082392932",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 22,
-          "postedAt": "2026-09-25T14:17:05.000Z"
+          "impressions": 1,
+          "postedAt": "2026-11-18T06:20:03.000Z"
         }
       ],
       "rank": 20
@@ -808,13 +798,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 10,
+      "topPostImpressions": 11,
+      "totalImpressions": 11,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Promising ecosystem with great community support. Let's connect 🤝\"",
+      "latestPostQuote": "\"Promising ecosystem with great community support. Let's connect \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -823,12 +813,12 @@
       "recentTweets": [
         {
           "tweetId": "2103525694953472243",
-          "text": "Promising ecosystem with great community support. Let's connect 🤝",
+          "text": "Promising ecosystem with great community support. Let's connect ",
           "url": "https://x.com/llil7C/status/2103525694953472243",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-25T16:43:01.000Z"
         }
       ],
@@ -836,18 +826,18 @@
     },
     {
       "twitterHandle": "GlobalCoinHub",
-      "displayName": "🌎 Coin Hub - Go Global 🌎",
+      "displayName": " Coin Hub - Go Global ",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1686775395427794951/oKp8s4B2_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 3,
       "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 24,
+      "topPostImpressions": 11,
+      "totalImpressions": 27,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 19,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Let’s talk⚡️dm us\"",
+      "latestPostQuote": "\"Let’s talkdm us\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -856,32 +846,32 @@
       "recentTweets": [
         {
           "tweetId": "2103521231240847713",
-          "text": "Let’s talk⚡️dm us",
+          "text": "Let’s talkdm us",
           "url": "https://x.com/GlobalCoinHub/status/2103521231240847713",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 9,
+          "impressions": 10,
           "postedAt": "2026-09-25T16:25:17.000Z"
         },
         {
           "tweetId": "2103521207421473017",
-          "text": "Let’s talk⚡️dm us",
+          "text": "Let’s talkdm us",
           "url": "https://x.com/GlobalCoinHub/status/2103521207421473017",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-25T16:25:12.000Z"
         },
         {
           "tweetId": "2103327148903891409",
-          "text": "Let’s talk⚡️dm us",
+          "text": "Let’s talkdm us",
           "url": "https://x.com/GlobalCoinHub/status/2103327148903891409",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 5,
+          "impressions": 6,
           "postedAt": "2026-09-25T03:34:04.000Z"
         }
       ],
@@ -894,13 +884,13 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 18,
+      "topPostImpressions": 11,
+      "totalImpressions": 20,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Wishing you a successful launch! Happy to connect. 🤝\"",
+      "latestPostQuote": "\"Wishing you a successful launch! Happy to connect. \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -909,22 +899,22 @@
       "recentTweets": [
         {
           "tweetId": "2103514249377325188",
-          "text": "Wishing you a successful launch! Happy to connect. 🤝",
+          "text": "Wishing you a successful launch! Happy to connect. ",
           "url": "https://x.com/MrbossOfficiial/status/2103514249377325188",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-25T15:57:33.000Z"
         },
         {
           "tweetId": "2103473760401826118",
-          "text": "Definitely keeping an eye on this one. 🔥",
+          "text": "Definitely keeping an eye on this one. ",
           "url": "https://x.com/MrbossOfficiial/status/2103473760401826118",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 8,
+          "impressions": 9,
           "postedAt": "2026-09-25T13:16:39.000Z"
         }
       ],
@@ -937,13 +927,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 16,
-      "totalImpressions": 16,
+      "topPostImpressions": 17,
+      "totalImpressions": 17,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"The project is slowly but surely getting attention 👀\"",
+      "latestPostQuote": "\"The project is slowly but surely getting attention \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -952,12 +942,12 @@
       "recentTweets": [
         {
           "tweetId": "2103513257470521842",
-          "text": "The project is slowly but surely getting attention 👀",
+          "text": "The project is slowly but surely getting attention ",
           "url": "https://x.com/MrDariBoss/status/2103513257470521842",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 16,
+          "impressions": 17,
           "postedAt": "2026-09-25T15:53:36.000Z"
         }
       ],
@@ -970,13 +960,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 9,
-      "totalImpressions": 9,
+      "topPostImpressions": 10,
+      "totalImpressions": 10,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"I believe we should have a conversation about working together. My inbox is open 🤝\"",
+      "latestPostQuote": "\"I believe we should have a conversation about working together. My inbox is open \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -985,12 +975,12 @@
       "recentTweets": [
         {
           "tweetId": "2103510825990496518",
-          "text": "I believe we should have a conversation about working together. My inbox is open 🤝",
+          "text": "I believe we should have a conversation about working together. My inbox is open ",
           "url": "https://x.com/WignusCrypto/status/2103510825990496518",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 9,
+          "impressions": 10,
           "postedAt": "2026-09-25T15:43:56.000Z"
         }
       ],
@@ -1003,8 +993,8 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 11,
-      "totalImpressions": 16,
+      "topPostImpressions": 12,
+      "totalImpressions": 18,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
@@ -1023,17 +1013,17 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 5,
+          "impressions": 6,
           "postedAt": "2026-09-25T15:26:45.000Z"
         },
         {
           "tweetId": "2103505216876523899",
-          "text": "Follow back for potential collab 🔥",
+          "text": "Follow back for potential collab ",
           "url": "https://x.com/007__ZM/status/2103505216876523899",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 11,
+          "impressions": 12,
           "postedAt": "2026-09-25T15:21:39.000Z"
         }
       ],
@@ -1041,18 +1031,18 @@
     },
     {
       "twitterHandle": "iSolCryptoo",
-      "displayName": "Sol Queen 👑",
+      "displayName": "Sol Queen ",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1937163902778765312/rjqeIxYl_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 15,
-      "totalImpressions": 15,
+      "topPostImpressions": 16,
+      "totalImpressions": 16,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Solid project with real potential 💎 Happy to collab, DM open 📩\"",
+      "latestPostQuote": "\"Solid project with real potential  Happy to collab, DM open \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -1061,12 +1051,12 @@
       "recentTweets": [
         {
           "tweetId": "2103502690542326190",
-          "text": "Solid project with real potential 💎 Happy to collab, DM open 📩",
+          "text": "Solid project with real potential  Happy to collab, DM open ",
           "url": "https://x.com/iSolCryptoo/status/2103502690542326190",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 15,
+          "impressions": 16,
           "postedAt": "2026-09-25T15:11:37.000Z"
         }
       ],
@@ -1079,13 +1069,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 23,
-      "totalImpressions": 23,
+      "topPostImpressions": 24,
+      "totalImpressions": 24,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Very refined presentation, nice job. 🚀\"",
+      "latestPostQuote": "\"Very refined presentation, nice job. \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -1094,12 +1084,12 @@
       "recentTweets": [
         {
           "tweetId": "2103488329509736543",
-          "text": "Very refined presentation, nice job. 🚀",
+          "text": "Very refined presentation, nice job. ",
           "url": "https://x.com/DaCryptoLady_/status/2103488329509736543",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 23,
+          "impressions": 24,
           "postedAt": "2026-09-25T14:14:33.000Z"
         }
       ],
@@ -1112,13 +1102,13 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 7,
-      "totalImpressions": 13,
+      "topPostImpressions": 8,
+      "totalImpressions": 15,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Great to see projects like this. Let's collaborate 🤝\"",
+      "latestPostQuote": "\"Great to see projects like this. Let's collaborate \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -1127,22 +1117,22 @@
       "recentTweets": [
         {
           "tweetId": "2103480701714825510",
-          "text": "Great to see projects like this. Let's collaborate 🤝",
+          "text": "Great to see projects like this. Let's collaborate ",
           "url": "https://x.com/DeFiNattii/status/2103480701714825510",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 6,
+          "impressions": 7,
           "postedAt": "2026-09-25T13:44:14.000Z"
         },
         {
           "tweetId": "2103470911420760288",
-          "text": "This has a very bright future. Reach out anytime 🚀",
+          "text": "This has a very bright future. Reach out anytime ",
           "url": "https://x.com/DeFiNattii/status/2103470911420760288",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 7,
+          "impressions": 8,
           "postedAt": "2026-09-25T13:05:20.000Z"
         }
       ],
@@ -1155,8 +1145,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 6,
-      "totalImpressions": 6,
+      "topPostImpressions": 7,
+      "totalImpressions": 7,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1175,7 +1165,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 6,
+          "impressions": 7,
           "postedAt": "2026-09-25T13:19:37.000Z"
         }
       ],
@@ -1188,13 +1178,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 7,
-      "totalImpressions": 7,
+      "topPostImpressions": 8,
+      "totalImpressions": 8,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"The effort behind this really shows. Let’s connect for a collaboration 🔥\"",
+      "latestPostQuote": "\"The effort behind this really shows. Let’s connect for a collaboration \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -1203,12 +1193,12 @@
       "recentTweets": [
         {
           "tweetId": "2103472093128257775",
-          "text": "The effort behind this really shows. Let’s connect for a collaboration 🔥",
+          "text": "The effort behind this really shows. Let’s connect for a collaboration ",
           "url": "https://x.com/OscarDefii/status/2103472093128257775",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 7,
+          "impressions": 8,
           "postedAt": "2026-09-25T13:10:02.000Z"
         }
       ],
@@ -1221,8 +1211,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 19,
-      "totalImpressions": 19,
+      "topPostImpressions": 20,
+      "totalImpressions": 20,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1241,7 +1231,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 19,
+          "impressions": 20,
           "postedAt": "2026-09-25T05:49:30.000Z"
         }
       ],
@@ -1254,8 +1244,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 19,
-      "totalImpressions": 19,
+      "topPostImpressions": 20,
+      "totalImpressions": 20,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1274,7 +1264,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 19,
+          "impressions": 20,
           "postedAt": "2026-09-25T04:47:39.000Z"
         }
       ],
@@ -1287,13 +1277,13 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 17,
+      "topPostImpressions": 11,
+      "totalImpressions": 19,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Solid concept! Let's talk 📩\"",
+      "latestPostQuote": "\"Solid concept! Let's talk \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -1302,12 +1292,12 @@
       "recentTweets": [
         {
           "tweetId": "2103258150522749165",
-          "text": "Solid concept! Let's talk 📩",
+          "text": "Solid concept! Let's talk ",
           "url": "https://x.com/Realwhales_/status/2103258150522749165",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 7,
+          "impressions": 8,
           "postedAt": "2026-09-24T22:59:54.000Z"
         },
         {
@@ -1317,7 +1307,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-24T22:59:50.000Z"
         }
       ],
@@ -1330,8 +1320,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 7,
-      "totalImpressions": 7,
+      "topPostImpressions": 8,
+      "totalImpressions": 8,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1350,7 +1340,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 7,
+          "impressions": 8,
           "postedAt": "2026-09-24T21:44:18.000Z"
         }
       ],
@@ -1363,13 +1353,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 15,
-      "totalImpressions": 15,
+      "topPostImpressions": 16,
+      "totalImpressions": 16,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"This project is moving nicely, feel free to reach out anytime 🤝\"",
+      "latestPostQuote": "\"This project is moving nicely, feel free to reach out anytime \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -1378,12 +1368,12 @@
       "recentTweets": [
         {
           "tweetId": "2103236436606759210",
-          "text": "This project is moving nicely, feel free to reach out anytime 🤝",
+          "text": "This project is moving nicely, feel free to reach out anytime ",
           "url": "https://x.com/0ii05i/status/2103236436606759210",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 15,
+          "impressions": 16,
           "postedAt": "2026-09-24T21:33:37.000Z"
         }
       ],
@@ -1396,13 +1386,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 29,
-      "totalImpressions": 29,
+      "topPostImpressions": 30,
+      "totalImpressions": 30,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Would love to work on something together, message me 🔥\"",
+      "latestPostQuote": "\"Would love to work on something together, message me \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -1411,17 +1401,17 @@
       "recentTweets": [
         {
           "tweetId": "2103235775739711663",
-          "text": "Would love to work on something together, message me 🔥",
+          "text": "Would love to work on something together, message me ",
           "url": "https://x.com/142C_/status/2103235775739711663",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 29,
+          "impressions": 30,
           "postedAt": "2026-09-24T21:30:59.000Z"
         }
       ],
       "rank": 37
     }
   ],
-  "totalTweets": 62
+  "totalTweets": 61
 }
