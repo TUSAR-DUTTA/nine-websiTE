@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T04:33:50.706Z",
+  "lastUpdated": "2026-11-23T04:25:18.142Z",
   "workers": [
     {
       "twitterHandle": "NineDcat",
@@ -8,8 +8,8 @@
       "bagWorkerScore": 24.5,
       "postsCount": 10,
       "activeDays": 3,
-      "topPostImpressions": 325,
-      "totalImpressions": 1176,
+      "topPostImpressions": 326,
+      "totalImpressions": 1186,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 60,
@@ -28,7 +28,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 325,
+          "impressions": 326,
           "postedAt": "2026-09-24T17:44:07.000Z"
         },
         {
@@ -38,7 +38,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 47,
+          "impressions": 48,
           "postedAt": "2026-09-26T11:37:01.000Z"
         },
         {
@@ -48,7 +48,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 56,
+          "impressions": 57,
           "postedAt": "2026-09-25T20:22:36.000Z"
         },
         {
@@ -58,7 +58,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 131,
+          "impressions": 132,
           "postedAt": "2026-09-25T15:08:17.000Z"
         },
         {
@@ -68,74 +68,21 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 134,
+          "impressions": 135,
           "postedAt": "2026-09-25T08:08:29.000Z"
         }
       ],
       "rank": 1
     },
     {
-      "twitterHandle": "TradeSnapHQ",
-      "displayName": "TradeSnap",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2058940578143068161/N8g0C7Vr_normal.jpg",
-      "bagWorkerScore": 15.9,
-      "postsCount": 3,
-      "activeDays": 1,
-      "topPostImpressions": 297,
-      "totalImpressions": 800,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 19,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"$NINE\n the price is up 12.40% since we first alerted at 12:10pm EST. SnapScore™ — one number tells you if a move has legs. Real-time momentu\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2123925470655721529",
-          "text": "$NINE\n the price is up 12.40% since we first alerted at 12:10pm EST. SnapScore™ — one number tells you if a move has legs. Real-time momentum scoring at: \nhttps://\ntradesnap.io",
-          "url": "https://x.com/TradeSnapHQ/status/2123925470655721529",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 257,
-          "postedAt": "2026-11-20T23:44:27.000Z"
-        },
-        {
-          "tweetId": "2123892727163011429",
-          "text": "$NINE\n the price is up 12.40% since we first alerted at 12:10pm EST. See institutional money before the crowd does. Dark Pool Scanner at: \nhttps://\ntradesnap.io",
-          "url": "https://x.com/TradeSnapHQ/status/2123892727163011429",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 246,
-          "postedAt": "2026-11-20T21:34:20.000Z"
-        },
-        {
-          "tweetId": "2123859738475593953",
-          "text": "$NINE\n the price is up 13.95% since we first alerted at 12:10pm EST. Daily, curated Stocks to Watch morning briefing, exclusively at: \nhttps://\ntradesnap.io",
-          "url": "https://x.com/TradeSnapHQ/status/2123859738475593953",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 297,
-          "postedAt": "2026-11-20T19:23:15.000Z"
-        }
-      ],
-      "rank": 2
-    },
-    {
       "twitterHandle": "TheTokenXpress",
       "displayName": "The Token Xpress 🚀",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1818313639389995008/hryUvbMd_normal.jpg",
-      "bagWorkerScore": 13.5,
+      "bagWorkerScore": 13.6,
       "postsCount": 4,
       "activeDays": 2,
-      "topPostImpressions": 17,
-      "totalImpressions": 55,
+      "topPostImpressions": 18,
+      "totalImpressions": 59,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 32,
@@ -154,7 +101,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 14,
+          "impressions": 15,
           "postedAt": "2026-09-25T16:10:53.000Z"
         },
         {
@@ -164,7 +111,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-25T12:49:36.000Z"
         },
         {
@@ -174,7 +121,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 14,
+          "impressions": 15,
           "postedAt": "2026-09-24T19:29:25.000Z"
         },
         {
@@ -184,64 +131,21 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 17,
+          "impressions": 18,
           "postedAt": "2026-09-24T19:02:42.000Z"
         }
       ],
-      "rank": 3
-    },
-    {
-      "twitterHandle": "_Niss0",
-      "displayName": "THE CRYPTO DEV",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/1985693502559092736/7g3FdWy-_normal.jpg",
-      "bagWorkerScore": 11.8,
-      "postsCount": 2,
-      "activeDays": 1,
-      "topPostImpressions": 53,
-      "totalImpressions": 68,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 16,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"This could easily catch major attention 🚀 Would love to collab\"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2103486031811268911",
-          "text": "This could easily catch major attention 🚀 Would love to collab",
-          "url": "https://x.com/_Niss0/status/2103486031811268911",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 15,
-          "postedAt": "2026-09-25T14:05:25.000Z"
-        },
-        {
-          "tweetId": "2103486005773017377",
-          "text": "Interested in a collab 👏",
-          "url": "https://x.com/_Niss0/status/2103486005773017377",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 53,
-          "postedAt": "2026-09-25T14:05:19.000Z"
-        }
-      ],
-      "rank": 4
+      "rank": 2
     },
     {
       "twitterHandle": "tommy_GV1",
       "displayName": "Tommy Crypto",
       "avatarUrl": "https://pbs.twimg.com/profile_images/2092101383327559680/9v_XI7sA_normal.jpg",
-      "bagWorkerScore": 11.7,
+      "bagWorkerScore": 11.8,
       "postsCount": 3,
       "activeDays": 1,
-      "topPostImpressions": 35,
-      "totalImpressions": 78,
+      "topPostImpressions": 36,
+      "totalImpressions": 81,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 19,
@@ -260,7 +164,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 35,
+          "impressions": 36,
           "postedAt": "2026-09-25T15:32:09.000Z"
         },
         {
@@ -270,7 +174,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 34,
+          "impressions": 35,
           "postedAt": "2026-09-25T13:49:26.000Z"
         },
         {
@@ -280,11 +184,54 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 9,
+          "impressions": 10,
           "postedAt": "2026-09-25T13:49:20.000Z"
         }
       ],
-      "rank": 5
+      "rank": 3
+    },
+    {
+      "twitterHandle": "_Niss0",
+      "displayName": "THE CRYPTO DEV",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1985693502559092736/7g3FdWy-_normal.jpg",
+      "bagWorkerScore": 11.8,
+      "postsCount": 2,
+      "activeDays": 1,
+      "topPostImpressions": 54,
+      "totalImpressions": 70,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 16,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"This could easily catch major attention 🚀 Would love to collab\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2103486031811268911",
+          "text": "This could easily catch major attention 🚀 Would love to collab",
+          "url": "https://x.com/_Niss0/status/2103486031811268911",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 16,
+          "postedAt": "2026-09-25T14:05:25.000Z"
+        },
+        {
+          "tweetId": "2103486005773017377",
+          "text": "Interested in a collab 👏",
+          "url": "https://x.com/_Niss0/status/2103486005773017377",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 54,
+          "postedAt": "2026-09-25T14:05:19.000Z"
+        }
+      ],
+      "rank": 4
     },
     {
       "twitterHandle": "DefiSparco",
@@ -293,8 +240,8 @@
       "bagWorkerScore": 11.2,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 39,
-      "totalImpressions": 74,
+      "topPostImpressions": 40,
+      "totalImpressions": 76,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
@@ -313,7 +260,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 35,
+          "impressions": 36,
           "postedAt": "2026-09-25T15:59:01.000Z"
         },
         {
@@ -323,26 +270,26 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 39,
+          "impressions": 40,
           "postedAt": "2026-09-25T15:58:54.000Z"
         }
       ],
-      "rank": 6
+      "rank": 5
     },
     {
-      "twitterHandle": "ShortSideIO",
-      "displayName": "ShortSide Research",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2025586015214149633/1TMOWC92_normal.jpg",
-      "bagWorkerScore": 10.8,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 48,
-      "totalImpressions": 48,
+      "twitterHandle": "HeitorMarback",
+      "displayName": "Christopher Reed",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512506128896000/O7u6siYR_normal.jpg",
+      "bagWorkerScore": 10.9,
+      "postsCount": 2,
+      "activeDays": 2,
+      "topPostImpressions": 3,
+      "totalImpressions": 3,
       "totalLikes": 0,
       "totalRetweets": 0,
-      "consistencyScore": 13,
+      "consistencyScore": 26,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"⏸️ \n$NINE\n (Nine Energy Service, Inc. Common Stock) HALTED — code M\nClick to see live Indicated Open Price updates. ⬇️⬇️\"",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -350,27 +297,37 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123826366281879657",
-          "text": "⏸️ \n$NINE\n (Nine Energy Service, Inc. Common Stock) HALTED — code M\nClick to see live Indicated Open Price updates. ⬇️⬇️",
-          "url": "https://x.com/ShortSideIO/status/2123826366281879657",
+          "tweetId": "2124692929457655901",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/HeitorMarback/status/2124692929457655901",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 48,
-          "postedAt": "2026-11-20T17:10:39.000Z"
+          "impressions": 0,
+          "postedAt": "2026-11-23T02:34:03.000Z"
+        },
+        {
+          "tweetId": "2124603040540066241",
+          "text": "The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this blogger,\nFollow him 👉  \n@WallStreetMatt\n\n\nHis analysis and predictions are incredibly accurate; I've made a lot of money following his advice.",
+          "url": "https://x.com/HeitorMarback/status/2124603040540066241",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 3,
+          "postedAt": "2026-11-22T20:36:52.000Z"
         }
       ],
-      "rank": 7
+      "rank": 6
     },
     {
       "twitterHandle": "GlobaICryptoHub",
       "displayName": "Global Crypto Hub | GCH 🌏",
       "avatarUrl": "https://pbs.twimg.com/profile_images/1813585104037412865/LlJHjuRM_normal.jpg",
-      "bagWorkerScore": 10.3,
+      "bagWorkerScore": 10.4,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 25,
-      "totalImpressions": 39,
+      "topPostImpressions": 26,
+      "totalImpressions": 41,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
@@ -389,7 +346,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 14,
+          "impressions": 15,
           "postedAt": "2026-09-25T17:37:03.000Z"
         },
         {
@@ -399,26 +356,26 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 25,
+          "impressions": 26,
           "postedAt": "2026-09-25T14:17:05.000Z"
         }
       ],
-      "rank": 8
+      "rank": 7
     },
     {
-      "twitterHandle": "ingmoedano",
-      "displayName": "David Mitchell",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512492606517248/kUxV17q4_normal.jpg",
-      "bagWorkerScore": 10,
+      "twitterHandle": "RuiXara",
+      "displayName": "Alex Gurevich",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2121282408465268736/Ix3mfqb4_normal.jpg",
+      "bagWorkerScore": 10.3,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 2,
-      "totalImpressions": 2,
+      "topPostImpressions": 38,
+      "totalImpressions": 38,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
+      "latestPostQuote": "\"🚨Even market giants are adjusting their positions! How should retail investors respond?\n\nMust-read before Monday's market opens: Emergency \"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -426,22 +383,22 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123992222517412180",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/ingmoedano/status/2123992222517412180",
+          "tweetId": "2124664848533651749",
+          "text": "🚨Even market giants are adjusting their positions! How should retail investors respond?\n\nMust-read before Monday's market opens: Emergency market trend analysis!\n\nhttps:\nhttps://\nstocksi.live/Nidx6E\n\nReply \"stocks\" to join the group for free, last chance!\n\n$MRO \n$NINE\n \n$PCT\n \n$PINS\n \n$MTRI",
+          "url": "https://x.com/RuiXara/status/2124664848533651749",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 2,
-          "postedAt": "2026-11-21T04:09:42.000Z"
+          "impressions": 38,
+          "postedAt": "2026-11-23T00:42:28.000Z"
         }
       ],
-      "rank": 9
+      "rank": 8
     },
     {
-      "twitterHandle": "mmhemani",
-      "displayName": "Thomas Walker",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512463439613952/ql6_ZqGu_normal.jpg",
+      "twitterHandle": "jainlalit173",
+      "displayName": "Ryan Carter",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2116928738638077952/Ztt8PtFo_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
@@ -451,7 +408,7 @@
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -459,32 +416,65 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123987614562664838",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/mmhemani/status/2123987614562664838",
+          "tweetId": "2124708648077422998",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/jainlalit173/status/2124708648077422998",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
           "impressions": 0,
-          "postedAt": "2026-11-21T03:51:23.000Z"
+          "postedAt": "2026-11-23T03:36:31.000Z"
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "twitterHandle": "pedroenrique_1",
+      "displayName": "Ethan Miller",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2117291430544809985/ddt0-IUW_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 1,
+      "totalImpressions": 1,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2124702899154702704",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/pedroenrique_1/status/2124702899154702704",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 1,
+          "postedAt": "2026-11-23T03:13:40.000Z"
         }
       ],
       "rank": 10
     },
     {
-      "twitterHandle": "attiqus_salam",
-      "displayName": "Jason Brooks",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2116928801535840256/7Aeft8u4_normal.jpg",
+      "twitterHandle": "miyagianan",
+      "displayName": "宮城杏奈",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/1282158245/2011032210240000_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 3,
-      "totalImpressions": 3,
+      "topPostImpressions": 1,
+      "totalImpressions": 1,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -492,17 +482,149 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123904941072744697",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/attiqus_salam/status/2123904941072744697",
+          "tweetId": "2124693032461341020",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/miyagianan/status/2124693032461341020",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 3,
-          "postedAt": "2026-11-20T22:22:52.000Z"
+          "impressions": 1,
+          "postedAt": "2026-11-23T02:34:28.000Z"
         }
       ],
       "rank": 11
+    },
+    {
+      "twitterHandle": "Burginberrywoo",
+      "displayName": "Liam Anderson",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733790130630656/bn-1FMQr_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 0,
+      "totalImpressions": 0,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2124664605851140125",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/Burginberrywoo/status/2124664605851140125",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 0,
+          "postedAt": "2026-11-23T00:41:31.000Z"
+        }
+      ],
+      "rank": 12
+    },
+    {
+      "twitterHandle": "Brittishnproud",
+      "displayName": "Hunter",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2121280171760345088/NCf2dAgr_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 18,
+      "totalImpressions": 18,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"🚨 Even market giants are adjusting their positions! How should retail investors respond?\n\nMust-read before the market opens: Urgent market \"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2124657109161951364",
+          "text": "🚨 Even market giants are adjusting their positions! How should retail investors respond?\n\nMust-read before the market opens: Urgent market trend analysis!\n\n\nhttps://\nstocksi.live/9rMHp2\n\nReply \"Stock\" to join the group for free—last chance!\n$CRDV $MVES \n$PRCT\n \n$VTR\n \n$NINE",
+          "url": "https://x.com/Brittishnproud/status/2124657109161951364",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 18,
+          "postedAt": "2026-11-23T00:11:43.000Z"
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "twitterHandle": "bossofgolia",
+      "displayName": "Mia Harrison",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733800364806145/VgA75B3w_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 2,
+      "totalImpressions": 2,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2124648821682803025",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/bossofgolia/status/2124648821682803025",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 2,
+          "postedAt": "2026-11-22T23:38:47.000Z"
+        }
+      ],
+      "rank": 14
+    },
+    {
+      "twitterHandle": "febtheteen",
+      "displayName": "Harper Wilson",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193184051716096/4RtkTGNA_normal.jpg",
+      "bagWorkerScore": 10,
+      "postsCount": 1,
+      "activeDays": 1,
+      "topPostImpressions": 2,
+      "totalImpressions": 2,
+      "totalLikes": 0,
+      "totalRetweets": 0,
+      "consistencyScore": 13,
+      "customTitle": "🐈 BAG WORKER",
+      "latestPostQuote": "\"$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by fo\"",
+      "achievements": [
+        "$NINE BAG WORKER",
+        "NINE THE CAT WARRIOR",
+        "TIMELINE SUPPORTER"
+      ],
+      "recentTweets": [
+        {
+          "tweetId": "2124644018231603254",
+          "text": "$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by following his tradesdes . An outstanding stock analyst\n 🔗\n@WallStreetMatt\n\nHe is an excellent stock analyst—be sure to follow him.",
+          "url": "https://x.com/febtheteen/status/2124644018231603254",
+          "likes": 0,
+          "retweets": 0,
+          "replies": 0,
+          "impressions": 2,
+          "postedAt": "2026-11-22T23:19:42.000Z"
+        }
+      ],
+      "rank": 15
     },
     {
       "twitterHandle": "esmilodonte73",
@@ -511,13 +633,13 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 11,
-      "totalImpressions": 11,
+      "topPostImpressions": 1,
+      "totalImpressions": 1,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -525,174 +647,32 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123818337884918014",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/esmilodonte73/status/2123818337884918014",
+          "tweetId": "2124643380466782400",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/esmilodonte73/status/2124643380466782400",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 11,
-          "postedAt": "2026-11-20T16:38:45.000Z"
-        }
-      ],
-      "rank": 12
-    },
-    {
-      "twitterHandle": "PincheReda",
-      "displayName": "Olivia Bennett",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193159829549056/LJKnENq5_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 7,
-      "totalImpressions": 7,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2123813156522762673",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/PincheReda/status/2123813156522762673",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 7,
-          "postedAt": "2026-11-20T16:18:09.000Z"
-        }
-      ],
-      "rank": 13
-    },
-    {
-      "twitterHandle": "qqss2wv9k",
-      "displayName": "本厚木大家",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/1941288423282671617/uG0IQip2_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 10,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2123812696751484935",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/qqss2wv9k/status/2123812696751484935",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 10,
-          "postedAt": "2026-11-20T16:16:20.000Z"
-        }
-      ],
-      "rank": 14
-    },
-    {
-      "twitterHandle": "tar0t_",
-      "displayName": "Lucas Morgan",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193187826503680/txp1Bgh-_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 2,
-      "activeDays": 1,
-      "topPostImpressions": 9,
-      "totalImpressions": 16,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 16,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2123810613788864709",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/tar0t_/status/2123810613788864709",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 7,
-          "postedAt": "2026-11-20T16:08:03.000Z"
-        },
-        {
-          "tweetId": "2123804974836498849",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/tar0t_/status/2123804974836498849",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 9,
-          "postedAt": "2026-11-20T15:45:39.000Z"
-        }
-      ],
-      "rank": 15
-    },
-    {
-      "twitterHandle": "dewduedew",
-      "displayName": "Amelia Foster",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733792345227264/YEqcAOnh_normal.jpg",
-      "bagWorkerScore": 10,
-      "postsCount": 1,
-      "activeDays": 1,
-      "topPostImpressions": 7,
-      "totalImpressions": 7,
-      "totalLikes": 0,
-      "totalRetweets": 0,
-      "consistencyScore": 13,
-      "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
-      "achievements": [
-        "$NINE BAG WORKER",
-        "NINE THE CAT WARRIOR",
-        "TIMELINE SUPPORTER"
-      ],
-      "recentTweets": [
-        {
-          "tweetId": "2123809924903739445",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/dewduedew/status/2123809924903739445",
-          "likes": 0,
-          "retweets": 0,
-          "replies": 0,
-          "impressions": 7,
-          "postedAt": "2026-11-20T16:05:19.000Z"
+          "impressions": 1,
+          "postedAt": "2026-11-22T23:17:10.000Z"
         }
       ],
       "rank": 16
     },
     {
-      "twitterHandle": "jjjjj0123456789",
-      "displayName": "Benjamin Brooks",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120193427749130240/QGN9VkOY_normal.jpg",
+      "twitterHandle": "MaddTakeyama",
+      "displayName": "Richard Bennett",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512473619185664/5CO1jVTc_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 12,
-      "totalImpressions": 12,
+      "topPostImpressions": 4,
+      "totalImpressions": 4,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
+      "latestPostQuote": "\"If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money f\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -700,32 +680,32 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123806271539228696",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/jjjjj0123456789/status/2123806271539228696",
+          "tweetId": "2124604037979099458",
+          "text": "If you hold the following stocks\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\n🔗： \n@WallStreetMatt\n\n\nYou really should follow him; I’ve made a lot of money following his lead.\n\nHis analysis is highly precise and well-substantiated, offering significant reference value.",
+          "url": "https://x.com/MaddTakeyama/status/2124604037979099458",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 12,
-          "postedAt": "2026-11-20T15:50:48.000Z"
+          "impressions": 4,
+          "postedAt": "2026-11-22T20:40:50.000Z"
         }
       ],
       "rank": 17
     },
     {
-      "twitterHandle": "tigerjapan",
-      "displayName": "William Parker",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512407009202176/81Z86tkF_normal.jpg",
+      "twitterHandle": "tatibarroso_",
+      "displayName": "David Mitchell",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512389774995456/tgz0A9IX_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 9,
-      "totalImpressions": 9,
+      "topPostImpressions": 7,
+      "totalImpressions": 7,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
+      "latestPostQuote": "\"The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this bl\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -733,22 +713,22 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123804039595123038",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/tigerjapan/status/2123804039595123038",
+          "tweetId": "2124574927923933637",
+          "text": "The following stocks may rise:\n\n\n$AIDX\n  \n$NWAX\n  \n$NINE\n\n\nIf you're not making $3,000 every two weeks, you should definitely follow this blogger,\nFollow him 👉  \n@WallStreetMatt\n\n\nHis analysis and predictions are incredibly accurate; I've made a lot of money following his advice.",
+          "url": "https://x.com/tatibarroso_/status/2124574927923933637",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 9,
-          "postedAt": "2026-11-20T15:41:56.000Z"
+          "impressions": 7,
+          "postedAt": "2026-11-22T18:45:10.000Z"
         }
       ],
       "rank": 18
     },
     {
-      "twitterHandle": "MaddTakeyama",
-      "displayName": "Richard Bennett",
-      "avatarUrl": "https://pbs.twimg.com/profile_images/2120512473619185664/5CO1jVTc_normal.jpg",
+      "twitterHandle": "dkurtnd",
+      "displayName": "Daniel Cooper",
+      "avatarUrl": "https://pbs.twimg.com/profile_images/2118733797160263680/-yt8bY03_normal.jpg",
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
@@ -758,7 +738,7 @@
       "totalRetweets": 0,
       "consistencyScore": 13,
       "customTitle": "🐈 BAG WORKER",
-      "latestPostQuote": "\"Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my \"",
+      "latestPostQuote": "\"$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by fo\"",
       "achievements": [
         "$NINE BAG WORKER",
         "NINE THE CAT WARRIOR",
@@ -766,14 +746,14 @@
       ],
       "recentTweets": [
         {
-          "tweetId": "2123803630037856383",
-          "text": "Notice📣\nWhether you’re new or experienced, you’re welcome to join\nGet free stock insights, market analysis, and pre-market updates from my team.\nConnect with my assistant here\n\nhttps://\nstockadvice.xyz/pTlMT4\nNot interested in stocks? No need to join\n\n$AIDX\n  \n$NWAX\n  \n$NINE",
-          "url": "https://x.com/MaddTakeyama/status/2123803630037856383",
+          "tweetId": "2124551146639630564",
+          "text": "$AIDX\n \n$NWAX\n \n$NINE\n   . \n  If you hold any of the aforementioned stocks, you should definitely pay attention to him; I made $80,000 by following his tradesdes . An outstanding stock analyst\n 🔗\n@WallStreetMatt\n\nHe is an excellent stock analyst—be sure to follow him.",
+          "url": "https://x.com/dkurtnd/status/2124551146639630564",
           "likes": 0,
           "retweets": 0,
           "replies": 0,
           "impressions": 5,
-          "postedAt": "2026-11-20T15:40:18.000Z"
+          "postedAt": "2026-11-22T17:10:40.000Z"
         }
       ],
       "rank": 19
@@ -785,8 +765,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 13,
-      "totalImpressions": 13,
+      "topPostImpressions": 14,
+      "totalImpressions": 14,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -805,7 +785,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 13,
+          "impressions": 14,
           "postedAt": "2026-09-25T16:43:01.000Z"
         }
       ],
@@ -818,8 +798,8 @@
       "bagWorkerScore": 10,
       "postsCount": 3,
       "activeDays": 1,
-      "topPostImpressions": 13,
-      "totalImpressions": 33,
+      "topPostImpressions": 14,
+      "totalImpressions": 36,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 19,
@@ -838,7 +818,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 12,
+          "impressions": 13,
           "postedAt": "2026-09-25T16:25:17.000Z"
         },
         {
@@ -848,7 +828,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 13,
+          "impressions": 14,
           "postedAt": "2026-09-25T16:25:12.000Z"
         },
         {
@@ -858,7 +838,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 8,
+          "impressions": 9,
           "postedAt": "2026-09-25T03:34:04.000Z"
         }
       ],
@@ -871,8 +851,8 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 13,
-      "totalImpressions": 24,
+      "topPostImpressions": 14,
+      "totalImpressions": 26,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
@@ -891,7 +871,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 13,
+          "impressions": 14,
           "postedAt": "2026-09-25T15:57:33.000Z"
         },
         {
@@ -901,7 +881,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 11,
+          "impressions": 12,
           "postedAt": "2026-09-25T13:16:39.000Z"
         }
       ],
@@ -914,8 +894,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 19,
-      "totalImpressions": 19,
+      "topPostImpressions": 20,
+      "totalImpressions": 20,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -934,7 +914,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 19,
+          "impressions": 20,
           "postedAt": "2026-09-25T15:53:36.000Z"
         }
       ],
@@ -947,8 +927,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 12,
-      "totalImpressions": 12,
+      "topPostImpressions": 13,
+      "totalImpressions": 13,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -967,7 +947,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 12,
+          "impressions": 13,
           "postedAt": "2026-09-25T15:43:56.000Z"
         }
       ],
@@ -980,8 +960,8 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 14,
-      "totalImpressions": 22,
+      "topPostImpressions": 15,
+      "totalImpressions": 24,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
@@ -1000,7 +980,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 8,
+          "impressions": 9,
           "postedAt": "2026-09-25T15:26:45.000Z"
         },
         {
@@ -1010,7 +990,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 14,
+          "impressions": 15,
           "postedAt": "2026-09-25T15:21:39.000Z"
         }
       ],
@@ -1023,8 +1003,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 18,
-      "totalImpressions": 18,
+      "topPostImpressions": 19,
+      "totalImpressions": 19,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1043,7 +1023,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 18,
+          "impressions": 19,
           "postedAt": "2026-09-25T15:11:37.000Z"
         }
       ],
@@ -1056,8 +1036,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 26,
-      "totalImpressions": 26,
+      "topPostImpressions": 27,
+      "totalImpressions": 27,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1076,7 +1056,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 26,
+          "impressions": 27,
           "postedAt": "2026-09-25T14:14:33.000Z"
         }
       ],
@@ -1089,8 +1069,8 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 19,
+      "topPostImpressions": 11,
+      "totalImpressions": 21,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
@@ -1109,7 +1089,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 9,
+          "impressions": 10,
           "postedAt": "2026-09-25T13:44:14.000Z"
         },
         {
@@ -1119,7 +1099,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-25T13:05:20.000Z"
         }
       ],
@@ -1132,8 +1112,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 9,
-      "totalImpressions": 9,
+      "topPostImpressions": 10,
+      "totalImpressions": 10,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1152,7 +1132,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 9,
+          "impressions": 10,
           "postedAt": "2026-09-25T13:19:37.000Z"
         }
       ],
@@ -1165,8 +1145,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 10,
+      "topPostImpressions": 11,
+      "totalImpressions": 11,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1185,7 +1165,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-25T13:10:02.000Z"
         }
       ],
@@ -1198,8 +1178,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 22,
-      "totalImpressions": 22,
+      "topPostImpressions": 23,
+      "totalImpressions": 23,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1218,7 +1198,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 22,
+          "impressions": 23,
           "postedAt": "2026-09-25T05:49:30.000Z"
         }
       ],
@@ -1231,8 +1211,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 22,
-      "totalImpressions": 22,
+      "topPostImpressions": 23,
+      "totalImpressions": 23,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1251,7 +1231,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 22,
+          "impressions": 23,
           "postedAt": "2026-09-25T04:47:39.000Z"
         }
       ],
@@ -1264,8 +1244,8 @@
       "bagWorkerScore": 10,
       "postsCount": 2,
       "activeDays": 1,
-      "topPostImpressions": 13,
-      "totalImpressions": 23,
+      "topPostImpressions": 14,
+      "totalImpressions": 25,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 16,
@@ -1284,7 +1264,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-24T22:59:54.000Z"
         },
         {
@@ -1294,7 +1274,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 13,
+          "impressions": 14,
           "postedAt": "2026-09-24T22:59:50.000Z"
         }
       ],
@@ -1307,8 +1287,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 10,
-      "totalImpressions": 10,
+      "topPostImpressions": 11,
+      "totalImpressions": 11,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1327,7 +1307,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 10,
+          "impressions": 11,
           "postedAt": "2026-09-24T21:44:18.000Z"
         }
       ],
@@ -1340,8 +1320,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 18,
-      "totalImpressions": 18,
+      "topPostImpressions": 19,
+      "totalImpressions": 19,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1360,7 +1340,7 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 18,
+          "impressions": 19,
           "postedAt": "2026-09-24T21:33:37.000Z"
         }
       ],
@@ -1373,8 +1353,8 @@
       "bagWorkerScore": 10,
       "postsCount": 1,
       "activeDays": 1,
-      "topPostImpressions": 32,
-      "totalImpressions": 32,
+      "topPostImpressions": 33,
+      "totalImpressions": 33,
       "totalLikes": 0,
       "totalRetweets": 0,
       "consistencyScore": 13,
@@ -1393,12 +1373,12 @@
           "likes": 0,
           "retweets": 0,
           "replies": 0,
-          "impressions": 32,
+          "impressions": 33,
           "postedAt": "2026-09-24T21:30:59.000Z"
         }
       ],
       "rank": 36
     }
   ],
-  "totalTweets": 62
+  "totalTweets": 60
 }
